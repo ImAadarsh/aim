@@ -85,7 +85,7 @@
                                 </div>
                                 <div class="col-xl-4 col-lg-4 col-md-4">
                                     <div class="footer-logo mb-30 text-start text-xl-center">
-                                        <a href="index.php"><img src="assets/img/logo/logo-white.png" alt="Mission AIM"></a>
+                                        <a href="index.php"><img src="assets/img/logo/logo-black.png" alt="Mission AIM"></a>
                                     </div>
                                 </div>
                                 <div class="col-xl-4 col-lg-8 col-md-8">
