@@ -83,8 +83,8 @@
                 </div>
                 <div class="tp-offcanvas-info mb-50">
                     <h3 class="tp-offcanvas-sm-title">Information</h3>
-                    <span><a href="tel:01234567">+ 4 20 7700 1007</a></span>
-                    <span><a href="mailto:hello@exdos.com">hello@exdos.com</a></span>
+                    <span><a href="tel:01234567">+91 769700123</a></span>
+                    <span><a href="mailto:aim@ipnacademy.in">aim@ipnacademy.in</a></span>
                     <span><a target="_blank" href="https://www.google.com/maps/">Avenue de Roma 158b, Lisboa</a></span>
                 </div>
                 <div class="tp-offcanvas-social mb-50">
@@ -885,106 +885,7 @@
                 </main>
 
                 <!-- footer start  -->
-                <footer class="tp-footer-main-area p-relative">
-                    <div class="container">
-                        <div class="tp-footer-widget-area tp-footer-widget-area-border pt-80 pb-40">
-                            <div class="row">
-                                <div class="col-xl-3 col-lg-6 col-md-6">
-                                    <div class="tp-footer-widget tp-footer-widget-2 tp-footer-2-col-1 mb-50">
-                                        <h3 class="tp-footer-widget-title tp-footer-widget-title-white mb-20">Newsletter</h3>
-                                        <div class="tp-footer-newsletter mb-40">
-                                            <form action="#">
-                                                <div class="p-relative">
-                                                    <input type="email" placeholder="Email here*">
-                                                    <button type="submit"><i class="far fa-arrow-right"></i></button>
-                                                </div>
-                                                <div class="form-check">
-                                                    <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
-                                                    <label class="form-check-label" for="flexCheckDefault">
-                                                    Default checkbox
-                                                    </label>
-                                                </div> 
-                                            </form>
-                                        </div>
-                                        <div class="tp-footer-social">
-                                            <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                            <a href="#"><i class="fab fa-twitter"></i></a>
-                                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xl-3 col-lg-6 col-md-6">
-                                    <div class="tp-footer-widget tp-footer-widget-2 tp-footer-2-col-2 mb-50">
-                                        <h3 class="tp-footer-widget-title tp-footer-widget-title-white mb-20">Quick Links</h3>
-                                        <ul>
-                                            <li><a href="about.php">About us</a></li>
-                                            <li><a href="services.php">Services</a></li>
-                                            <li><a href="team.php">Meet the team</a></li>
-                                            <li><a href="blog.php">Recent news</a></li>
-                                            <li><a href="portfolio.php">Our gallery</a></li>
-                                            <li><a href="portfolio.php">Case studies</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                                <div class="col-xl-3 col-lg-6 col-md-6">
-                                    <div class="tp-footer-widget tp-footer-widget-2 tp-footer-2-col-3 mb-50">
-                                        <h3 class="tp-footer-widget-title tp-footer-widget-title-white mb-20">Contact Info</h3>
-                                        <div class="tp-footer-contact">
-                                            <div class="tp-footer-contact-item mb-20">
-                                                <span>Email us</span>
-                                                <h4><a href="mailto:info@exdosstudio.com">info@exdosstudio.com</a></h4>
-                                            </div>
-                                            <div class="tp-footer-contact-item mb-20">
-                                                <span>Phone no</span>
-                                                <h4><a href="tel:2(520)632032">2 (520) 6320 32</a></h4>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                </div>
-                                <div class="col-xl-3 col-lg-6 col-md-6">
-                                    <div class="tp-footer-widget tp-footer-widget-2 tp-footer-2-col-4 mb-50">
-                                        <h3 class="tp-footer-widget-title tp-footer-widget-title-white mb-20">California</h3>
-                                        <div class="footer-content">
-                                            <span>3005 Meadowview Drive  <br>
-                                                Gordons, VA 22942</span>
-                                        </div>
-                                    </div>
-                                    <div class="tp-footer-widget tp-footer-widget-2 tp-footer-2-col-4 mb-50">
-                                        <h3 class="tp-footer-widget-title tp-footer-widget-title-white mb-20">Los Angels</h3>
-                                        <div class="footer-content">
-                                            <span>3587 Limer Street Dalton <br>
-                                                Palmar 30720</span>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tp-footer-copyright-area tp-footer-copyright-area-2 pt-40 pb-10 p-relative z-index-1">
-                            <div class="row align-items-center">
-                                <div class="col-xl-4 col-lg-12 ">
-                                    <div class="tp-footer-copyright mb-30 text-lg-start">
-                                        <p>Copyright © 2024 | Alright reserved by <a href="#">Hr Design</a></p>
-                                    </div>
-                                </div>
-                                <div class="col-xl-4 col-lg-4 col-md-4">
-                                    <div class="footer-logo mb-30 text-start text-xl-center">
-                                        <a href="index.php"><img src="assets/img/logo/logo-black.png" alt=""></a>
-                                    </div>
-                                </div>
-                                <div class="col-xl-4 col-lg-8 col-md-8">
-                                    <div class="tp-footer-menu text-md-center text-lg-end mb-30 ">
-                                        <ul>
-                                            <li><a href="#">Career</a></li>
-                                            <li><a href="#">privacy & policy</a></li>
-                                            <li><a href="contact.php">contact</a></li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </footer>
+                <?php include "include/footer.php"; ?>
                 <!-- footer end  -->
 
             </div>
