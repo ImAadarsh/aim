@@ -46,17 +46,13 @@
                                         <div class="tp-footer-contact">
                                             <div class="tp-footer-contact-item mb-20">
                                                 <span>Email us</span>
-                                                <h4><a href="mailto:info@missionaim.com">info@missionaim.com</a></h4>
+                                                <h4><a href="mailto:aim@ipnacademy.in">aim@ipnacademy.in</a></h4>
                                             </div>
                                             <div class="tp-footer-contact-item mb-20">
                                                 <span>Call us</span>
                                                 <h4><a href="tel:+917697001234">+91 7697001234</a></h4>
                                             </div>
-                                            <div class="tp-footer-contact-item">
-                                                <span>Visit us</span>
-                                                <h4>Mission AIM Campus, 
-                                                <br>New Delhi, India</h4>
-                                            </div>
+                                           
                                         </div>
                                     </div>
                                 </div>
