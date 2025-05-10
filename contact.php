@@ -1,19 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mission AIM</title>
-
-    <link rel="icon" type="image/x-icon" href="assets/img/logo/favicon.png">
-
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/fontawesome-pro.min.css">
-    <link rel="stylesheet" href="assets/css/flaticon-exdos.css">
-    <link rel="stylesheet" href="assets/css/magnific-popup.css">
-    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-</head>
+<?php include 'include/head.php'; ?>
 <body>
     
     <!-- scroll to top  -->
@@ -65,8 +52,8 @@
                 <section class="tp-contact-area pt-120 pb-90">
                     <div class="container">
                         <div class="tp-section-title-wrapper mb-50 text-center">
-                            <h2 class="tp-section-title mb-20">Contact information</h2>
-                            <p>Per ipsum ultrices sollicitudin iaculis platea facilisi semper aliquam up <br> senectus cursus vivamus volutpat penatibus</p>
+                            <h2 class="tp-section-title mb-20">Get in Touch</h2>
+                            <p>Ready to transform your teaching with AI? Contact us to learn more about our training programs, <br> schedule a consultation, or join our community of AI-empowered educators.</p>
                         </div>
                         <div class="row text-center">
                             <div class="col-xl-4 col-lg-6 col-md-12">
@@ -77,8 +64,7 @@
                                     <div class="tp-contact-info-text">
                                         <span class="mb-10 d-block">Our Location</span>
                                         <p>
-                                            <a href="#">1905 Oakridge Farm Lane
-                                                Waukesha, WI 53188</a>
+                                            <a href="#">Mumbai, India</a>
                                         </p>
                                     </div>
                                 </div>
@@ -89,10 +75,10 @@
                                         <span><i class="flaticon-chat"></i></span>
                                     </div>
                                     <div class="tp-contact-info-text">
-                                        <span class="mb-10 d-block">email address</span>
+                                        <span class="mb-10 d-block">Email Address</span>
                                         <p>
-                                            <a href="mailto:ipnacademy@ipnindia.in">ipnacademy@ipnindia.in</a> <br>
-                                            <a href="mailto:ipnacademy@ipnindia.in">ipnacademy@ipnindia.in</a>
+                                            <a href="mailto:info@missionaim.org">aim@ipnindia.in</a> <br>
+                                            <!-- <a href="mailto:support@missionaim.org">support@missionaim.org</a> -->
                                         </p>
                                     </div>
                                 </div>
@@ -103,10 +89,10 @@
                                         <span><i class="flaticon-call"></i></span>
                                     </div>
                                     <div class="tp-contact-info-text">
-                                        <span class="mb-10 d-block">Phone number</span>
+                                        <span class="mb-10 d-block">Phone Number</span>
                                         <p>
-                                            <a href="tel:02(256)3253602">02 (256) 325 3602</a> <br>
-                                            <a href="tel:01(541)258360">01 (541) 258 360</a>
+                                            <a href="tel:+91 769700123">+91 769700123</a> <br>
+                                            <!-- <a href="tel:+91 769700124">+91 769700124</a> -->
                                         </p>
                                     </div>
                                 </div>
@@ -115,21 +101,18 @@
                     </div>
                 </section>
 
-                <div class="tp-map-area wow img-custom-anim-top" data-wow-duration="1s" data-wow-delay="0.2s">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d53554.75805178511!2d90.41279236249726!3d23.814422694617555!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sbd!4v1720341133590!5m2!1sen!2sbd"  style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                </div>
 
                 <div class="tp-contact-form-area  pt-130 pb-130">
                     <div class="container">
                         <div class="row">
                             <div class="col-xl-5">
                                 <div class="tp-section-title-wrapper mb-50 wow img-custom-anim-left" data-wow-duration="1s" data-wow-delay="0.2s">
-                                    <h2 class="tp-section-title mb-20 fs-100">Contact Us</h2>
+                                    <h2 class="tp-section-title mb-20 fs-100">Start Your AI Journey</h2>
                                 </div>
                             </div>
                             <div class="col-xl-7">
                                 <div class="contact-form-wrapper">
-                                    <h3 class="tpform-title mb-25">Get in touch</h3>
+                                    <h3 class="tpform-title mb-25">Request Information</h3>
                                 </div>
                                 <div class="contact-form-box">
                                     <form id="contact-form" action="assets/mail.php" method="post">
@@ -138,19 +121,25 @@
                                                 <input name="name" type="text" placeholder="Full Name*">
                                             </div>
                                             <div class="col-md-6 mb-30">
-                                                <input name="email" type="email" placeholder="Email Here*">
+                                                <input name="email" type="email" placeholder="Email Address*">
                                             </div>
                                             <div class="col-md-6 mb-30">
-                                                <input name="subject" type="email" placeholder="subject *">
+                                                <select name="program" class="form-select">
+                                                    <option value="">Select Program*</option>
+                                                    <option value="basic">Basic AI Training</option>
+                                                    <option value="advanced">Advanced AI Training</option>
+                                                    <option value="school">School Package</option>
+                                                    <option value="other">Other</option>
+                                                </select>
                                             </div>
                                             <div class="col-md-12 mb-45">
-                                                <textarea name="message"  cols="30" rows="10" placeholder="write note*"></textarea>
+                                                <textarea name="message" cols="30" rows="10" placeholder="Tell us about your teaching experience and how you'd like to integrate AI in your classroom*"></textarea>
                                             </div>
                                             <div class="col-12">
                                                 <button type="submit" class="tp-btn">
                                                     <span class="tp-btn-wrap">
-                                                        <span class="tp-btn-y-1">Send message</span>
-                                                        <span class="tp-btn-y-2">Send message</span>
+                                                        <span class="tp-btn-y-1">Send Request</span>
+                                                        <span class="tp-btn-y-2">Send Request</span>
                                                     </span>  
                                                     <i></i>
                                                 </button>

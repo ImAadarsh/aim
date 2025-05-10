@@ -1,19 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mission AIM</title>
-
-    <link rel="icon" type="image/x-icon" href="assets/img/logo/favicon.png">
-
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/fontawesome-pro.min.css">
-    <link rel="stylesheet" href="assets/css/flaticon-exdos.css">
-    <link rel="stylesheet" href="assets/css/magnific-popup.css">
-    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-</head>
+<?php include 'include/head.php'; ?>
 <body>
     
     <!-- scroll to top  -->
@@ -72,8 +59,8 @@
                             <div class="col-lg-6">
                                 <div class="tp-about-box pl-42">
                                     <div class="tp-section-title-wrapper mb-33">
-                                        <h2 class="tp-section-title mb-20">Let us building the bridge between <br> brand and customer</h2>
-                                        <p>Per ipsum ultrices sollicitudin iaculis platea facilisi Semper aliquam up   taciti <b>senectus cursus</b> vivamus volutpat nibh. Penatibus fringilla porttitor do magna purus massa per <b>duis dapibus</b> scelerisque etiam</p>
+                                        <h2 class="tp-section-title mb-20">Empowering Educators with AI Excellence</h2>
+                                        <p>Building on our legacy of impacting <b>30,000+ teachers</b> and <b>10,000+ schools</b>, we're scaling up to transform education through AI integration. Our comprehensive training programs and support systems enable educators to harness the power of artificial intelligence for enhanced teaching and learning experiences.</p>
                                     </div>
                                     <div class="tp-about-feature mb-50">
                                         <div class="d-flex mb-25">
@@ -81,8 +68,8 @@
                                                 <span><i class="flaticon-vulnerability"></i></span>
                                             </div>
                                             <div class="tp-about-feature-content">
-                                                <h3 class="tp-about-feature tp-fs-30">On time delivery</h3>
-                                                <p>Eratela natoque aenea ullamcorper full egestas congue condimentum disel sapien cubilia</p>
+                                                <h3 class="tp-about-feature tp-fs-30">Expert-Led Training</h3>
+                                                <p>Live and recorded sessions led by global experts on AI fundamentals and classroom applications, ensuring practical and relevant learning experiences.</p>
                                             </div>
                                         </div>
                                         <div class="d-flex mb-25">
@@ -90,16 +77,16 @@
                                                 <span><i class="flaticon-half"></i></span>
                                             </div>
                                             <div class="tp-about-feature-content">
-                                                <h3 class="tp-about-feature tp-fs-30">Dedicated member</h3>
-                                                <p>Eratela natoque aenea ullamcorper full egestas congue condimentum disel sapien cubilia</p>
+                                                <h3 class="tp-about-feature tp-fs-30">Comprehensive Support</h3>
+                                                <p>Mentorship networks and AI learning hubs for collaborative experimentation, providing continuous guidance and resources for successful implementation.</p>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="tp-about-btn wow img-custom-anim-top" data-wow-duration="1.5s" data-wow-delay="0.5s">
                                         <a href="services.php" class="tp-btn">
                                             <span class="tp-btn-wrap">
-                                                <span class="tp-btn-y-1">About More</span>
-                                                <span class="tp-btn-y-2">About More</span>
+                                                <span class="tp-btn-y-1">Explore Programs</span>
+                                                <span class="tp-btn-y-2">Explore Programs</span>
                                             </span>  
                                             <i></i> 
                                         </a>
@@ -116,9 +103,7 @@
                         <div class="row">
                             <div class="col-xl-6">
                                 <div class="tp-section-title-wrapper mb-40">
-                                    <h2 class="tp-section-title mb-20">Exdos received many
-                                        global awards that
-                                        inspired our member</h2>
+                                    <h2 class="tp-section-title mb-20">Our Impact & Recognition</h2>
                                 </div>
                                 <div class="shape-arrow mb-40 d-none d-xl-block">
                                     <img src="assets/img/shape/big-arrow.png" alt="">
@@ -129,38 +114,38 @@
                                     <div class="row gx-0">
                                         <div class="col-md-6">
                                             <div class="tpaward">
-                                                <span>2015 - 2016</span>
-                                                <h3 class="tpaward__title">Best design award</h3>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="tpaward">
-                                                <span>2017 - 2018</span>
-                                                <h3 class="tpaward__title">Dribbble winner</h3>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="tpaward">
-                                                <span>2018 - 2019</span>
-                                                <h3 class="tpaward__title">Design of the year</h3>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="tpaward">
-                                                <span>2019 - 2020</span>
-                                                <h3 class="tpaward__title">Graphic design</h3>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="tpaward">
                                                 <span>2020 - 2021</span>
-                                                <h3 class="tpaward__title">Awwwards winner</h3>
+                                                <h3 class="tpaward__title">Best EdTech Initiative</h3>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="tpaward">
+                                                <span>2021 - 2022</span>
+                                                <h3 class="tpaward__title">Innovation in Education</h3>
                                             </div>
                                         </div>
                                         <div class="col-md-6">
                                             <div class="tpaward">
                                                 <span>2022 - 2023</span>
-                                                <h3 class="tpaward__title">Best jury awards</h3>
+                                                <h3 class="tpaward__title">Excellence in Teacher Training</h3>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="tpaward">
+                                                <span>2023 - 2024</span>
+                                                <h3 class="tpaward__title">AI Integration Pioneer</h3>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="tpaward">
+                                                <span>2024 - 2025</span>
+                                                <h3 class="tpaward__title">Digital Learning Leader</h3>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="tpaward">
+                                                <span>2025 - 2026</span>
+                                                <h3 class="tpaward__title">Future of Education Award</h3>
                                             </div>
                                         </div>
                                     </div>
@@ -175,8 +160,8 @@
                         <div class="row align-items-center">
                             <div class="col-md-8">
                                 <div class="tp-section-title-wrapper mb-50">
-                                    <h2 class="tp-section-title mb-20">Dedicated team member  <br>
-                                        behind your story</h2>
+                                    <h2 class="tp-section-title mb-20">Our Expert Team of <br>
+                                        AI Education Specialists</h2>
                                 </div>
                             </div>
                             <div class="col-md-4">
@@ -431,21 +416,21 @@
                             <div class="col-lg-6">
                                 <div class="tpfaq-wrapper">
                                     <div class="tp-section-title-wrapper mb-40">
-                                        <span class="tp-section-subtitle mb-10"><i></i> Client questions </span>
-                                        <h2 class="tp-section-title tp-upper mb-20">general questions</h2>
-                                        <p>Augue ullamcorper nunc libero augue blandit habitant purus felis quam persui nisi lectus. augue lobortis nostra placerat penatibus</p>
+                                        <span class="tp-section-subtitle mb-10"><i></i> Common Questions </span>
+                                        <h2 class="tp-section-title tp-upper mb-20">Frequently Asked Questions</h2>
+                                        <p>Find answers to common questions about our AI training programs, implementation process, and support services.</p>
                                     </div>
                                     <div class="accordion" id="accordionExample">
                                         <div class="tp-accordion-item mb-20">
                                         <h2 class="accordion-header">
                                             <button class="tp-accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                                How do you collaborate with developers?
+                                                What are the prerequisites for joining the AI training program?
                                                 <span><i class="far fa-arrow-down"></i></span>
                                             </button>
                                         </h2>
                                         <div id="collapseOne" class="tp-accordion-collapse collapse show" data-bs-parent="#accordionExample">
                                             <div class="tp-accordion-body">
-                                            <p>Leo site ultrices donec a volutpat penatibus mind suscipit faucibus and duis pharetra bed name socios phasellus nunce accumsan lectus morbi ridiculus. He beginning it bee won't they are shall life</p>
+                                            <p>No prior AI experience is required. Our programs are designed for educators at all levels. Basic computer literacy and a passion for enhancing teaching methods are the only prerequisites. We provide comprehensive training starting from fundamentals.</p>
                                             </div>
                                         </div>
                                         </div>
@@ -453,13 +438,13 @@
                                         <div class="tp-accordion-item mb-20">
                                         <h2 class="tp-accordion-header">
                                             <button class="tp-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                                How do we start working together?
+                                                How long does it take to complete the training?
                                                 <span><i class="far fa-arrow-down"></i></span>
                                             </button>
                                         </h2>
                                         <div id="collapseTwo" class="tp-accordion-collapse collapse" data-bs-parent="#accordionExample">
                                             <div class="tp-accordion-body">
-                                                <p>Leo site ultrices donec a volutpat penatibus mind suscipit faucibus and duis pharetra bed name socios phasellus nunce accumsan lectus morbi ridiculus. He beginning it bee won't they are shall life</p>
+                                                <p>The basic training program takes 8-12 weeks, while advanced programs can take 16-20 weeks. We offer flexible learning schedules to accommodate working educators. The school package includes customized timelines based on your institution's needs.</p>
                                             </div>
                                         </div>
                                         </div>
@@ -467,13 +452,13 @@
                                         <div class="tp-accordion-item">
                                         <h2 class="accordion-header">
                                             <button class="tp-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                                What are your cancellation policies?
+                                                What kind of support is provided after training?
                                                 <span><i class="far fa-arrow-down"></i></span>
                                             </button>
                                         </h2>
                                         <div id="collapseThree" class="tp-accordion-collapse collapse" data-bs-parent="#accordionExample">
                                             <div class="tp-accordion-body">
-                                                <p>Leo site ultrices donec a volutpat penatibus mind suscipit faucibus and duis pharetra bed name socios phasellus nunce accumsan lectus morbi ridiculus. He beginning it bee won't they are shall life</p>
+                                                <p>We provide ongoing support through our mentorship network, AI learning hubs, and dedicated support team. You'll have access to resources, regular check-ins, and a community of educators for collaboration and problem-solving.</p>
                                             </div>
                                         </div>
                                         </div>
@@ -491,71 +476,7 @@
                     </div>
                 </div>
 
-                <section class="tp-testimonial-area pt-130 pb-130">
-                    <div class="container">
-                        <div class="tp-section-title-wrapper mb-50 text-center">
-                            <h2 class="tp-section-title mb-20">Client feedback</h2>
-                            <p>Per ipsum ultrices sollicitudin iaculis platea facilisi semper aliquam up <br> senectus cursus vivamus volutpat penatibus</p>
-                        </div>
-                        <div class="tp-testimonial-wrapper text-center p-relative">
-                            <div class="tp-testimonial-shape">
-                                <img src="assets/img/shape/quote-testimonial.png" alt="">
-                            </div>
-                            <div class="tp-testimonial-shape-thumb-1 p-absolute d-none d-xl-block">
-                                <img src="assets/img/testimonial/thumb-2.jpg" alt="">
-                            </div>
-                            <div class="tp-testimonial-shape-thumb-2 p-absolute d-none d-xl-block">
-                                <img src="assets/img/testimonial/thumb-1.jpg" alt="">
-                            </div>
 
-                            <div class="swiper tp-testimonial-active">
-                                <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <div class="tp-testimonial-item">
-                                        <h3 class="tp-testimonial-desc"> Bed hicula tellu curae <br>
-                                            massa acinia ristie more acu
-                                            curabitur diam aliquet vehicula
-                                            ridiculus convallis </h3>
-                                        <div class="tp-testimonial-author mt-60">
-                                            <h4 class="tp-testimonial-name">Cynthia A. Keely</h4>
-                                            <span class="tp-testimonial-desig"> <span></span> CEO of lollipop</span>
-                                        </div>    
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="tp-testimonial-item">
-                                        <h3 class="tp-testimonial-desc"> Bed hicula tellu curae <br>
-                                            massa acinia ristie more acu
-                                            curabitur diam aliquet vehicula
-                                            ridiculus convallis </h3>
-                                        <div class="tp-testimonial-author mt-60">
-                                            <h4 class="tp-testimonial-name">Cynthia A. Keely</h4>
-                                            <span class="tp-testimonial-desig"> <span></span> CEO of lollipop</span>
-                                        </div>    
-                                    </div>
-                                </div>
-                                <div class="swiper-slide">
-                                    <div class="tp-testimonial-item">
-                                        <h3 class="tp-testimonial-desc"> Bed hicula tellu curae <br>
-                                            massa acinia ristie more acu
-                                            curabitur diam aliquet vehicula
-                                            ridiculus convallis </h3>
-                                        <div class="tp-testimonial-author mt-60">
-                                            <h4 class="tp-testimonial-name">Cynthia A. Keely</h4>
-                                            <span class="tp-testimonial-desig"> <span></span> CEO of lollipop</span>
-                                        </div>    
-                                    </div>
-                                </div>
-                                </div>
-                            </div>
-
-                            <div class="tp-test-slider-arrow">
-                                <div class="tp-swiper-test-button-prev tp-swiper-test-button tp-rot-180"><i class="flaticon-right-arrow"></i></div>
-                                <div class="tp-swiper-test-button-next tp-swiper-test-button"><i class="flaticon-right-arrow"></i></div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
 
             </main>
 

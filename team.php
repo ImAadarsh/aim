@@ -1,21 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Mission AIM</title>
-
-        <link rel="icon" type="image/x-icon" href="assets/img/logo/favicon.png">
-
-        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-        <link rel="stylesheet" href="assets/css/fontawesome-pro.min.css">
-        <link rel="stylesheet" href="assets/css/flaticon-exdos.css">
-        <link rel="stylesheet" href="assets/css/magnific-popup.css">
-        <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
-        <link rel="stylesheet" href="assets/css/style.css">
-
-    </head>
+<?php include 'include/head.php'; ?>
 
     <body>
         
@@ -72,12 +57,12 @@
                                             <a href="team-details.php"><img src="assets/img/team/team-01.jpg" alt=""></a>
                                         </div>
                                         <div class="tpteam__info mt-30 ml-80">
-                                            <h3 class="tpteam__title"><a href="team-details.php">Bonnie Z. Brown</a></h3>
-                                            <span class="ml-45"><i></i>Senior Designer</span>
+                                            <h3 class="tpteam__title"><a href="team-details.php">Dr. Rajesh Kumar</a></h3>
+                                            <span class="ml-45"><i></i>AI Education Director</span>
                                             <div class="tpteam__social mt-20">
-                                                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                                <a href="#"><i class="fab fa-twitter"></i></a>
                                                 <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                                <a href="#"><i class="fab fa-github"></i></a>
                                             </div>
                                         </div>
                                     </div>
@@ -88,12 +73,12 @@
                                             <a href="team-details.php"><img src="assets/img/team/team-02.jpg" alt=""></a>
                                         </div>
                                         <div class="tpteam__info mt-30 ml-80">
-                                            <h3 class="tpteam__title"><a href="team-details.php">Cynthia A. Keely</a></h3>
-                                            <span class="ml-45"><i></i>Senior Designer</span>
+                                            <h3 class="tpteam__title"><a href="team-details.php">Dr. Priya Sharma</a></h3>
+                                            <span class="ml-45"><i></i>Curriculum Development Lead</span>
                                             <div class="tpteam__social mt-20">
-                                                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                                <a href="#"><i class="fab fa-twitter"></i></a>
                                                 <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                                <a href="#"><i class="fab fa-github"></i></a>
                                             </div>
                                         </div>
                                     </div>
@@ -104,12 +89,12 @@
                                             <a href="team-details.php"><img src="assets/img/team/team-03.jpg" alt=""></a>
                                         </div>
                                         <div class="tpteam__info mt-30 ml-80">
-                                            <h3 class="tpteam__title"><a href="team-details.php">Donald D. Lowel</a></h3>
-                                            <span class="ml-45"><i></i>Senior Designer</span>
+                                            <h3 class="tpteam__title"><a href="team-details.php">Amit Patel</a></h3>
+                                            <span class="ml-45"><i></i>AI Training Specialist</span>
                                             <div class="tpteam__social mt-20">
-                                                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                                <a href="#"><i class="fab fa-twitter"></i></a>
                                                 <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                                <a href="#"><i class="fab fa-github"></i></a>
                                             </div>
                                         </div>
                                     </div>
@@ -120,12 +105,12 @@
                                             <a href="team-details.php"><img src="assets/img/team/team-04.jpg" alt=""></a>
                                         </div>
                                         <div class="tpteam__info mt-30 ml-80">
-                                            <h3 class="tpteam__title"><a href="team-details.php">Maria A. Murray</a></h3>
-                                            <span class="ml-45"><i></i>Senior Designer</span>
+                                            <h3 class="tpteam__title"><a href="team-details.php">Dr. Meera Singh</a></h3>
+                                            <span class="ml-45"><i></i>Research & Innovation Lead</span>
                                             <div class="tpteam__social mt-20">
-                                                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                                <a href="#"><i class="fab fa-twitter"></i></a>
                                                 <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                                <a href="#"><i class="fab fa-github"></i></a>
                                             </div>
                                         </div>
                                     </div>
@@ -136,12 +121,12 @@
                                             <a href="team-details.php"><img src="assets/img/team/team-05.jpg" alt=""></a>
                                         </div>
                                         <div class="tpteam__info mt-30 ml-80">
-                                            <h3 class="tpteam__title"><a href="#">Kendra R. Macoy</a></h3>
-                                            <span class="ml-45"><i></i>Senior Designer</span>
+                                            <h3 class="tpteam__title"><a href="team-details.php">Sneha Reddy</a></h3>
+                                            <span class="ml-45"><i></i>Teacher Support Coordinator</span>
                                             <div class="tpteam__social mt-20">
-                                                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                                <a href="#"><i class="fab fa-twitter"></i></a>
                                                 <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                                <a href="#"><i class="fab fa-github"></i></a>
                                             </div>
                                         </div>
                                     </div>
@@ -152,12 +137,12 @@
                                             <a href="team-details.php"><img src="assets/img/team/team-06.jpg" alt=""></a>
                                         </div>
                                         <div class="tpteam__info mt-30 ml-80">
-                                            <h3 class="tpteam__title"><a href="team-details.php">Kellee R. Cherry</a></h3>
-                                            <span class="ml-45"><i></i>Senior Designer</span>
+                                            <h3 class="tpteam__title"><a href="team-details.php">Vikram Malhotra</a></h3>
+                                            <span class="ml-45"><i></i>Technical Training Lead</span>
                                             <div class="tpteam__social mt-20">
-                                                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                                <a href="#"><i class="fab fa-twitter"></i></a>
                                                 <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                                <a href="#"><i class="fab fa-github"></i></a>
                                             </div>
                                         </div>
                                     </div>
@@ -168,12 +153,12 @@
                                             <a href="team-details.php"><img src="assets/img/team/team-07.jpg" alt=""></a>
                                         </div>
                                         <div class="tpteam__info mt-30 ml-80">
-                                            <h3 class="tpteam__title"><a href="team-details.php">Gary D. Cannon</a></h3>
-                                            <span class="ml-45"><i></i>Senior Designer</span>
+                                            <h3 class="tpteam__title"><a href="team-details.php">Ananya Gupta</a></h3>
+                                            <span class="ml-45"><i></i>Educational Technology Expert</span>
                                             <div class="tpteam__social mt-20">
-                                                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                                <a href="#"><i class="fab fa-twitter"></i></a>
                                                 <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                                <a href="#"><i class="fab fa-github"></i></a>
                                             </div>
                                         </div>
                                     </div>
@@ -184,12 +169,12 @@
                                             <a href="team-details.php"><img src="assets/img/team/team-08.jpg" alt=""></a>
                                         </div>
                                         <div class="tpteam__info mt-30 ml-80">
-                                            <h3 class="tpteam__title"><a href="team-details.php">Robert G. Jekins</a></h3>
-                                            <span class="ml-45"><i></i>Senior Designer</span>
+                                            <h3 class="tpteam__title"><a href="team-details.php">Dr. Rahul Verma</a></h3>
+                                            <span class="ml-45"><i></i>AI Ethics & Policy Advisor</span>
                                             <div class="tpteam__social mt-20">
-                                                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                                <a href="#"><i class="fab fa-twitter"></i></a>
                                                 <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                                                <a href="#"><i class="fab fa-twitter"></i></a>
+                                                <a href="#"><i class="fab fa-github"></i></a>
                                             </div>
                                         </div>
                                     </div>
@@ -207,9 +192,9 @@
                                         <div class="tp-exp-wrapper">
                                             <div class="tp-exp-bg"></div>
                                             <div class="tp-exp d-flex align-items-center">
-                                                <h2 class="mb-0 mr-20">25</h2>
-                                                <h5 class="tp-fs-30 m-0">Years of <br>
-                                                    experience </h5>
+                                                <h2 class="mb-0 mr-20">30K+</h2>
+                                                <h5 class="tp-fs-30 m-0">Teachers <br>
+                                                    Trained </h5>
                                             </div>
                                         </div>
                                     </div>
@@ -217,24 +202,23 @@
                                 <div class="col-lg-6">
                                     <div class="tp-about-skill-box pl-80">
                                         <div class="tp-section-title-wrapper mb-33 ">
-                                            <h2 class="tp-section-title mb-20">Better communication 
-                                                for best design</h2>
-                                            <p>Lobortis netus dis neque congue, habitasse orciad suscipit ultricies dignissim nunc dictumst lobortis penatibus varius</p>
+                                            <h2 class="tp-section-title mb-20">Our Expertise in AI Education</h2>
+                                            <p>With a team of experienced educators and AI specialists, we're committed to transforming teaching through innovative technology and personalized learning approaches.</p>
                                         </div>
                                         <div class="tp-skill-bar">
                                             <div class="tp-skill-item mb-25">
-                                                <label>Concept</label>
+                                                <label>AI Integration</label>
                                                 <div class="progress-outer">
-                                                    <span class="progress-num" style="left:calc(80% - 31px)">8%</span>
+                                                    <span class="progress-num" style="left:calc(95% - 31px)">95%</span>
                                                     <div class="fix">
                                                         <div class="progress wow tpSkillInLeft " data-wow-duration="1s" data-wow-delay="0.2s" role="progressbar" aria-label="Example with label" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                                            <div class="progress-bar" style="width: 80%"></div>
+                                                            <div class="progress-bar" style="width: 95%"></div>
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
                                             <div class="tp-skill-item mb-25">
-                                                <label>Research</label>
+                                                <label>Teacher Training</label>
                                                 <div class="progress-outer">
                                                     <span class="progress-num" style="left:calc(90% - 31px)">90%</span>
                                                     <div class="fix">
@@ -245,7 +229,7 @@
                                                 </div>
                                             </div>
                                             <div class="tp-skill-item mb-25">
-                                                <label>Development</label>
+                                                <label>Curriculum Development</label>
                                                 <div class="progress-outer">
                                                     <span class="progress-num" style="left:calc(85% - 31px)">85%</span>
                                                     <div class="fix">
@@ -255,54 +239,57 @@
                                                     </div>
                                                 </div>
                                             </div>
-
                                         </div>
-                                        
                                     </div>
-
                                 </div>
                             </div>
                         </div>
                     </section>
 
-                    <div class="tp-contact-form-area  pt-130 pb-130">
+                    <div class="tp-contact-form-area pt-130 pb-130">
                         <div class="container">
                             <div class="row">
                                 <div class="col-xl-5">
                                     <div class="tp-section-title-wrapper mb-50 wow img-custom-anim-top" data-wow-duration="1s" data-wow-delay=".2s">
-                                        <h2 class="tp-section-title mb-20 fs-100">Join our
-                                            team</h2>
+                                        <h2 class="tp-section-title mb-20 fs-100">Join Our Mission</h2>
                                     </div>
                                 </div>
                                 <div class="col-xl-7">
                                     <div class="contact-form-wrapper">
-                                        <h3 class="tpform-title mb-25">Get in touch</h3>
+                                        <h3 class="tpform-title mb-25">Become an AI Education Specialist</h3>
                                     </div>
                                     <div class="contact-form-box">
-                                        <form action="#">
+                                        <form id="contact-form" action="assets/mail.php" method="post">
                                             <div class="row">
                                                 <div class="col-md-12 mb-30">
-                                                    <input type="text" placeholder="Full Name*">
+                                                    <input name="name" type="text" placeholder="Full Name*">
                                                 </div>
                                                 <div class="col-md-6 mb-30">
-                                                    <input type="email" placeholder="Email Here*">
+                                                    <input name="email" type="email" placeholder="Email Address*">
                                                 </div>
                                                 <div class="col-md-6 mb-30">
-                                                    <input type="email" placeholder="subject *">
+                                                    <select name="position" class="form-select">
+                                                        <option value="">Select Position*</option>
+                                                        <option value="trainer">AI Trainer</option>
+                                                        <option value="developer">Curriculum Developer</option>
+                                                        <option value="support">Teacher Support</option>
+                                                        <option value="other">Other</option>
+                                                    </select>
                                                 </div>
                                                 <div class="col-md-12 mb-45">
-                                                    <textarea name="message"  cols="30" rows="10" placeholder="write note*"></textarea>
+                                                    <textarea name="message" cols="30" rows="10" placeholder="Tell us about your experience and why you'd like to join our team*"></textarea>
                                                 </div>
                                                 <div class="col-12">
                                                     <button type="submit" class="tp-btn">
                                                         <span class="tp-btn-wrap">
-                                                            <span class="tp-btn-y-1">Send message</span>
-                                                            <span class="tp-btn-y-2">Send message</span>
+                                                            <span class="tp-btn-y-1">Submit Application</span>
+                                                            <span class="tp-btn-y-2">Submit Application</span>
                                                         </span>  
                                                         <i></i>
                                                     </button>
                                                 </div>
                                             </div>
+                                            <p class="ajax-response"></p>
                                         </form>
                                     </div>
                                 </div>

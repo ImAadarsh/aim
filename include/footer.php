@@ -80,7 +80,7 @@
                             <div class="row align-items-center">
                                 <div class="col-xl-4 col-lg-12 ">
                                     <div class="tp-footer-copyright mb-30 text-lg-start">
-                                        <p>© 2024 Mission AIM. All Rights Reserved.</p>
+                                        <p>© 2025 Mission AIM. All Rights Reserved.</p>
                                     </div>
                                 </div>
                                 <div class="col-xl-4 col-lg-4 col-md-4">

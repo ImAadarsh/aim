@@ -1,20 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mission AIM</title>
-
-    <link rel="icon" type="image/x-icon" href="assets/img/logo/favicon.png">
-
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/fontawesome-pro.min.css">
-    <link rel="stylesheet" href="assets/css/flaticon-exdos.css">
-    <link rel="stylesheet" href="assets/css/magnific-popup.css">
-    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
-    <link rel="stylesheet" href="assets/css/animate.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-</head>
+<?php include 'include/head.php'; ?>
 <body>
     
 
@@ -51,11 +37,11 @@
                     </div>
                     <div class="container">
                         <div class="tp-breadcrumb text-center position-relative z-index-2">
-                            <h1 class="tp-breadcrumb-title tp-upper tp-text-white">our service</h1>
+                            <h1 class="tp-breadcrumb-title tp-upper tp-text-white">Our Programs</h1>
                             <div class="tp-breadcrumb-list">
                                 <span class="active"><a href="#">Home</a></span>
                                 <span class="dvir">-</span>
-                                <span><a href="#">our service</a></span>
+                                <span><a href="#">Our Programs</a></span>
                             </div>
                         </div>
                     </div>
@@ -65,8 +51,8 @@
                 <section class="tp-services-area pt-130 pb-130" >
                     <div class="container">
                         <div class="tp-section-title-wrapper mb-50 text-center">
-                            <h2 class="tp-section-title mb-20">What we offer</h2>
-                            <p>Per ipsum ultrices sollicitudin iaculis platea facilisi semper aliquam up <br> senectus cursus vivamus volutpat penatibus</p>
+                            <h2 class="tp-section-title mb-20">Transform Your Teaching with AI</h2>
+                            <p>Empowering educators with cutting-edge AI tools and training to enhance student learning <br> and create personalized educational experiences</p>
                         </div>
                         <div class="row justify-content-center g-0">
                             <div class="col-xl-3 col-lg-6 col-md-6">
@@ -75,19 +61,19 @@
                                         <span><i class="flaticon-concentration"></i></span>
                                     </div>
                                     <div class="tpservices__text ">
-                                        <h3 class="tpservices__title mb-15"><a href="services-details.php">Visual identity</a></h3>
-                                        <p>Perfs ipsum ultrices sollicitudin iaculis platea facilisi</p>
+                                        <h3 class="tpservices__title mb-15"><a href="services-details.php">AI Skills Training</a></h3>
+                                        <p>Comprehensive training in AI fundamentals and classroom applications</p>
                                         <div class="tpservices__list">
                                             <ul>
-                                                <li>Branding Design</li>
-                                                <li>Research & Testing </li>
-                                                <li>Interion Design</li>
-                                                <li>Content Writing</li>
+                                                <li>AI Fundamentals</li>
+                                                <li>Tool Integration</li>
+                                                <li>Practical Applications</li>
+                                                <li>Best Practices</li>
                                             </ul>
                                         </div>
                                     </div>
                                     <div class="tpservices__btn mt-30">
-                                        <a href="services-details.php" class="tp-sv-btn br-5">Read More <i class="far fa-arrow-right"></i></a>
+                                        <a href="services-details.php" class="tp-sv-btn br-5">Learn More <i class="far fa-arrow-right"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -97,19 +83,19 @@
                                         <span><i class="flaticon-sharing"></i></span>
                                     </div>
                                     <div class="tpservices__text ">
-                                        <h3 class="tpservices__title mb-15"><a href="services-details.php">Branding design</a></h3>
-                                        <p>Perfs ipsum ultrices sollicitudin iaculis platea facilisi</p>
+                                        <h3 class="tpservices__title mb-15"><a href="services-details.php">Mentorship Program</a></h3>
+                                        <p>Personalized guidance from experienced AI educators</p>
                                         <div class="tpservices__list">
                                             <ul>
-                                                <li>Branding Design</li>
-                                                <li>Research & Testing </li>
-                                                <li>Interion Design</li>
-                                                <li>Content Writing</li>
+                                                <li>One-on-One Mentoring</li>
+                                                <li>Peer Learning</li>
+                                                <li>Expert Guidance</li>
+                                                <li>Continuous Support</li>
                                             </ul>
                                         </div>
                                     </div>
                                     <div class="tpservices__btn mt-30">
-                                        <a href="services-details.php" class="tp-sv-btn br-5">Read More <i class="far fa-arrow-right"></i></a>
+                                        <a href="services-details.php" class="tp-sv-btn br-5">Learn More <i class="far fa-arrow-right"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -119,19 +105,19 @@
                                         <span><i class="flaticon-cooperation"></i></span>
                                     </div>
                                     <div class="tpservices__text ">
-                                        <h3 class="tpservices__title mb-15"><a href="services-details.php">Creative solution</a></h3>
-                                        <p>Perfs ipsum ultrices sollicitudin iaculis platea facilisi</p>
+                                        <h3 class="tpservices__title mb-15"><a href="services-details.php">Resource Development</a></h3>
+                                        <p>Customized AI tools and resources for your classroom</p>
                                         <div class="tpservices__list">
                                             <ul>
-                                                <li>Branding Design</li>
-                                                <li>Research & Testing </li>
-                                                <li>Interion Design</li>
-                                                <li>Content Writing</li>
+                                                <li>AI Toolkits</li>
+                                                <li>Learning Units</li>
+                                                <li>Assessment Tools</li>
+                                                <li>Teaching Resources</li>
                                             </ul>
                                         </div>
                                     </div>
                                     <div class="tpservices__btn mt-30">
-                                        <a href="services-details.php" class="tp-sv-btn br-5">Read More <i class="far fa-arrow-right"></i></a>
+                                        <a href="services-details.php" class="tp-sv-btn br-5">Learn More <i class="far fa-arrow-right"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -141,19 +127,19 @@
                                         <span><i class="flaticon-connections"></i></span>
                                     </div>
                                     <div class="tpservices__text ">
-                                        <h3 class="tpservices__title mb-15"><a href="services-details.php">Content writing</a></h3>
-                                        <p>Perfs ipsum ultrices sollicitudin iaculis platea facilisi</p>
+                                        <h3 class="tpservices__title mb-15"><a href="services-details.php">School Integration</a></h3>
+                                        <p>Complete AI implementation for educational institutions</p>
                                         <div class="tpservices__list">
                                             <ul>
-                                                <li>Branding Design</li>
-                                                <li>Research & Testing </li>
-                                                <li>Interion Design</li>
-                                                <li>Content Writing</li>
+                                                <li>School-wide Training</li>
+                                                <li>Infrastructure Setup</li>
+                                                <li>Policy Development</li>
+                                                <li>Ongoing Support</li>
                                             </ul>
                                         </div>
                                     </div>
                                     <div class="tpservices__btn mt-30">
-                                        <a href="services-details.php" class="tp-sv-btn br-5">Read More <i class="far fa-arrow-right"></i></a>
+                                        <a href="services-details.php" class="tp-sv-btn br-5">Learn More <i class="far fa-arrow-right"></i></a>
                                     </div>
                                 </div>
                             </div>
@@ -170,9 +156,9 @@
                                     <div class="tp-exp-wrapper">
                                         <div class="tp-exp-bg"></div>
                                         <div class="tp-exp d-flex align-items-center">
-                                            <h2 class="mb-0 mr-20">25</h2>
-                                            <h5 class="tp-fs-30 m-0">Years of <br>
-                                                experience </h5>
+                                            <h2 class="mb-0 mr-20">30K+</h2>
+                                            <h5 class="tp-fs-30 m-0">Teachers <br>
+                                                Trained </h5>
                                         </div>
                                     </div>
                                 </div>
@@ -180,24 +166,23 @@
                             <div class="col-lg-6">
                                 <div class="tp-about-skill-box pl-80">
                                     <div class="tp-section-title-wrapper mb-33 ">
-                                        <h2 class="tp-section-title mb-20">Better communication 
-                                            for best design</h2>
-                                        <p>Lobortis netus dis neque congue, habitasse orciad suscipit ultricies dignissim nunc dictumst lobortis penatibus varius</p>
+                                        <h2 class="tp-section-title mb-20">Our Impact in Numbers</h2>
+                                        <p>Join our growing community of educators who are transforming their classrooms with AI-powered teaching methods</p>
                                     </div>
                                     <div class="tp-skill-bar">
                                         <div class="tp-skill-item mb-25">
-                                            <label>Concept</label>
+                                            <label>Teacher Satisfaction</label>
                                             <div class="progress-outer">
-                                                <span class="progress-num" style="left:calc(80% - 31px)">8%</span>
+                                                <span class="progress-num" style="left:calc(95% - 31px)">95%</span>
                                                 <div class="fix">
                                                     <div class="progress wow tpSkillInLeft " data-wow-duration="1s" data-wow-delay="0.2s" role="progressbar" aria-label="Example with label" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100">
-                                                        <div class="progress-bar" style="width: 80%"></div>
+                                                        <div class="progress-bar" style="width: 95%"></div>
                                                     </div>
                                                 </div>
                                             </div>
                                         </div>
                                         <div class="tp-skill-item mb-25">
-                                            <label>Research</label>
+                                            <label>Student Engagement</label>
                                             <div class="progress-outer">
                                                 <span class="progress-num" style="left:calc(90% - 31px)">90%</span>
                                                 <div class="fix">
@@ -208,7 +193,7 @@
                                             </div>
                                         </div>
                                         <div class="tp-skill-item mb-25">
-                                            <label>Development</label>
+                                            <label>Learning Outcomes</label>
                                             <div class="progress-outer">
                                                 <span class="progress-num" style="left:calc(85% - 31px)">85%</span>
                                                 <div class="fix">
@@ -218,11 +203,8 @@
                                                 </div>
                                             </div>
                                         </div>
-
                                     </div>
-                                    
                                 </div>
-
                             </div>
                         </div>
                     </div>
@@ -239,8 +221,8 @@
                                                 <span><i class="flaticon-merging"></i></span>
                                             </div>
                                             <div class="tpfact__text">
-                                                <h4 class="tpfact__title mb-30">Project completed</h4>
-                                                <span>796</span>
+                                                <h4 class="tpfact__title mb-30">Teachers Trained</h4>
+                                                <span>30K+</span>
                                             </div>
                                         </div>
                                     </div>
@@ -250,8 +232,8 @@
                                                 <span><i class="flaticon-merging"></i></span>
                                             </div>
                                             <div class="tpfact__text">
-                                                <h4 class="tpfact__title mb-30">Satisfied clients</h4>
-                                                <span>2k+</span>
+                                                <h4 class="tpfact__title mb-30">Schools Impacted</h4>
+                                                <span>10K+</span>
                                             </div>
                                         </div>
                                     </div>
@@ -261,8 +243,8 @@
                                                 <span><i class="flaticon-merging"></i></span>
                                             </div>
                                             <div class="tpfact__text">
-                                                <h4 class="tpfact__title mb-30">Honorable award</h4>
-                                                <span>132</span>
+                                                <h4 class="tpfact__title mb-30">Success Rate</h4>
+                                                <span>95%</span>
                                             </div>
                                         </div>
                                     </div>
@@ -272,8 +254,8 @@
                                                 <span><i class="flaticon-merging"></i></span>
                                             </div>
                                             <div class="tpfact__text">
-                                                <h4 class="tpfact__title mb-30">Running Project</h4>
-                                                <span>218</span>
+                                                <h4 class="tpfact__title mb-30">Active Programs</h4>
+                                                <span>50+</span>
                                             </div>
                                         </div>
                                     </div>
@@ -284,7 +266,6 @@
                                     <img src="assets/img/fact/fact-1.jpg" alt="">
                                 </div>
                             </div>
-
                         </div>
                     </div>
                 </div>
@@ -294,8 +275,8 @@
                         <div class="row">
                             <div class="col-12">
                                 <div class="tp-section-title-wrapper mb-50 text-center">
-                                    <h2 class="tp-section-title mb-20">Recent articles </h2>
-                                    <p>Per ipsum ultrices sollicitudin iaculis platea facilisi semper aliquam up <br> senectus cursus vivamus volutpat penatibus</p>
+                                    <h2 class="tp-section-title mb-20">Latest Insights</h2>
+                                    <p>Stay updated with the latest trends and success stories in AI education <br> and teacher training</p>
                                 </div>
                             </div>
                         </div>
@@ -309,12 +290,10 @@
                                         <div class="tpblog__meta mb-15">
                                             <span><a href="#"><i class="fal fa-calendar-alt"></i> 20 Sep. 2023</a></span>
                                             <cite></cite>
-                                            <span><a href="#"><i class="fal fa-certificate"></i> Creative</a></span>
+                                            <span><a href="#"><i class="fal fa-certificate"></i> AI Education</a></span>
                                         </div>
                                         <h3 class="tpblog__title mb-25">
-                                            <a href="blog-details.php">Potent be interdum ipsum
-                                                pellentes code primis laoreet
-                                                diam per established</a>
+                                            <a href="blog-details.php">Transforming Classroom Learning with AI: Success Stories from South Asia</a>
                                         </h3>
                                         <div class="tpblog__btn">
                                             <a class="tp-text-btn" href="blog-details.php">Read More <i class="far fa-arrow-right"></i></a>
@@ -331,12 +310,10 @@
                                         <div class="tpblog__meta mb-15">
                                             <span><a href="#"><i class="fal fa-calendar-alt"></i> 20 Sep. 2023</a></span>
                                             <cite></cite>
-                                            <span><a href="#"><i class="fal fa-certificate"></i> Creative</a></span>
+                                            <span><a href="#"><i class="fal fa-certificate"></i> Teacher Training</a></span>
                                         </div>
                                         <h3 class="tpblog__title mb-25">
-                                            <a href="blog-details.php">Leos placerat sagittis vitae
-                                                quisque scelerisque sociosqu
-                                                bulputate natoque</a>
+                                            <a href="blog-details.php">Empowering Teachers: The Impact of AI Training on Student Success</a>
                                         </h3>
                                         <div class="tpblog__btn">
                                             <a class="tp-text-btn" href="blog-details.php">Read More <i class="far fa-arrow-right"></i></a>
@@ -353,12 +330,10 @@
                                         <div class="tpblog__meta mb-15">
                                             <span><a href="#"><i class="fal fa-calendar-alt"></i> 20 Sep. 2023</a></span>
                                             <cite></cite>
-                                            <span><a href="#"><i class="fal fa-certificate"></i> Creative</a></span>
+                                            <span><a href="#"><i class="fal fa-certificate"></i> Innovation</a></span>
                                         </div>
                                         <h3 class="tpblog__title mb-25">
-                                            <a href="blog-details.php">Metus fames dictum curae
-                                                tempus over parturient tempor
-                                                cubilia venenatis.</a>
+                                            <a href="blog-details.php">The Future of Education: How AI is Reshaping Learning in South Asia</a>
                                         </h3>
                                         <div class="tpblog__btn">
                                             <a class="tp-text-btn" href="blog-details.php">Read More <i class="far fa-arrow-right"></i></a>

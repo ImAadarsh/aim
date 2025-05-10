@@ -1,19 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mission AIM</title>
-
-    <link rel="icon" type="image/x-icon" href="assets/img/logo/favicon.png">
-
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    <link rel="stylesheet" href="assets/css/fontawesome-pro.min.css">
-    <link rel="stylesheet" href="assets/css/flaticon-exdos.css">
-    <link rel="stylesheet" href="assets/css/magnific-popup.css">
-    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
-    <link rel="stylesheet" href="assets/css/style.css">
-</head>
+<?php include 'include/head.php'; ?>
 <body>
     
     <!-- scroll to top  -->
@@ -67,103 +54,106 @@
                             <div class="col-xl-8">
                                 <div class="tp-faq-page">
                                     <div class="tp-section-title-wrapper mb-50">
-                                        <h2 class="tp-section-title mb-20">General Questions</h2>
-                                        <p>Malesuada eleifend faucibus ridiculus vivamus fringilla ultrices sed est fames dui facilisis vivamus donec nonad habitasse nostra ornare purus dapibus tristique nisie eget dictum</p>
+                                        <h2 class="tp-section-title mb-20">Frequently Asked Questions</h2>
+                                        <p>Find answers to common questions about our AI training programs, certification process, and how we can help you transform your teaching with artificial intelligence.</p>
                                     </div>
                                     <div class="accordion" id="accordionExample">
                                         <div class="tp-accordion-item mb-20">
-                                        <h2 class="accordion-header">
-                                            <button class="tp-accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                                How do you collaborate with developers?
-                                                <span><i class="far fa-arrow-down"></i></span>
-                                            </button>
-                                        </h2>
-                                        <div id="collapseOne" class="tp-accordion-collapse collapse show" data-bs-parent="#accordionExample">
-                                            <div class="tp-accordion-body">
-                                            <p>Leo site ultrices donec a volutpat penatibus mind suscipit faucibus and duis pharetra bed name socios phasellus nunce accumsan lectus morbi ridiculus. He beginning it bee won't they are shall life</p>
+                                            <h2 class="accordion-header">
+                                                <button class="tp-accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                                    What are the prerequisites for joining the AI training program?
+                                                    <span><i class="far fa-arrow-down"></i></span>
+                                                </button>
+                                            </h2>
+                                            <div id="collapseOne" class="tp-accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                                                <div class="tp-accordion-body">
+                                                    <p>No prior AI experience is required! Our programs are designed for educators at all levels. Basic computer literacy and a passion for teaching are all you need to get started. We'll guide you through everything from AI fundamentals to advanced applications in your classroom.</p>
+                                                </div>
                                             </div>
-                                        </div>
                                         </div>
 
                                         <div class="tp-accordion-item mb-20">
-                                        <h2 class="tp-accordion-header">
-                                            <button class="tp-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                                How do we start working together?
-                                                <span><i class="far fa-arrow-down"></i></span>
-                                            </button>
-                                        </h2>
-                                        <div id="collapseTwo" class="tp-accordion-collapse collapse" data-bs-parent="#accordionExample">
-                                            <div class="tp-accordion-body">
-                                                <p>Leo site ultrices donec a volutpat penatibus mind suscipit faucibus and duis pharetra bed name socios phasellus nunce accumsan lectus morbi ridiculus. He beginning it bee won't they are shall life</p>
+                                            <h2 class="tp-accordion-header">
+                                                <button class="tp-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                                    How long does the training program take to complete?
+                                                    <span><i class="far fa-arrow-down"></i></span>
+                                                </button>
+                                            </h2>
+                                            <div id="collapseTwo" class="tp-accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                                <div class="tp-accordion-body">
+                                                    <p>The Basic AI Training program takes 8 weeks to complete, while the Advanced Training spans 12 weeks. The School Package duration varies based on your institution's needs. All programs include self-paced learning modules, live sessions, and hands-on practice opportunities.</p>
+                                                </div>
                                             </div>
-                                        </div>
                                         </div>
 
                                         <div class="tp-accordion-item mb-20">
-                                        <h2 class="accordion-header">
-                                            <button class="tp-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                                What are your cancellation policies?
-                                                <span><i class="far fa-arrow-down"></i></span>
-                                            </button>
-                                        </h2>
-                                        <div id="collapseThree" class="tp-accordion-collapse collapse" data-bs-parent="#accordionExample">
-                                            <div class="tp-accordion-body">
-                                                <p>Leo site ultrices donec a volutpat penatibus mind suscipit faucibus and duis pharetra bed name socios phasellus nunce accumsan lectus morbi ridiculus. He beginning it bee won't they are shall life</p>
+                                            <h2 class="accordion-header">
+                                                <button class="tp-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                                    What kind of support do you provide during and after training?
+                                                    <span><i class="far fa-arrow-down"></i></span>
+                                                </button>
+                                            </h2>
+                                            <div id="collapseThree" class="tp-accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                                <div class="tp-accordion-body">
+                                                    <p>We provide comprehensive support throughout your AI journey. This includes access to our expert mentors, a dedicated support team, online community forums, regular Q&A sessions, and ongoing professional development opportunities. After certification, you'll continue to have access to our resources and community.</p>
+                                                </div>
                                             </div>
-                                        </div>
                                         </div>
 
                                         <div class="tp-accordion-item mb-20">
-                                        <h2 class="accordion-header">
-                                            <button class="tp-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse7" aria-expanded="false" aria-controls="collapse7">
-                                                Do they have case studies or references?
-                                                <span><i class="far fa-arrow-down"></i></span>
-                                            </button>
-                                        </h2>
-                                        <div id="collapse7" class="tp-accordion-collapse collapse" data-bs-parent="#accordionExample">
-                                            <div class="tp-accordion-body">
-                                                <p>Leo site ultrices donec a volutpat penatibus mind suscipit faucibus and duis pharetra bed name socios phasellus nunce accumsan lectus morbi ridiculus. He beginning it bee won't they are shall life</p>
+                                            <h2 class="accordion-header">
+                                                <button class="tp-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse7" aria-expanded="false" aria-controls="collapse7">
+                                                    How can AI tools be integrated into my existing curriculum?
+                                                    <span><i class="far fa-arrow-down"></i></span>
+                                                </button>
+                                            </h2>
+                                            <div id="collapse7" class="tp-accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                                <div class="tp-accordion-body">
+                                                    <p>Our training includes practical modules on curriculum integration. You'll learn how to use AI tools for personalized learning, automated assessments, content creation, and student engagement. We provide subject-specific examples and templates that you can adapt to your teaching style and curriculum requirements.</p>
+                                                </div>
                                             </div>
                                         </div>
-                                        </div>
+
                                         <div class="tp-accordion-item mb-20">
-                                        <h2 class="accordion-header">
-                                            <button class="tp-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
-                                                What is the onboarding process like?
-                                                <span><i class="far fa-arrow-down"></i></span>
-                                            </button>
-                                        </h2>
-                                        <div id="collapse4" class="tp-accordion-collapse collapse" data-bs-parent="#accordionExample">
-                                            <div class="tp-accordion-body">
-                                                <p>Leo site ultrices donec a volutpat penatibus mind suscipit faucibus and duis pharetra bed name socios phasellus nunce accumsan lectus morbi ridiculus. He beginning it bee won't they are shall life</p>
+                                            <h2 class="accordion-header">
+                                                <button class="tp-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse4" aria-expanded="false" aria-controls="collapse4">
+                                                    What certification do I receive upon completion?
+                                                    <span><i class="far fa-arrow-down"></i></span>
+                                                </button>
+                                            </h2>
+                                            <div id="collapse4" class="tp-accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                                <div class="tp-accordion-body">
+                                                    <p>Upon successful completion, you'll receive a digital certificate recognizing your AI teaching competencies. The certification is recognized by educational institutions and includes digital badges that you can display on your professional profiles. Advanced training participants receive additional specialized certifications.</p>
+                                                </div>
                                             </div>
                                         </div>
-                                        </div>
+
                                         <div class="tp-accordion-item mb-20">
-                                        <h2 class="accordion-header">
-                                            <button class="tp-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
-                                                How long until completion of my project?
-                                                <span><i class="far fa-arrow-down"></i></span>
-                                            </button>
-                                        </h2>
-                                        <div id="collapse5" class="tp-accordion-collapse collapse" data-bs-parent="#accordionExample">
-                                            <div class="tp-accordion-body">
-                                                <p>Leo site ultrices donec a volutpat penatibus mind suscipit faucibus and duis pharetra bed name socios phasellus nunce accumsan lectus morbi ridiculus. He beginning it bee won't they are shall life</p>
+                                            <h2 class="accordion-header">
+                                                <button class="tp-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse5" aria-expanded="false" aria-controls="collapse5">
+                                                    How do you ensure the ethical use of AI in education?
+                                                    <span><i class="far fa-arrow-down"></i></span>
+                                                </button>
+                                            </h2>
+                                            <div id="collapse5" class="tp-accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                                <div class="tp-accordion-body">
+                                                    <p>Ethical AI use is a core component of our training. We cover important topics like data privacy, bias prevention, responsible AI implementation, and maintaining human connection in education. Our curriculum includes dedicated modules on ethical considerations and best practices for AI integration in classrooms.</p>
+                                                </div>
                                             </div>
                                         </div>
-                                        </div>
+
                                         <div class="tp-accordion-item mb-20">
-                                        <h2 class="accordion-header">
-                                            <button class="tp-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse6" aria-expanded="false" aria-controls="collapse6">
-                                                What will be expected of me as a client?
-                                                <span><i class="far fa-arrow-down"></i></span>
-                                            </button>
-                                        </h2>
-                                        <div id="collapse6" class="tp-accordion-collapse collapse" data-bs-parent="#accordionExample">
-                                            <div class="tp-accordion-body">
-                                                <p>Leo site ultrices donec a volutpat penatibus mind suscipit faucibus and duis pharetra bed name socios phasellus nunce accumsan lectus morbi ridiculus. He beginning it bee won't they are shall life</p>
+                                            <h2 class="accordion-header">
+                                                <button class="tp-accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse6" aria-expanded="false" aria-controls="collapse6">
+                                                    What resources and tools are included in the training?
+                                                    <span><i class="far fa-arrow-down"></i></span>
+                                                </button>
+                                            </h2>
+                                            <div id="collapse6" class="tp-accordion-collapse collapse" data-bs-parent="#accordionExample">
+                                                <div class="tp-accordion-body">
+                                                    <p>You'll receive access to our comprehensive learning platform, including video tutorials, interactive modules, practice exercises, and a curated toolkit of AI teaching resources. The program also includes access to premium AI tools, templates, and lesson plans that you can use in your classroom immediately.</p>
+                                                </div>
                                             </div>
-                                        </div>
                                         </div>
                                     </div>
                                 </div>
@@ -177,38 +167,45 @@
                         <div class="row">
                             <div class="col-xl-5">
                                 <div class="tp-section-title-wrapper mb-50 wow img-custom-anim-left" data-wow-duration="1s" data-wow-delay="0.2s">
-                                    <h2 class="tp-section-title mb-20 fs-100">Contact Us</h2>
+                                    <h2 class="tp-section-title mb-20 fs-100">Still Have Questions?</h2>
                                 </div>
                             </div>
                             <div class="col-xl-7">
                                 <div class="contact-form-wrapper">
-                                    <h3 class="tpform-title mb-25">Get in touch</h3>
+                                    <h3 class="tpform-title mb-25">Get in Touch</h3>
                                 </div>
                                 <div class="contact-form-box">
-                                    <form action="#">
+                                    <form id="contact-form" action="assets/mail.php" method="post">
                                         <div class="row">
                                             <div class="col-md-12 mb-30">
-                                                <input type="text" placeholder="Full Name*">
+                                                <input name="name" type="text" placeholder="Full Name*">
                                             </div>
                                             <div class="col-md-6 mb-30">
-                                                <input type="email" placeholder="Email Here*">
+                                                <input name="email" type="email" placeholder="Email Address*">
                                             </div>
                                             <div class="col-md-6 mb-30">
-                                                <input type="email" placeholder="subject *">
+                                                <select name="program" class="form-select">
+                                                    <option value="">Select Program*</option>
+                                                    <option value="basic">Basic AI Training</option>
+                                                    <option value="advanced">Advanced AI Training</option>
+                                                    <option value="school">School Package</option>
+                                                    <option value="other">Other</option>
+                                                </select>
                                             </div>
                                             <div class="col-md-12 mb-45">
-                                                <textarea name="message"  cols="30" rows="10" placeholder="write note*"></textarea>
+                                                <textarea name="message" cols="30" rows="10" placeholder="What would you like to know?*"></textarea>
                                             </div>
                                             <div class="col-12">
                                                 <button type="submit" class="tp-btn">
                                                     <span class="tp-btn-wrap">
-                                                        <span class="tp-btn-y-1">Send message</span>
-                                                        <span class="tp-btn-y-2">Send message</span>
+                                                        <span class="tp-btn-y-1">Send Question</span>
+                                                        <span class="tp-btn-y-2">Send Question</span>
                                                     </span>  
                                                     <i></i>
                                                 </button>
                                             </div>
                                         </div>
+                                        <p class="ajax-response"></p>
                                     </form>
                                 </div>
                             </div>

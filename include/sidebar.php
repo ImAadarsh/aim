@@ -33,14 +33,9 @@
                 </div>
                 <div class="tp-offcanvas-content mb-50 d-none d-xl-block">
                     <h2 class="tp-offcanvas-title">Hello There!</h2>
-                    <p>Lorem ipsum dolor sit amet, consect etur adipiscing elit. </p>
+                    <p>Empowering 1 Million Teachers with AI Excellence </p>
                 </div>
-                <div class="tp-offcanvas-gallery mb-50">
-                    <a class="popup-image" href="assets/img/project/showcase-thumb-01.jpg"><img src="assets/img/project/showcase-thumb-01.jpg" alt=""></a>
-                    <a class="popup-image" href="assets/img/project/showcase-thumb-02.jpg"><img src="assets/img/project/showcase-thumb-02.jpg" alt=""></a>
-                    <a class="popup-image" href="assets/img/project/showcase-thumb-03.jpg"><img src="assets/img/project/showcase-thumb-03.jpg" alt=""></a>
-                    <a class="popup-image" href="assets/img/project/showcase-thumb-04.jpg"><img src="assets/img/project/showcase-thumb-04.jpg" alt=""></a>
-                </div>
+
                 <div class="tp-offcanvas-info mb-50">
                     <h3 class="tp-offcanvas-sm-title">Information</h3>
                     <span><a href="tel:01234567">+91 769700123</a></span>

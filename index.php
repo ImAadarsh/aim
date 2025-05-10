@@ -1,20 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Mission AIM</title>
-
-        <link rel="icon" type="image/x-icon" href="assets/img/logo/favicon.png">
-
-        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-        <link rel="stylesheet" href="assets/css/fontawesome-pro.min.css">
-        <link rel="stylesheet" href="assets/css/flaticon-exdos.css">
-        <link rel="stylesheet" href="assets/css/magnific-popup.css">
-        <link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
-        <link href="https://cdn.jsdelivr.net/npm/jarallax@2/dist/jarallax.min.css" rel="stylesheet">
-        <link rel="stylesheet" href="assets/css/style.css">
-    </head>
+<?php include 'include/head.php'; ?>
 
     <body>
         
@@ -60,13 +46,11 @@
                                         </div>
                                         <div class="tp-hero tp-hero-black p-relative pt-40 z-index-11" data-speed=".9">
                                             <div class="mb-35 wow img-custom-anim-left" data-wow-duration="1.5s" data-wow-delay="0.6s">
-                                                <h1 class="tp-hero-title tp-hero-title-black">Demystifying <br>
-                                                    <img src="assets/img/shape/home-3-hero.png" alt=""> Digital agency <br> Excellence</h1>
+                                                <h1 class="tp-hero-title tp-hero-title-black">Empowering <br>
+                                                    <img src="assets/img/shape/home-3-hero.png" alt=""> 1 Million Teachers <br> with AI Excellence</h1>
                                             </div>
                                             <div class="tp-hero-black-content wow img-custom-anim-top" data-wow-duration="1.5s" data-wow-delay="0.8s">
-                                                <p>Life you under itself greater. Land the fill make so land. Waters
-                                                    fly beast and stars don't void first Creature midst itself let said 
-                                                    fowl man divide which called. Open.</p>
+                                                <p>Building on our legacy of impacting 30,000+ teachers and 10,000+ schools, we're scaling up to transform education through AI integration. Join us in shaping the future of teaching and learning.</p>
                                                 <a class="tp-text-btn" href="about.php">Read More <i class="far fa-arrow-right"></i></a>    
                                             </div>
                                         </div>
@@ -83,7 +67,7 @@
                                 <div class="col-xl-8 col-lg-12">
                                     <div class="tp-section-title-wrapper mb-40">
                                         <span class="tp-section-subtitle mb-10"><i class="sub-dot-color"></i> what we offer</span>
-                                        <h2 class="tp-section-title tp-upper tp_title_anim mb-20">Elevate Your Business <br> by our service</h2>
+                                        <h2 class="tp-section-title tp-upper tp_title_anim mb-20">Transform Your Teaching <br> with AI Integration</h2>
                                     </div>
                                     <div class="row g-0 mb-30">
                                         <div class="col-xl-6 col-lg-6 col-md-6">
@@ -95,8 +79,8 @@
                                                     </div>
                                                 </div>
                                                 <div class="tpservices__text ">
-                                                    <h3 class="tpservices__title mb-15"><a href="services-details.php">Visual identity</a></h3>
-                                                    <p>Perfs ipsum ultrices sollicitudin iaculis platea facilisi</p>
+                                                    <h3 class="tpservices__title mb-15"><a href="services-details.php">AI Skills Training</a></h3>
+                                                    <p>Live and recorded sessions led by global experts on AI fundamentals and classroom applications</p>
                                                     <div class="tpservices__icon_btn">
                                                         <a href="services-details.php"><i class="flaticon-next-button"></i></a>
                                                     </div>
@@ -112,8 +96,8 @@
                                                     </div>
                                                 </div>
                                                 <div class="tpservices__text ">
-                                                    <h3 class="tpservices__title mb-15"><a href="services-details.php">Visual identity</a></h3>
-                                                    <p>Perfs ipsum ultrices sollicitudin iaculis platea facilisi</p>
+                                                    <h3 class="tpservices__title mb-15"><a href="services-details.php">Capacity Building</a></h3>
+                                                    <p>Mentorship networks and AI learning hubs for collaborative experimentation</p>
                                                     <div class="tpservices__icon_btn">
                                                         <a href="services-details.php"><i class="flaticon-next-button"></i></a>
                                                     </div>
@@ -129,8 +113,8 @@
                                                     </div>
                                                 </div>
                                                 <div class="tpservices__text ">
-                                                    <h3 class="tpservices__title mb-15"><a href="services-details.php">Visual identity</a></h3>
-                                                    <p>Perfs ipsum ultrices sollicitudin iaculis platea facilisi</p>
+                                                    <h3 class="tpservices__title mb-15"><a href="services-details.php">Resource Development</a></h3>
+                                                    <p>Curated toolkits and customizable learning units for different subjects and contexts</p>
                                                     <div class="tpservices__icon_btn">
                                                         <a href="services-details.php"><i class="flaticon-next-button"></i></a>
                                                     </div>
@@ -146,8 +130,8 @@
                                                     </div>
                                                 </div>
                                                 <div class="tpservices__text ">
-                                                    <h3 class="tpservices__title mb-15"><a href="services-details.php">Visual identity</a></h3>
-                                                    <p>Perfs ipsum ultrices sollicitudin iaculis platea facilisi</p>
+                                                    <h3 class="tpservices__title mb-15"><a href="services-details.php">Certification & Recognition</a></h3>
+                                                    <p>Digital badges, certificates, and annual events to celebrate AI-empowered educators</p>
                                                     <div class="tpservices__icon_btn">
                                                         <a href="services-details.php"><i class="flaticon-next-button"></i></a>
                                                     </div>
@@ -180,22 +164,22 @@
                                 </div>
                                 <div class="col-xl-5 col-lg-6 col-md-12">
                                     <div class="tp-section-title-wrapper mb-40">
-                                        <span class="tp-section-subtitle mb-10"><i class="sub-dot-color"></i> our company</span>
-                                        <h2 class="tp-section-title tp-upper mb-20 wow img-custom-anim-top" data-wow-duration="1.5s" data-wow-delay="0.3s">Focus on work
-                                            Value People
-                                            over Pageviews</h2>
+                                        <span class="tp-section-subtitle mb-10"><i class="sub-dot-color"></i> our mission</span>
+                                        <h2 class="tp-section-title tp-upper mb-20 wow img-custom-anim-top" data-wow-duration="1.5s" data-wow-delay="0.3s">Empowering Educators
+                                            Transforming Classrooms
+                                            Building Future Leaders</h2>
                                     </div>
                                     <div class="tp-about-faq">
                                         <div class="accordion" id="accordionExample">
                                             <div class="tp-faq-item mb-20">
                                             <h2 class="tp-faq-header">
                                                 <button class="tp-faq-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                                                    Modern Technologies 
+                                                    Our Mission 
                                                 </button>
                                             </h2>
                                             <div id="collapseOne" class="tp-accordion-collapse collapse show" data-bs-parent="#accordionExample">
                                                 <div class="tp-faq-body">
-                                                <p>Leo site ultrices donec a volutpat penatibus mind suscipit faucibus and duis pharetra bed name socios phasellus nunce accumsan lectus morbi ridiculus. He beginning it bee won't they are shall life</p>
+                                                <p>Our mission is to empower 1 million educators across South Asia with AI competencies, enabling them to harness technology for personalized learning, administrative efficiency, and enhanced student engagement.</p>
                                                 </div>
                                             </div>
                                             </div>
@@ -203,12 +187,12 @@
                                             <div class="tp-faq-item mb-20">
                                             <h2 class="tp-faq-header">
                                                 <button class="tp-faq-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                                                    Friendly Support Team
+                                                    Our Vision
                                                 </button>
                                             </h2>
                                             <div id="collapseTwo" class="tp-faq-collapse collapse" data-bs-parent="#accordionExample">
                                                 <div class="tp-faq-body">
-                                                    <p>Leo site ultrices donec a volutpat penatibus mind suscipit faucibus and duis pharetra bed name socios phasellus nunce accumsan lectus morbi ridiculus. He beginning it bee won't they are shall life</p>
+                                                    <p>To be the most trusted and valued partner for progressive schools and teaching professionals by delivering world-class, AI-driven training and upskilling tools that foster innovative, ethical, and impactful teaching.</p>
                                                 </div>
                                             </div>
                                             </div>
@@ -216,12 +200,12 @@
                                             <div class="tp-faq-item mb-20">
                                             <h2 class="tp-faq-header">
                                                 <button class="tp-faq-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                                                    Pathways to Innovations 
+                                                    Our Objectives 
                                                 </button>
                                             </h2>
                                             <div id="collapseThree" class="tp-faq-collapse collapse" data-bs-parent="#accordionExample">
                                                 <div class="tp-faq-body">
-                                                    <p>Leo site ultrices donec a volutpat penatibus mind suscipit faucibus and duis pharetra bed name socios phasellus nunce accumsan lectus morbi ridiculus. He beginning it bee won't they are shall life</p>
+                                                    <p>Equip teachers with practical AI skills, facilitate AI tool adoption, foster collaborative networks, promote ethical AI use, and support continuous professional development through innovative learning formats.</p>
                                                 </div>
                                             </div>
                                             </div>
@@ -248,32 +232,32 @@
                                 <div class="swiper-wrapper tp-slide-transtion">
                                 <div class="swiper-slide tp-brand-slide-element">
                                     <div class="tp-brand-title">
-                                        <h3>Brand *</h3>
+                                        <h3>AI Training *</h3>
                                     </div>
                                 </div>
                                 <div class="swiper-slide tp-brand-slide-element">
                                     <div class="tp-brand-title">
-                                        <h3>marketing *</h3>
+                                        <h3>Education *</h3>
                                     </div>
                                 </div>
                                 <div class="swiper-slide tp-brand-slide-element">
                                     <div class="tp-brand-title">
-                                        <h3>design *</h3>
+                                        <h3>Innovation *</h3>
                                     </div>
                                 </div>
                                 <div class="swiper-slide tp-brand-slide-element">
                                     <div class="tp-brand-title">
-                                        <h3> solution *</h3>
+                                        <h3>Technology *</h3>
                                     </div>
                                 </div>
                                 <div class="swiper-slide tp-brand-slide-element">
                                     <div class="tp-brand-title">
-                                        <h3>marketing *</h3>
+                                        <h3>Learning *</h3>
                                     </div>
                                 </div>
                                 <div class="swiper-slide tp-brand-slide-element">
                                     <div class="tp-brand-title">
-                                        <h3>design *</h3>
+                                        <h3>Future *</h3>
                                     </div>
                                 </div>
                                 </div>
@@ -349,14 +333,13 @@
                             <div class="row align-items-end">
                                 <div class="col-xl-8 col-lg-12">
                                     <div class="tp-section-title-wrapper mb-50">
-                                        <span class="tp-section-subtitle tp-section-subtitle-white  mb-10"><i class="sub-dot-color"></i> latest project</span>
-                                        <h2 class="tp-section-title tp-section-title-white tp-upper tp_title_anim mb-20">our latest project &
-                                            portfolio</h2>
+                                        <span class="tp-section-subtitle tp-section-subtitle-white  mb-10"><i class="sub-dot-color"></i> Success Stories</span>
+                                        <h2 class="tp-section-title tp-section-title-white tp-upper tp_title_anim mb-20">What Our Educators Say</h2>
                                     </div>
                                 </div>
                                 <div class="col-xl-4 col-lg-12">
                                     <div class="tp-section-title-wrapper mb-50 pb-15">
-                                        <p class="tp-section-title-content-white">Per ipsum ultrices sollicitud platea facilisi Semper aliquam up tacits <b>senectus cursus</b> vivamu volutpat penatibus fringilla porttitor do magna purus massa per <b>duis dapibus</b> scelerisqu divice fred etiam</p>
+                                        <p class="tp-section-title-content-white">Join our growing community of 30,000+ teachers and 10,000+ schools who are already <b>transforming their classrooms</b> with AI-powered teaching methods and <b>enhancing student engagement</b> through innovative learning approaches.</p>
                                     </div>
                                 </div>
                             </div>
@@ -372,11 +355,11 @@
                                             <span>01</span>
                                         </div>
                                         <div class="tpshowcase__cat mb-20">
-                                            <span>Branding</span>
+                                            <span>AI Integration</span>
                                         </div>
-                                        <h3 class="tpshowcase__title tp-upper"><a href="portfolio-details.php">Experience Digital <br>
-                                            Marketing <br>
-                                            Craftsmanship</a></h3>
+                                        <h3 class="tpshowcase__title tp-upper"><a href="portfolio-details.php">Revolutionizing <br>
+                                            Classroom Learning <br>
+                                            with AI Tools</a></h3>
                                         <div class="tpshowcase__btn mt-30">
                                             <a class="tp-text-btn tp-text-btn-white" href="portfolio-details.php">Read More <i class="far fa-arrow-right"></i></a>
                                         </div>  
@@ -390,11 +373,11 @@
                                             <span>02</span>
                                         </div>
                                         <div class="tpshowcase__cat mb-20">
-                                            <span>Branding</span>
+                                            <span>Teacher Training</span>
                                         </div>
-                                        <h3 class="tpshowcase__title tp-upper"><a href="portfolio-details.php">creative Mobile <br>
-                                            app design for the <br>
-                                            molto bene</a></h3>
+                                        <h3 class="tpshowcase__title tp-upper"><a href="portfolio-details.php">Empowering Teachers <br>
+                                            with AI Skills for <br>
+                                            Modern Education</a></h3>
                                         <div class="tpshowcase__btn mt-30">
                                             <a class="tp-text-btn tp-text-btn-white" href="portfolio-details.php">Read More <i class="far fa-arrow-right"></i></a>
                                         </div>  
@@ -418,11 +401,11 @@
                                             <span>03</span>
                                         </div>
                                         <div class="tpshowcase__cat mb-20">
-                                            <span>Branding</span>
+                                            <span>Student Success</span>
                                         </div>
-                                        <h3 class="tpshowcase__title tp-upper"><a href="portfolio-details.php">Powerhouse of <br>
-                                            Digital Marketing <br>
-                                            best Solutions</a></h3>
+                                        <h3 class="tpshowcase__title tp-upper"><a href="portfolio-details.php">Enhancing Student <br>
+                                            Learning Outcomes <br>
+                                            Through AI</a></h3>
                                         <div class="tpshowcase__btn mt-30">
                                             <a class="tp-text-btn tp-text-btn-white" href="portfolio-details.php">Read More <i class="far fa-arrow-right"></i></a>
                                         </div>  
@@ -431,116 +414,6 @@
                             </div>
                         </div>
                     </section>   
-                    
-                    <section class="tp-pricing-area pt-120 pb-90">
-                        <div class="container">
-                            <div class="tp-section-title-wrapper mb-50 text-center">
-                                <span class="tp-section-subtitle mb-10"><i class="sub-dot-color"></i> Pricing Package</span>
-                                <h2 class="tp-section-title tp-upper tp_title_anim mb-20">Friendly budget</h2>
-                            </div>
-                            <div class="row">
-                                <div class="col-xl-4 col-lg-6 col-md-6">
-                                    <div class="tpprice mb-30 pt-60 pb-60 pl-50 pr-50 wow tpFadeInUp" data-wow-duration="1s" data-wow-delay="0.2s" data-bg-color="#FDF6F2" data-background="assets/img/price/price-bg.png">
-                                        <div class="tpprice__icon">
-                                            <span><i class="flaticon-geometric-6"></i></span>
-                                            <div class="tpprice__icon-shape">
-                                                <img src="assets/img/price/shape-1.png" alt="">
-                                            </div>
-                                        </div>
-                                        <div class="tpprice__price">
-                                            <h4><span>$</span>120</h4>
-                                        </div>
-                                        
-                                        <h3 class="tpprice__title">Brand research</h3>
-                                        <div class="tpprice__sep"></div>
-                                        <ul class="tpprice__features">
-                                            <li><i class="fal fa-check"></i> <span> Full design support</span></li>
-                                            <li><i class="fal fa-check"></i> <span> Customizable registration</span></li>
-                                            <li><i class="fal fa-check"></i> <span> Guarantee Approval</span></li>
-                                            <li><i class="fal fa-check"></i> <span> Custom domain</span></li>
-                                            <li><i class="fal fa-check"></i> <span> Unlimited paid ticket</span></li>
-                                            <li><i class="fal fa-check"></i> <span>24/7 Client support </span></li>
-                                        </ul>
-                                        <div class="tp-price-btn mt-50">
-                                            <a href="contact.php" class="tp-btn-orange">
-                                                <span class="tp-btn-wrap">
-                                                    <span class="tp-btn-y-1">Choose a Plan</span>
-                                                    <span class="tp-btn-y-2">Choose a Plan</span>
-                                                </span>  
-                                                <i></i> 
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xl-4 col-lg-6 col-md-6">
-                                    <div class="tpprice mb-30 pt-60 pb-60 pl-50 pr-50 wow tpFadeInUp" data-wow-duration="1s" data-wow-delay="0.4s" data-bg-color="#FDF6F2" data-background="assets/img/price/price-bg.png">
-                                        <div class="tpprice__icon">
-                                            <span><i class="flaticon-geometric-7"></i></span>
-                                            <div class="tpprice__icon-shape">
-                                                <img src="assets/img/price/shape-2.png" alt="">
-                                            </div>
-                                        </div>
-                                        <div class="tpprice__price">
-                                            <h4><span>$</span>150</h4>
-                                        </div>
-                                        
-                                        <h3 class="tpprice__title">App development</h3>
-                                        <div class="tpprice__sep"></div>
-                                        <ul class="tpprice__features">
-                                            <li><i class="fal fa-check"></i> <span> Full design support</span></li>
-                                            <li><i class="fal fa-check"></i> <span> Customizable registration</span></li>
-                                            <li><i class="fal fa-check"></i> <span> Guarantee Approval</span></li>
-                                            <li><i class="fal fa-check"></i> <span> Custom domain</span></li>
-                                            <li><i class="fal fa-check"></i> <span> Unlimited paid ticket</span></li>
-                                            <li><i class="fal fa-check"></i> <span>24/7 Client support </span></li>
-                                        </ul>
-                                        <div class="tp-price-btn mt-50">
-                                            <a href="contact.php" class="tp-btn-orange">
-                                                <span class="tp-btn-wrap">
-                                                    <span class="tp-btn-y-1">Choose a Plan</span>
-                                                    <span class="tp-btn-y-2">Choose a Plan</span>
-                                                </span>  
-                                                <i></i> 
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="col-xl-4 col-lg-6 col-md-6">
-                                    <div class="tpprice mb-30 pt-60 pb-60 pl-50 pr-50 wow tpFadeInUp" data-wow-duration="1s" data-wow-delay="0.6s" data-bg-color="#FDF6F2" data-background="assets/img/price/price-bg.png">
-                                        <div class="tpprice__icon">
-                                            <span><i class="flaticon-geometric-8"></i></span>
-                                            <div class="tpprice__icon-shape">
-                                                <img src="assets/img/price/shape-3.png" alt="">
-                                            </div>
-                                        </div>
-                                        <div class="tpprice__price">
-                                            <h4><span>$</span>180</h4>
-                                        </div>
-                                        
-                                        <h3 class="tpprice__title">Digital marketing</h3>
-                                        <div class="tpprice__sep"></div>
-                                        <ul class="tpprice__features">
-                                            <li><i class="fal fa-check"></i> <span> Full design support</span></li>
-                                            <li><i class="fal fa-check"></i> <span> Customizable registration</span></li>
-                                            <li><i class="fal fa-check"></i> <span> Guarantee Approval</span></li>
-                                            <li><i class="fal fa-check"></i> <span> Custom domain</span></li>
-                                            <li><i class="fal fa-check"></i> <span> Unlimited paid ticket</span></li>
-                                            <li><i class="fal fa-check"></i> <span>24/7 Client support </span></li>
-                                        </ul>
-                                        <div class="tp-price-btn mt-50">
-                                            <a href="contact.php" class="tp-btn-orange">
-                                                <span class="tp-btn-wrap">
-                                                    <span class="tp-btn-y-1">Choose a Plan</span>
-                                                    <span class="tp-btn-y-2">Choose a Plan</span>
-                                                </span>  
-                                                <i></i> 
-                                            </a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
 
                     <div class="solid-bg jarallax">
                         <img class="jarallax-img" src="assets/img/bg/solid-bg.jpg" alt="">
@@ -698,48 +571,66 @@
                                             <div class="swiper tp-testimonial-active">
                                                 <div class="swiper-wrapper">
                                                     <div class="swiper-slide">
-                                                        <div class="tp-testimonial-item">
-                                                            <div class="tp-testimonial-long-text d-flex">
-                                                                <h3 class="tp-testimonial-text tp-testimonial-text-black  tp-upper"> shall cattle light signs it of
-                                                                    him greater. Two had yielding
-                                                                    upon midst without of have
-                                                                    Fruitful Lights earth do spire
-                                                                    after may fruitful</h3>
+                                                        <div class="tptestimonial__content">
+                                                            <div class="tptestimonial__rating">
+                                                                <i class="fas fa-star"></i>
+                                                                <i class="fas fa-star"></i>
+                                                                <i class="fas fa-star"></i>
+                                                                <i class="fas fa-star"></i>
+                                                                <i class="fas fa-star"></i>
                                                             </div>
-                                                            <div class="tp-testimonial-author-info mt-30">
-                                                                <h4 class="tp-testimonial-author-name tp-testimonial-author-name-black">Cynthia A. Keely</h4>
-                                                                <span class="tp-testimonial-author-desig tp-testimonial-author-desig-black">CEO of lollipop</span>
-                                                            </div>    
+                                                            <p>"The AI training program has transformed my teaching approach. I can now create personalized learning experiences for each student, making education more engaging and effective."</p>
+                                                        </div>
+                                                        <div class="tptestimonial__author">
+                                                            <div class="tptestimonial__author-img">
+                                                                <img src="assets/img/testimonial/author-1.jpg" alt="">
+                                                            </div>
+                                                            <div class="tptestimonial__author-info">
+                                                                <h4>Priya Sharma</h4>
+                                                                <span>Mathematics Teacher, Delhi Public School</span>
+                                                            </div>
                                                         </div>
                                                     </div>     
                                                     <div class="swiper-slide">
-                                                        <div class="tp-testimonial-item">
-                                                            <div class="tp-testimonial-long-text d-flex">
-                                                                <h3 class="tp-testimonial-text tp-testimonial-text-black  tp-upper"> shall cattle light signs it of
-                                                                    him greater. Two had yielding
-                                                                    upon midst without of have
-                                                                    Fruitful Lights earth do spire
-                                                                    after may fruitful</h3>
+                                                        <div class="tptestimonial__content">
+                                                            <div class="tptestimonial__rating">
+                                                                <i class="fas fa-star"></i>
+                                                                <i class="fas fa-star"></i>
+                                                                <i class="fas fa-star"></i>
+                                                                <i class="fas fa-star"></i>
+                                                                <i class="fas fa-star"></i>
                                                             </div>
-                                                            <div class="tp-testimonial-author-info mt-30">
-                                                                <h4 class="tp-testimonial-author-name tp-testimonial-author-name-black">Cynthia A. Keely</h4>
-                                                                <span class="tp-testimonial-author-desig tp-testimonial-author-desig-black">CEO of lollipop</span>
-                                                            </div>    
+                                                            <p>"The mentorship program and AI learning hubs have been invaluable. I've learned to integrate AI tools seamlessly into my classroom, and my students are more motivated than ever."</p>
+                                                        </div>
+                                                        <div class="tptestimonial__author">
+                                                            <div class="tptestimonial__author-img">
+                                                                <img src="assets/img/testimonial/author-2.jpg" alt="">
+                                                            </div>
+                                                            <div class="tptestimonial__author-info">
+                                                                <h4>Rajesh Kumar</h4>
+                                                                <span>Science Teacher, Modern School</span>
+                                                            </div>
                                                         </div>
                                                     </div>     
                                                     <div class="swiper-slide">
-                                                        <div class="tp-testimonial-item">
-                                                            <div class="tp-testimonial-long-text d-flex">
-                                                                <h3 class="tp-testimonial-text tp-testimonial-text-black  tp-upper"> shall cattle light signs it of
-                                                                    him greater. Two had yielding
-                                                                    upon midst without of have
-                                                                    Fruitful Lights earth do spire
-                                                                    after may fruitful</h3>
+                                                        <div class="tptestimonial__content">
+                                                            <div class="tptestimonial__rating">
+                                                                <i class="fas fa-star"></i>
+                                                                <i class="fas fa-star"></i>
+                                                                <i class="fas fa-star"></i>
+                                                                <i class="fas fa-star"></i>
+                                                                <i class="fas fa-star"></i>
                                                             </div>
-                                                            <div class="tp-testimonial-author-info mt-30">
-                                                                <h4 class="tp-testimonial-author-name tp-testimonial-author-name-black">Cynthia A. Keely</h4>
-                                                                <span class="tp-testimonial-author-desig tp-testimonial-author-desig-black">CEO of lollipop</span>
-                                                            </div>    
+                                                            <p>"As a school principal, I've seen remarkable improvements in teaching quality after implementing the AI training program. Our teachers are more confident and our students are thriving."</p>
+                                                        </div>
+                                                        <div class="tptestimonial__author">
+                                                            <div class="tptestimonial__author-img">
+                                                                <img src="assets/img/testimonial/author-3.jpg" alt="">
+                                                            </div>
+                                                            <div class="tptestimonial__author-info">
+                                                                <h4>Dr. Meera Patel</h4>
+                                                                <span>Principal, Global Academy</span>
+                                                            </div>
                                                         </div>
                                                     </div>     
                                                 </div>
