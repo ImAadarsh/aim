@@ -68,8 +68,8 @@
                                         <h3 class="tp-footer-widget-title tp-footer-widget-title-white mb-20">Support</h3>
                                         <div class="footer-content">
                                             <ul>
-                                                <li><a href="#">Terms & Conditions</a></li>
-                                                <li><a href="#">Privacy Policy</a></li>
+                                                <li><a href="terms.php">Terms & Conditions</a></li>
+                                                <li><a href="privacy.php">Privacy Policy</a></li>
                                             </ul>
                                         </div>
                                     </div>
@@ -80,7 +80,7 @@
                             <div class="row align-items-center">
                                 <div class="col-xl-4 col-lg-12 ">
                                     <div class="tp-footer-copyright mb-30 text-lg-start">
-                                        <p>© 2025 Mission AIM. All Rights Reserved.</p>
+                                        <p>© <?php echo date('Y'); ?> Mission AIM. All Rights Reserved.</p>
                                     </div>
                                 </div>
                                 <div class="col-xl-4 col-lg-4 col-md-4">
@@ -102,21 +102,3 @@
                     </div>
                 </footer>
 
-<div class="tp-footer-bottom">
-    <div class="container">
-        <div class="row align-items-center">
-            <div class="col-md-6">
-                <div class="tp-footer-copyright">
-                    <p>© <?php echo date('Y'); ?> Mission AIM. All Rights Reserved.</p>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="tp-footer-bottom-links text-md-end">
-                    <a href="terms.php">Terms & Conditions</a>
-                    <span class="mx-2">|</span>
-                    <a href="privacy.php">Privacy Policy</a>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
