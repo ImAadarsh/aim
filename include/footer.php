@@ -101,3 +101,22 @@
                         </div>
                     </div>
                 </footer>
+
+<div class="tp-footer-bottom">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <div class="tp-footer-copyright">
+                    <p>© <?php echo date('Y'); ?> Mission AIM. All Rights Reserved.</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="tp-footer-bottom-links text-md-end">
+                    <a href="terms.php">Terms & Conditions</a>
+                    <span class="mx-2">|</span>
+                    <a href="privacy.php">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
