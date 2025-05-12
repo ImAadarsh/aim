@@ -37,7 +37,7 @@
                     <div class="tp-hero-shap">
                        <!--  <img class="tp-hero-3-shape-1 p-absolute wow img-custom-anim-right" data-wow-duration="1.5s"
                         data-wow-delay="0.4s" src="assets/img/images/circle_img.png" alt=""> -->
-                        <img class="tp-hero-3-shape-2 p-absolute" src="assets/img/hero/hero-3-3.png" alt="">
+                        <img class="tp-hero-3-shape-2 p-absolute" src="assets/img/aim_main.svg" alt="">
                     </div>
                     <div class="container-fluid">
                         <div class="row">
@@ -185,7 +185,7 @@
                                         <img class="tp-about-2-shape-2 p-absolute"
                                             src="assets/img/shape/home-3-acc-02.png" alt="">
                                     </div>
-                                    <img src="assets/img/images/our_mission.png" alt="">
+                                    <img style="width: 70%;" src="assets/img/images/our_mission.png" alt="">
                                     <div class="tp-about-circle"></div>
                                 </div>
                             </div>
@@ -313,11 +313,10 @@
                     </div>
                 </div>
 
-                <section class="tp-process-area pt-120 pb-90">
-                    <div class="container">
-                        <div class="tp-section-title-wrapper mb-50 text-center">
-                            <span class="tp-section-subtitle mb-10"><i class="sub-dot-color"></i> working process</span>
-                            <h2 class="tp-section-title tp-upper tp_title_anim mb-20">how we work</h2>
+             
+                        <div class="tp-section-title-wrapper mt-30 mb-50 text-center">
+                            <span class="tp-section-subtitle mb-10"><i class="sub-dot-color"></i> Our Process</span>
+                            <h2 class="tp-section-title tp-upper tp_title_anim mb-20">How We Transform Teaching with AI</h2>
                         </div>
                         <div class="row">
                             <div class="col-xl-3 col-lg-6 col-md-6">
@@ -326,10 +325,8 @@
                                     <div class="tpprocess__step mb-35">
                                         <span>Step (01)</span>
                                     </div>
-                                    <h3 class="tpprocess__title mb-15">Free Signup</h3>
-                                    <p>Said moved fruit are not unto
-                                        forth years the brought kind herbs under fort without may creepeth to delisa.
-                                    </p>
+                                    <h3 class="tpprocess__title mb-15"> Planning</h3>
+                                    <p>We evaluate your current teaching methods and create a personalized AI integration plan tailored to your specific needs and goals.</p>
                                     <div class="tpprocess__icon mt-40">
                                         <span><i class="flaticon-geometric-4"></i></span>
                                     </div>
@@ -341,10 +338,8 @@
                                     <div class="tpprocess__step mb-35">
                                         <span>Step (02)</span>
                                     </div>
-                                    <h3 class="tpprocess__title mb-15">Plan Concept</h3>
-                                    <p>Said moved fruit are not unto
-                                        forth years the brought kind herbs under fort without may creepeth to delisa.
-                                    </p>
+                                    <h3 class="tpprocess__title mb-15">AI Skills Training</h3>
+                                    <p>Expert-led workshops and hands-on sessions to build your AI competencies and confidence in using educational technology.</p>
                                     <div class="tpprocess__icon mt-40">
                                         <span data-bg-color="#D6F0FF"><i class="flaticon-triangle"></i></span>
                                     </div>
@@ -356,10 +351,8 @@
                                     <div class="tpprocess__step mb-35">
                                         <span>Step (03)</span>
                                     </div>
-                                    <h3 class="tpprocess__title mb-15">Sketch Work</h3>
-                                    <p>Said moved fruit are not unto
-                                        forth years the brought kind herbs under fort without may creepeth to delisa.
-                                    </p>
+                                    <h3 class="tpprocess__title mb-15">Implementation </h3>
+                                    <p>Ongoing mentorship and technical assistance to help you integrate AI tools effectively into your teaching practice.</p>
                                     <div class="tpprocess__icon mt-40">
                                         <span data-bg-color="#FFE4FB"><i class="flaticon-geometric-5"></i></span>
                                     </div>
@@ -371,18 +364,15 @@
                                     <div class="tpprocess__step mb-35">
                                         <span>Step (04)</span>
                                     </div>
-                                    <h3 class="tpprocess__title mb-15">Final Output</h3>
-                                    <p>Said moved fruit are not unto
-                                        forth years the brought kind herbs under fort without may creepeth to delisa.
-                                    </p>
+                                    <h3 class="tpprocess__title mb-15">Continuous Growth</h3>
+                                    <p>Access to our AI learning hub, community support, and regular updates to keep you at the forefront of educational innovation.</p>
                                     <div class="tpprocess__icon mt-40">
                                         <span data-bg-color="#E2EAD7"><i class="flaticon-3d-shapes"></i></span>
                                     </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
-                </section>
+
 
                 <section class="tp-showcase-area tp-nblue-bg pt-130 pb-130"
                     data-background="assets/img/bg/project-bg-pattern.png">
@@ -490,59 +480,8 @@
                     <img class="jarallax-img" src="assets/img/images/1920820.png" alt="">
                 </div>
 
-                <section class="tp-brand-area pt-120 pb-100 tp-cream-bg-2">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-xl-6 col-lg-5">
-                                <div class="tp-section-title-wrapper mb-50">
-                                    <span class="tp-section-subtitle mb-10"><i class="sub-dot-color"></i> trusted
-                                        clients</span>
-                                    <h2 class="tp-section-title tp-upper mb-20 img-custom-anim-top"
-                                        data-wow-duration="1.5s" data-wow-delay="0.4s">Popular company
-                                        love us for our
-                                        best service</h2>
-                                </div>
-                            </div>
-                            <div class="col-xl-6 col-lg-7">
-                                <div class="tp-brand-logo-wrapper pl-80 mb-30">
-                                    <div class="row g-0">
-                                        <div class="col-md-6">
-                                            <div class="tp-brand-item-border">
-                                                <img src="assets/img/brand/home-brand-3-1.png" alt="">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="tp-brand-item-border">
-                                                <img src="assets/img/brand/home-brand-3-2.png" alt="">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="tp-brand-item-border">
-                                                <img src="assets/img/brand/home-brand-3-3.png" alt="">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="tp-brand-item-border">
-                                                <img src="assets/img/brand/home-brand-3-4.png" alt="">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="tp-brand-item-border">
-                                                <img src="assets/img/brand/home-brand-3-5.png" alt="">
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6">
-                                            <div class="tp-brand-item-border">
-                                                <img src="assets/img/brand/home-brand-3-6.png" alt="">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
-                <div class="tp-team-area pb-90">
+            
+                <div class="tp-team-area mt-30 pb-90">
                     <div class="container">
                         <div class="tp-section-title-wrapper mb-50 text-center">
                             <span class="tp-section-subtitle mb-10"><i class="sub-dot-color"></i> expert member</span>
