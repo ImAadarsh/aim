@@ -152,7 +152,7 @@
                         <div class="row">
                             <div class="col-lg-6">
                                 <div class="tp-about-exp br-20 p-relative mb-30">
-                                    <img class="wow img-custom-anim-top" data-wow-duration="1s" data-wow-delay="0.3s" src="assets/img/about/about-2.jpg" alt="">
+                                    <img class="wow img-custom-anim-top" data-wow-duration="1s" data-wow-delay="0.3s" src="assets/img/images/service_img1.png" alt="">
                                     <div class="tp-exp-wrapper">
                                         <div class="tp-exp-bg"></div>
                                         <div class="tp-exp d-flex align-items-center">
@@ -263,87 +263,14 @@
                             </div>
                             <div class="col-xl-6 col-lg-5">
                                 <div class="tp-fact-img br-15 wow img-custom-anim-top" data-wow-duration="1s" data-wow-delay="0.3s">
-                                    <img src="assets/img/fact/fact-1.jpg" alt="">
+                                    <img src="assets/img/images/service_img2.png" alt="">
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
 
-                <div class="tp-blog-post-area pt-130 pb-90">
-                    <div class="container">
-                        <div class="row">
-                            <div class="col-12">
-                                <div class="tp-section-title-wrapper mb-50 text-center">
-                                    <h2 class="tp-section-title mb-20">Latest Insights</h2>
-                                    <p>Stay updated with the latest trends and success stories in AI education <br> and teacher training</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="col-xl-4 col-lg-4 col-md-6">
-                                <div class="tpblog mb-40 wow img-custom-anim-top" data-wow-duration="1s" data-wow-delay="0.2s">
-                                    <div class="tpblog__thumb br-20 mb-35">
-                                        <a href="blog-details.php"><img src="assets/img/blog/blog-post-01.jpg" alt=""></a>
-                                    </div>
-                                    <div class="tpblog__content pl-30">
-                                        <div class="tpblog__meta mb-15">
-                                            <span><a href="#"><i class="fal fa-calendar-alt"></i> 20 Sep. 2023</a></span>
-                                            <cite></cite>
-                                            <span><a href="#"><i class="fal fa-certificate"></i> AI Education</a></span>
-                                        </div>
-                                        <h3 class="tpblog__title mb-25">
-                                            <a href="blog-details.php">Transforming Classroom Learning with AI: Success Stories from South Asia</a>
-                                        </h3>
-                                        <div class="tpblog__btn">
-                                            <a class="tp-text-btn" href="blog-details.php">Read More <i class="far fa-arrow-right"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-4 col-lg-4 col-md-6">
-                                <div class="tpblog mb-40">
-                                    <div class="tpblog__thumb br-20 mb-35 wow img-custom-anim-top" data-wow-duration="1s" data-wow-delay="0.4s">
-                                        <a href="blog-details.php"><img src="assets/img/blog/blog-post-02.jpg" alt=""></a>
-                                    </div>
-                                    <div class="tpblog__content pl-30">
-                                        <div class="tpblog__meta mb-15">
-                                            <span><a href="#"><i class="fal fa-calendar-alt"></i> 20 Sep. 2023</a></span>
-                                            <cite></cite>
-                                            <span><a href="#"><i class="fal fa-certificate"></i> Teacher Training</a></span>
-                                        </div>
-                                        <h3 class="tpblog__title mb-25">
-                                            <a href="blog-details.php">Empowering Teachers: The Impact of AI Training on Student Success</a>
-                                        </h3>
-                                        <div class="tpblog__btn">
-                                            <a class="tp-text-btn" href="blog-details.php">Read More <i class="far fa-arrow-right"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-xl-4 col-lg-4 col-md-6">
-                                <div class="tpblog mb-40">
-                                    <div class="tpblog__thumb br-20 mb-35 wow img-custom-anim-top" data-wow-duration="1s" data-wow-delay="0.6s">
-                                        <a href="blog-details.php"><img src="assets/img/blog/blog-post-03.jpg" alt=""></a>
-                                    </div>
-                                    <div class="tpblog__content pl-30">
-                                        <div class="tpblog__meta mb-15">
-                                            <span><a href="#"><i class="fal fa-calendar-alt"></i> 20 Sep. 2023</a></span>
-                                            <cite></cite>
-                                            <span><a href="#"><i class="fal fa-certificate"></i> Innovation</a></span>
-                                        </div>
-                                        <h3 class="tpblog__title mb-25">
-                                            <a href="blog-details.php">The Future of Education: How AI is Reshaping Learning in South Asia</a>
-                                        </h3>
-                                        <div class="tpblog__btn">
-                                            <a class="tp-text-btn" href="blog-details.php">Read More <i class="far fa-arrow-right"></i></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                
 
             </main>
 

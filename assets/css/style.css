@@ -7560,6 +7560,10 @@ img {
 }
 .tp-hero-img img {
   max-width: inherit;
+  border-radius: 50%;
+  object-fit: cover;
+  width: 100%;
+  height: auto;
 }
 @media screen and (min-width: 1400px) and (max-width: 1800px) {
   .tp-hero-img img {
@@ -9749,7 +9753,7 @@ img {
 
 .tp-testimonial-bg-color {
   position: absolute;
-  background: #FF8653;
+  background: #8ca6d8;
   width: 408px;
   height: 380px;
   bottom: 0;
@@ -11517,7 +11521,7 @@ img {
 }
 .tp-return-customer-forgot a::after {
   position: absolute;
-  content: url("../../assets/img/product/icon/check.svg");
+  content: "";
   left: auto;
   right: 0;
   bottom: 4px;

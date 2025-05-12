@@ -53,7 +53,7 @@
                         <div class="row">
                             <div class="col-lg-6">
                                 <div class="tp-about-img br-20 mb-30 wow img-custom-anim-left" data-wow-duration="1.5s" data-wow-delay="0.2s">
-                                    <img src="assets/img/about/about-1.jpg" alt="">
+                                    <img src="assets/img/images/about_img1.png" alt="">
                                 </div>
                             </div>
                             <div class="col-lg-6">
@@ -179,75 +179,11 @@
                             <div class="swiper-slide">
                                     <div class="tpteam">
                                         <div class="tpteam__thumb br-15">
-                                            <a href="team-details.php"><img src="assets/img/team/team-01.jpg" alt=""></a>
+                                            <a href="team-details.php"><img src="assets/img/images/team_member.png" alt=""></a>
                                         </div>
                                         <div class="tpteam__info mt-30 ml-80">
-                                            <h3 class="tpteam__title"><a href="team-details.php">Bonnie Z. Brown</a></h3>
-                                            <span class="ml-45"><i></i>Senior Designer</span>
-                                            <div class="tpteam__social mt-20">
-                                                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                                <a href="#"><i class="fab fa-twitter"></i></a>
-                                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                            </div>
-                            <div class="swiper-slide">
-                                    <div class="tpteam">
-                                        <div class="tpteam__thumb br-15">
-                                            <a href="team-details.php"><img src="assets/img/team/team-02.jpg" alt=""></a>
-                                        </div>
-                                        <div class="tpteam__info mt-30 ml-80">
-                                            <h3 class="tpteam__title"><a href="team-details.php">Cynthia A. Keely</a></h3>
-                                            <span class="ml-45"><i></i>Senior Designer</span>
-                                            <div class="tpteam__social mt-20">
-                                                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                                <a href="#"><i class="fab fa-twitter"></i></a>
-                                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                            </div>
-                            <div class="swiper-slide">
-                                    <div class="tpteam">
-                                        <div class="tpteam__thumb br-15">
-                                            <a href="team-details.php"><img src="assets/img/team/team-03.jpg" alt=""></a>
-                                        </div>
-                                        <div class="tpteam__info mt-30 ml-80">
-                                            <h3 class="tpteam__title"><a href="team-details.php">Donald D. Lowel</a></h3>
-                                            <span class="ml-45"><i></i>Senior Designer</span>
-                                            <div class="tpteam__social mt-20">
-                                                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                                <a href="#"><i class="fab fa-twitter"></i></a>
-                                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                            </div>
-                            <div class="swiper-slide">
-                                    <div class="tpteam">
-                                        <div class="tpteam__thumb br-15">
-                                            <a href="team-details.php"><img src="assets/img/team/team-04.jpg" alt=""></a>
-                                        </div>
-                                        <div class="tpteam__info mt-30 ml-80">
-                                            <h3 class="tpteam__title"><a href="team-details.php">Maria A. Murray</a></h3>
-                                            <span class="ml-45"><i></i>Senior Designer</span>
-                                            <div class="tpteam__social mt-20">
-                                                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                                <a href="#"><i class="fab fa-twitter"></i></a>
-                                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                                            </div>
-                                        </div>
-                                    </div>
-                            </div>
-                            <div class="swiper-slide">
-                                    <div class="tpteam">
-                                        <div class="tpteam__thumb br-15">
-                                            <a href="team-details.php"><img src="assets/img/team/team-01.jpg" alt=""></a>
-                                        </div>
-                                        <div class="tpteam__info mt-30 ml-80">
-                                            <h3 class="tpteam__title"><a href="team-details.php">Bonnie Z. Brown</a></h3>
-                                            <span class="ml-45"><i></i>Senior Designer</span>
+                                            <h3 class="tpteam__title"><a href="team-details.php">Gaurava Yadav</a></h3>
+                                            <span class="ml-45"><i></i>Founder & CEO of IPN Foundation</span>
                                             <div class="tpteam__social mt-20">
                                                 <a href="#"><i class="fab fa-facebook-f"></i></a>
                                                 <a href="#"><i class="fab fa-twitter"></i></a>
@@ -410,7 +346,7 @@
                 </div>
 
                 <div class="tp-faq-area mt-130 mb-130 p-relative">
-                    <div class="tpfaq-bg tpfaq-bg-right wow img-custom-anim-right" data-wow-duration="1.5s" data-wow-delay="0.2s" data-background="assets/img/faq/faq.jpg"></div>
+                    <div class="tpfaq-bg tpfaq-bg-right wow img-custom-anim-right" data-wow-duration="1.5s" data-wow-delay="0.2s" data-background="assets/img/images/about_img2.png"></div>
                     <div class="container">
                         <div class="row">
                             <div class="col-lg-6">
@@ -470,7 +406,7 @@
                     </div>
                 </div>
 
-                <div class="tp-video-area jarallax" data-background="assets/img/bg/video-bg.jpg">
+                <div class="tp-video-area jarallax" data-background="assets/img/images/bg3.png">
                     <div class="tp-play-btn text-center">
                         <a class="popup-video" href="https://www.youtube.com/watch?v=l6rsx5nhim0"><img src="assets/img/icon/play.png" alt=""></a>
                     </div>
