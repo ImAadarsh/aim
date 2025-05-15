@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <?php include 'include/head.php'; ?>
+<?php include 'include/connect.php'; ?>
 
 <body>
 
@@ -274,6 +275,117 @@
                     </div>
                 </section>
 
+                <!-- Progress Toward 1 Million Goal -->
+                <section class="tp-progress-goal-area pt-80 pb-80 tp-nblue-bg">
+                    <div class="container">
+                        <div class="row align-items-center">
+                            <div class="col-xl-6 col-lg-6">
+                                <div class="tp-section-title-wrapper mb-30">
+                                    <h2 class="tp-section-title tp-upper tp-text-white mb-20">Our Mission: 1 Million AI-Empowered Teachers</h2>
+                                    <p class="tp-text-white">Join our growing community as we work toward our first milestone of 100,000 teachers on the journey to 1 million.</p>
+                                </div>
+                                <?php
+                                // Get user count for progress visualization
+                                $user_query = "SELECT COUNT(*) as total_users FROM users WHERE user_type = 'user'";
+                                $user_result = mysqli_query($connect, $user_query);
+                                $user_data = mysqli_fetch_assoc($user_result);
+                                $total_users = $user_data['total_users'];
+                                
+                                // Calculate percentage toward first milestone (100K) instead of full goal
+                                $first_milestone = 100000;
+                                $ultimate_goal = 1000000;
+                                $percentage = ($total_users / $first_milestone) * 100;
+                                // Cap at 100% for display purposes if we exceed the milestone
+                                $display_percentage = min($percentage, 100);
+                                $formatted_percentage = number_format($display_percentage, 1);
+                                $formatted_users = number_format($total_users);
+                                $milestone_progress = number_format(($total_users / $ultimate_goal) * 100, 1);
+                                ?>
+                                <div class="tp-skill-bar mb-50">
+                                    <div class="tp-skill-item">
+                                        <label style="color: aliceblue;" class="tp-text-white"><?php echo $formatted_users; ?> Teachers Trained - <?php echo $formatted_percentage; ?>% to First Milestone</label>
+                                        <div class="progress-outer">
+                                            <div class="fix">
+                                                <div class="progress wow tpSkillInLeft" data-wow-duration="1s" data-wow-delay="0.2s">
+                                                    <div class="progress-bar" style="width: <?php echo $display_percentage; ?>%; background: linear-gradient(to right, #2184e9, #6416ec);"></div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <small class="tp-text-white text-end d-block mt-2">First milestone: 100K teachers</small>
+                                    </div>
+                                </div>
+                                <div class="tp-about-btn mt-10 mb-30 wow img-custom-anim-top" data-wow-duration="1s" data-wow-delay="0.3s">
+                                    <a href="impact.php" class="tp-btn-orange">
+                                        <span class="tp-btn-wrap">
+                                            <span class="tp-btn-y-1">See Our Impact</span>
+                                            <span class="tp-btn-y-2">See Our Impact</span>
+                                        </span>
+                                        <i></i>
+                                    </a>
+                                    <a href="https://ipnacademy.in/user/signup.php" class="tp-btn-orange">
+                                        <span class="tp-btn-wrap">
+                                            <span class="tp-btn-y-1">Join Mission AIM</span>
+                                            <span class="tp-btn-y-2">Join Mission AIM</span>
+                                        </span>
+                                        <i></i>
+                                    </a>
+                                    
+                                </div>
+                            </div>
+                            <div class="col-xl-6 col-lg-6">
+                                <div class="tp-goal-stats p-relative">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <div class="tpfact text-center mb-30">
+                                                <div class="tpfact__icon">
+                                                    <span><i class="flaticon-connections"></i></span>
+                                                </div>
+                                                <div class="tpfact__text tp-text-white">
+                                                    <h3 class="tpfact__title mb-5">Teachers Trained</h3>
+                                                    <span><?php echo $formatted_users; ?></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="tpfact text-center mb-30">
+                                                <div class="tpfact__icon">
+                                                    <span><i class="flaticon-cooperation"></i></span>
+                                                </div>
+                                                <div class="tpfact__text tp-text-white">
+                                                    <h3 class="tpfact__title mb-5">First Milestone</h3>
+                                                    <span><?php echo $formatted_percentage; ?>%</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="tpfact text-center mb-30">
+                                                <div class="tpfact__icon">
+                                                    <span><i class="flaticon-concentration"></i></span>
+                                                </div>
+                                                <div class="tpfact__text tp-text-white">
+                                                    <h3 class="tpfact__title mb-5">To 100K Goal</h3>
+                                                    <span><?php echo number_format(max(0, $first_milestone - $total_users)); ?></span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6">
+                                            <div class="tpfact text-center mb-30">
+                                                <div class="tpfact__icon">
+                                                    <span><i class="flaticon-sharing"></i></span>
+                                                </div>
+                                                <div class="tpfact__text tp-text-white">
+                                                    <h3 class="tpfact__title mb-5">Overall Progress</h3>
+                                                    <span><?php echo $milestone_progress; ?>%</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+
                 <div class="tp-brand-area grad-bg pt-40 pb-35">
                     <div class="tp-brand-wrapper">
                         <div class="swiper tp-brand-title-active">
@@ -312,6 +424,178 @@
                         </div>
                     </div>
                 </div>
+
+                
+
+                <!-- Start MISSION AIM Workshops Section -->
+<section class="tp-services-area pt-130 pb-130">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="tp-section-title-wrapper mb-40 text-center">
+                    <span class="tp-section-subtitle mb-10"><i class="sub-dot-color"></i> Latest Workshops</span>
+                    <h2 class="tp-section-title tp-upper tp_title_anim mb-20">MISSION AIM Workshops</h2>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="tp-tab-wrapper">
+                    <ul class="nav nav-tabs tp-tab-menu mb-50" role="tablist">
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link active" data-bs-toggle="tab" data-bs-target="#upcoming" type="button" role="tab">Upcoming</button>
+                        </li>
+                        <li class="nav-item" role="presentation">
+                            <button class="nav-link" data-bs-toggle="tab" data-bs-target="#previous" type="button" role="tab">Previous</button>
+                        </li>
+                    </ul>
+                    <div class="tab-content">
+                        <div class="tab-pane fade show active" id="upcoming" role="tabpanel">
+                            <div class="row">
+                                <?php 
+                                $sql = "SELECT * FROM workshops WHERE is_deleted=0 AND category_id=39 AND type=0 AND start_date > NOW() ORDER BY start_date ASC LIMIT 6";
+                                $results = $connect->query($sql);
+                                while ($final = $results->fetch_assoc()) {
+                                ?>
+                                <div class="col-lg-4 col-md-6 mb-4">
+                                    <div class="card h-100 shadow-sm border-0 tpservices-card" style="border-radius:18px; overflow:hidden; transition:box-shadow .3s;">
+                                        <div class="position-relative">
+                                            <a href="https://ipnacademy.in/workshop-details.php?id=<?php echo $final['id'] ?>">
+                                                <img src="<?php echo $uri.$final['image'] ?>" class="card-img-top" alt="" style="height:220px;object-fit:cover;">
+                                            </a>
+                                            <span class="badge bg-info position-absolute top-0 start-0 m-2" style="font-size:12px;">MISSION AIM</span>
+                                            <span class="badge bg-dark position-absolute top-0 end-0 m-2" style="font-size:12px;">
+                                                <?php 
+                                                if($final['w_status']==1) {
+                                                    echo 'TBA';
+                                                } else {
+                                                    $date = $final['start_date'];
+                                                    $new_date = date("d M Y", strtotime($date));
+                                                    echo $new_date;
+                                                }
+                                                ?>
+                                            </span>
+                                        </div>
+                                        <div class="card-body d-flex flex-column">
+                                            <h5 class="card-title mb-2" style="font-size:1.1rem;">
+                                                <a href="https://ipnacademy.in/workshop-details.php?id=<?php echo $final['id'] ?>" class="text-dark"><?php echo $final['name'] ?></a>
+                                            </h5>
+                                            <div class="mb-2" style="font-size:13px; color:#888;">
+                                                <?php
+                                                if ($final['is_2024'] == 0) {
+                                                    echo '<i class=\"far fa-user\"></i> ' . $final['trainer_name'];
+                                                } else {
+                                                    $trainer_id = $final['trainer_id'];
+                                                    $trainersql = "SELECT * FROM trainers WHERE id=$trainer_id";
+                                                    $Trainerresults = $connect->query($trainersql);
+                                                    $trainerfinal = $Trainerresults->fetch_assoc();
+                                                    echo '<i class=\"far fa-user\"></i> <a href=\"./workshops-trainer.php?id=' . $trainerfinal['id'] . '\">' . $trainerfinal['name'] . '</a>';
+                                                }
+                                                ?>
+                                            </div>
+                                            <div class="mb-2" style="font-size:13px; color:#888;">
+                                                <i class="far fa-clock"></i>
+                                                <?php 
+                                                if($final['w_status']==1) {
+                                                    echo 'TBA';
+                                                } else {
+                                                    $date = $final['start_date'];
+                                                    $new_date = date("D | d M Y | h:i A", strtotime($date));
+                                                    echo $new_date;
+                                                }
+                                                ?>
+                                            </div>
+                                            <div class="mt-auto">
+                                                <div class="d-flex align-items-center mb-3">
+                                                    <span class="fw-bold text-success" style="font-size:1.1rem;">₹<?php echo $final['price'] ?></span>
+                                                    <span class="text-muted ms-2" style="text-decoration:line-through;">₹<?php echo $final['cut_price'] ?></span>
+                                                </div>
+                                                <a href="https://ipnacademy.in/workshop-details.php?id=<?php echo $final['id'] ?>" class="btn btn-primary w-100" style="border-radius:8px;">
+                                                    Enroll Now
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <?php } ?>
+                            </div>
+                        </div>
+                        <div class="tab-pane fade" id="previous" role="tabpanel">
+                            <div class="row">
+                                <?php 
+                                $sql = "SELECT * FROM workshops WHERE is_deleted=0 AND category_id=39 AND type=1 ORDER BY start_date DESC LIMIT 6";
+                                $results = $connect->query($sql);
+                                while ($final = $results->fetch_assoc()) {
+                                ?>
+                                <div class="col-lg-4 col-md-6 mb-4">
+                                    <div class="card h-100 shadow-sm border-0 tpservices-card" style="border-radius:18px; overflow:hidden; transition:box-shadow .3s;">
+                                        <div class="position-relative">
+                                            <a href="https://ipnacademy.in/workshop-details.php?id=<?php echo $final['id'] ?>">
+                                                <img src="<?php echo $uri.$final['image'] ?>" class="card-img-top" alt="" style="height:220px;object-fit:cover;">
+                                            </a>
+                                            <span class="badge bg-info position-absolute top-0 start-0 m-2" style="font-size:12px;">MISSION AIM</span>
+                                            <span class="badge bg-dark position-absolute top-0 end-0 m-2" style="font-size:12px;">
+                                                <?php 
+                                                if($final['w_status']==1) {
+                                                    echo 'TBA';
+                                                } else {
+                                                    $date = $final['start_date'];
+                                                    $new_date = date("d M Y", strtotime($date));
+                                                    echo $new_date;
+                                                }
+                                                ?>
+                                            </span>
+                                        </div>
+                                        <div class="card-body d-flex flex-column">
+                                            <h5 class="card-title mb-2" style="font-size:1.1rem;">
+                                                <a href="https://ipnacademy.in/workshop-details.php?id=<?php echo $final['id'] ?>" class="text-dark"><?php echo $final['name'] ?></a>
+                                            </h5>
+                                            <div class="mb-2" style="font-size:13px; color:#888;">
+                                                <?php
+                                                if ($final['is_2024'] == 0) {
+                                                    echo '<i class=\"far fa-user\"></i> ' . $final['trainer_name'];
+                                                } else {
+                                                    $trainer_id = $final['trainer_id'];
+                                                    $trainersql = "SELECT * FROM trainers WHERE id=$trainer_id";
+                                                    $Trainerresults = $connect->query($trainersql);
+                                                    $trainerfinal = $Trainerresults->fetch_assoc();
+                                                    echo '<i class=\"far fa-user\"></i> <a href=\"./workshops-trainer.php?id=' . $trainerfinal['id'] . '\">' . $trainerfinal['name'] . '</a>';
+                                                }
+                                                ?>
+                                            </div>
+                                            <div class="mb-2" style="font-size:13px; color:#888;">
+                                                <i class="far fa-clock"></i>
+                                                <?php 
+                                                if($final['w_status']==1) {
+                                                    echo 'TBA';
+                                                } else {
+                                                    $date = $final['start_date'];
+                                                    $new_date = date("D | d M Y | h:i A", strtotime($date));
+                                                    echo $new_date;
+                                                }
+                                                ?>
+                                            </div>
+                                            <div class="mt-auto">
+                                                <div class="d-flex align-items-center mb-3">
+                                                    <span class="fw-bold text-success" style="font-size:1.1rem;">₹<?php echo $final['price_2'] ?></span>
+                                                    <span class="text-muted ms-2" style="text-decoration:line-through;">₹<?php echo $final['cut_price'] ?></span>
+                                                </div>
+                                                <a href="https://ipnacademy.in/workshop-details.php?id=<?php echo $final['id'] ?>" class="btn btn-primary w-100" style="border-radius:8px;">
+                                                    Recording
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <?php } ?>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </div>
+</section>
+<!-- End MISSION AIM Workshops Section -->
 
              
                         <div class="tp-section-title-wrapper mt-30 mb-50 text-center">
@@ -374,7 +658,7 @@
                         </div>
 
 
-                <section class="tp-showcase-area tp-nblue-bg pt-130 pb-130"
+                <!-- <section class="tp-showcase-area tp-nblue-bg pt-130 pb-130"
                     data-background="assets/img/bg/project-bg-pattern.png">
                     <div class="container">
                         <div class="row align-items-end">
@@ -474,14 +758,14 @@
                             </div>
                         </div>
                     </div>
-                </section>
+                </section> -->
 
-                <div class="solid-bg jarallax">
+                <!-- <div class="solid-bg jarallax">
                     <img class="jarallax-img" src="assets/img/images/1920820.png" alt="">
-                </div>
+                </div> -->
 
             
-                <div class="tp-team-area mt-30 pb-90">
+                <!-- <div class="tp-team-area mt-30 pb-90">
                     <div class="container">
                         <div class="tp-section-title-wrapper mb-50 text-center">
                             <span class="tp-section-subtitle mb-10"><i class="sub-dot-color"></i> expert member</span>
@@ -511,9 +795,9 @@
                            
                         </div>
                     </div>
-                </div>
+                </div> -->
 
-                <section class="tp-testimonial-area pt-130 pb-130">
+                <!-- <section class="tp-testimonial-area pt-130 pb-130">
                     <div class="container">
                         <div class="row align-items-end">
                             <div class="col-xl-4 d-none d-xl-block">
@@ -618,8 +902,8 @@
                             </div>
                         </div>
                     </div>
-                </section>
-                <div class="tp-contact-form-area tp-cream-bg pt-130 pb-130">
+                </section> -->
+                <!-- <div class="tp-contact-form-area tp-cream-bg pt-130 pb-130">
                     <div class="container">
                         <div class="row">
                             <div class="col-xl-5">
@@ -663,35 +947,41 @@
                             </div>
                         </div>
                     </div>
+                </div> -->
+
+
+
+<!-- Continue with the rest of your page as before -->
+<section class="tp-cta-bg-area pt-111 pb-110 p-relative tp-cta-overlay jarallax"
+    data-background="assets/img/images/bg1.png">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-xl-8 text-center">
+                <div class="tp-section-title-wrapper mb-50 position-relative z-2">
+                    <span class="tp-section-subtitle mb-10" data-color="#fff"><i
+                            class="sub-dot-color"></i> working process</span>
+                    <h2 class="tp-section-title tp-upper tp_title_anim mb-20" data-color="#fff">do you
+                        have any <br>
+                        work inquiry? send <br>
+                        us message</h2>
                 </div>
+                <div class="tp-price-btn mt-50">
+                    <a href="about.php" class="tp-btn-orange">
+                        <span class="tp-btn-wrap">
+                            <span class="tp-btn-y-1">Discover More</span>
+                            <span class="tp-btn-y-2">Discover Dore</span>
+                        </span>
+                        <i></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- ...rest of your file... -->
 
 
-                <section class="tp-cta-bg-area pt-111 pb-110 p-relative tp-cta-overlay jarallax"
-                    data-background="assets/img/images/bg1.png">
-                    <div class="container">
-                        <div class="row justify-content-center">
-                            <div class="col-xl-8 text-center">
-                                <div class="tp-section-title-wrapper mb-50 position-relative z-2">
-                                    <span class="tp-section-subtitle mb-10" data-color="#fff"><i
-                                            class="sub-dot-color"></i> working process</span>
-                                    <h2 class="tp-section-title tp-upper tp_title_anim mb-20" data-color="#fff">do you
-                                        have any <br>
-                                        work inquiry? send <br>
-                                        us message</h2>
-                                </div>
-                                <div class="tp-price-btn mt-50">
-                                    <a href="about.php" class="tp-btn-orange">
-                                        <span class="tp-btn-wrap">
-                                            <span class="tp-btn-y-1">Discover More</span>
-                                            <span class="tp-btn-y-2">Discover Dore</span>
-                                        </span>
-                                        <i></i>
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </section>
+             
 
             </main>
 

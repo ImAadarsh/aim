@@ -14,8 +14,8 @@
                                         <ul>
                                             <li><a href="index.php">Home</a></li>
                                             <li><a href="about.php">About Us</a></li>
-                                            <li><a href="services.php">Services</a></li>
-                                            <li><a href="team.php">Team</a></li>
+                                            <li><a href="impact.php">AIM Impact</a></li>
+                                            <li><a href="team.php">AI Educators</a></li>
                                             <li><a href="faq.php">FAQ</a></li>
                                             <li><a href="contact.php">Contact</a></li>
                                         </ul>

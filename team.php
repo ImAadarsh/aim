@@ -37,11 +37,11 @@
                         </div>
                         <div class="container">
                             <div class="tp-breadcrumb text-center position-relative z-index-2">
-                                <h1 class="tp-breadcrumb-title tp-upper tp-text-white">Team</h1>
+                                <h1 class="tp-breadcrumb-title tp-upper tp-text-white">AI Educators</h1>
                                 <div class="tp-breadcrumb-list">
                                     <span class="active"><a href="#">Home</a></span>
                                     <span class="dvir">-</span>
-                                    <span><a href="#">Team</a></span>
+                                    <span><a href="#">AI Educators</a></span>
                                 </div>
                             </div>
                         </div>
@@ -246,56 +246,7 @@
                         </div>
                     </section>
 
-                    <div class="tp-contact-form-area pt-130 pb-130">
-                        <div class="container">
-                            <div class="row">
-                                <div class="col-xl-5">
-                                    <div class="tp-section-title-wrapper mb-50 wow img-custom-anim-top" data-wow-duration="1s" data-wow-delay=".2s">
-                                        <h2 class="tp-section-title mb-20 fs-100">Join Our Mission</h2>
-                                    </div>
-                                </div>
-                                <div class="col-xl-7">
-                                    <div class="contact-form-wrapper">
-                                        <h3 class="tpform-title mb-25">Become an AI Education Specialist</h3>
-                                    </div>
-                                    <div class="contact-form-box">
-                                        <form id="contact-form" action="assets/mail.php" method="post">
-                                            <div class="row">
-                                                <div class="col-md-12 mb-30">
-                                                    <input name="name" type="text" placeholder="Full Name*">
-                                                </div>
-                                                <div class="col-md-6 mb-30">
-                                                    <input name="email" type="email" placeholder="Email Address*">
-                                                </div>
-                                                <div class="col-md-6 mb-30">
-                                                    <select name="position" class="form-select">
-                                                        <option value="">Select Position*</option>
-                                                        <option value="trainer">AI Trainer</option>
-                                                        <option value="developer">Curriculum Developer</option>
-                                                        <option value="support">Teacher Support</option>
-                                                        <option value="other">Other</option>
-                                                    </select>
-                                                </div>
-                                                <div class="col-md-12 mb-45">
-                                                    <textarea name="message" cols="30" rows="10" placeholder="Tell us about your experience and why you'd like to join our team*"></textarea>
-                                                </div>
-                                                <div class="col-12">
-                                                    <button type="submit" class="tp-btn">
-                                                        <span class="tp-btn-wrap">
-                                                            <span class="tp-btn-y-1">Submit Application</span>
-                                                            <span class="tp-btn-y-2">Submit Application</span>
-                                                        </span>  
-                                                        <i></i>
-                                                    </button>
-                                                </div>
-                                            </div>
-                                            <p class="ajax-response"></p>
-                                        </form>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                
 
                 </main>
 

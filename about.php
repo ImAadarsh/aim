@@ -83,7 +83,7 @@
                                         </div>
                                     </div>
                                     <div class="tp-about-btn wow img-custom-anim-top" data-wow-duration="1.5s" data-wow-delay="0.5s">
-                                        <a href="services.php" class="tp-btn">
+                                        <a href="impact.php" class="tp-btn">
                                             <span class="tp-btn-wrap">
                                                 <span class="tp-btn-y-1">Explore Programs</span>
                                                 <span class="tp-btn-y-2">Explore Programs</span>
