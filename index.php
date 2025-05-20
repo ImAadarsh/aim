@@ -598,7 +598,7 @@
 <!-- End MISSION AIM Workshops Section -->
 
              
-                        <div class="tp-section-title-wrapper mt-30 mb-50 text-center">
+                        <!-- <div class="tp-section-title-wrapper mt-30 mb-50 text-center">
                             <span class="tp-section-subtitle mb-10"><i class="sub-dot-color"></i> Our Process</span>
                             <h2 class="tp-section-title tp-upper tp_title_anim mb-20">How We Transform Teaching with AI</h2>
                         </div>
@@ -655,7 +655,7 @@
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
 
 
                 <!-- <section class="tp-showcase-area tp-nblue-bg pt-130 pb-130"
