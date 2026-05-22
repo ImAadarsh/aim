@@ -175,7 +175,7 @@ $nextId = $id < 6 ? $id + 1 : null;
                             <i class="far fa-calendar-alt"></i> Date: <strong><?php echo htmlspecialchars($workshop['date']); ?></strong>
                         </span>
                         <span class="ws-detail-hero__meta-item">
-                            <i class="far fa-clock"></i> Time: <strong>5:00 PM – 6:00 PM IST</strong>
+                            <i class="far fa-clock"></i> Time: <strong>05:00 PM – 06:00 PM IST</strong>
                         </span>
                         <span class="ws-detail-hero__meta-item">
                             <i class="fas fa-video"></i> Delivery: <strong>Live Online</strong>
@@ -272,7 +272,7 @@ $nextId = $id < 6 ? $id + 1 : null;
                                     <i class="far fa-clock ws-detail__sidebar-icon"></i>
                                     <div>
                                         <div class="ws-detail__sidebar-label">Time</div>
-                                        <div class="ws-detail__sidebar-val">5:00 PM – 6:00 PM IST</div>
+                                        <div class="ws-detail__sidebar-val">05:00 PM – 06:00 PM IST</div>
                                     </div>
                                 </div>
                                 <div class="ws-detail__sidebar-item">
