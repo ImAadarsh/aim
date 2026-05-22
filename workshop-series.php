@@ -556,7 +556,7 @@
                 <!-- Trainer 1: Ms. Sonia Wadhwa -->
                 <div class="ws-trainer-card ws-fade-left">
                     <div class="ws-trainer-card__avatar">
-                        <img src="assets/img/team/trainer_wadhwa.png" alt="Ms. Sonia Wadhwa">
+                        <img src="https://api.ipnacademy.in/storage/app/public/img/trainer/2IlBj7J7m5I2Rhgj9KgFdXwMP3vxALLbFRSG4cnK.png" alt="Ms. Sonia Wadhwa">
                     </div>
                     <h3 class="ws-trainer-card__name">Ms. Sonia Wadhwa</h3>
                     <p class="ws-trainer-card__role">AI Practitioner & Education Technology Leader</p>
@@ -574,7 +574,7 @@
                 <!-- Trainer 2: Ms. M S Saha -->
                 <div class="ws-trainer-card ws-fade-right">
                     <div class="ws-trainer-card__avatar">
-                        <img src="assets/img/team/trainer_saha.png" alt="Ms. M S Saha">
+                        <img src="https://api.ipnacademy.in/storage/app/public/img/trainer/bmUY3dRogKmKyqpqEJsmL2Scy6uuxddXYxdtO9ar.png" alt="Ms. M S Saha">
                     </div>
                     <h3 class="ws-trainer-card__name">Ms. M S Saha</h3>
                     <p class="ws-trainer-card__role">Award-Winning School Leader | Research Scholar | Educator</p>
