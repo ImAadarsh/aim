@@ -313,7 +313,7 @@ $nextId = $id < 6 ? $id + 1 : null;
                             <h4 class="ws-detail__sidebar-title"><i class="fas fa-graduation-cap"></i> Master Trainers</h4>
                             
                             <div class="ws-detail__sidebar-trainer">
-                                <img src="assets/img/team/trainer_wadhwa.png" alt="Ms. Sonia Wadhwa">
+                                <img src="https://api.ipnacademy.in/storage/app/public/img/trainer/2IlBj7J7m5I2Rhgj9KgFdXwMP3vxALLbFRSG4cnK.png" alt="Ms. Sonia Wadhwa">
                                 <div class="ws-detail__sidebar-trainer-info">
                                     <div class="ws-detail__sidebar-trainer-name">Ms. Sonia Wadhwa</div>
                                     <div class="ws-detail__sidebar-trainer-role">EdTech Leader & Author</div>
@@ -321,7 +321,7 @@ $nextId = $id < 6 ? $id + 1 : null;
                             </div>
 
                             <div class="ws-detail__sidebar-trainer">
-                                <img src="assets/img/team/trainer_saha.png" alt="Ms. M S Saha">
+                                <img src="https://api.ipnacademy.in/storage/app/public/img/trainer/bmUY3dRogKmKyqpqEJsmL2Scy6uuxddXYxdtO9ar.png" alt="Ms. M S Saha">
                                 <div class="ws-detail__sidebar-trainer-info">
                                     <div class="ws-detail__sidebar-trainer-name">Ms. M S Saha</div>
                                     <div class="ws-detail__sidebar-trainer-role">Award-Winning School Leader</div>
