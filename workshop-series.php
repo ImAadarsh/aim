@@ -914,7 +914,7 @@
         // ============================================================
         // COUNTDOWN TIMER
         // ============================================================
-        var targetDate = new Date('2026-06-16T10:00:00+05:30').getTime();
+        var targetDate = new Date('2026-06-16T17:00:00+05:30').getTime();
 
         function updateCountdown() {
             var now = new Date().getTime();
