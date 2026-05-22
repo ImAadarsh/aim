@@ -553,12 +553,12 @@
             </div>
 
             <div class="ws-trainers__grid">
-                <!-- Trainer 1: Mrs. S. Wadhwa -->
+                <!-- Trainer 1: Ms. Sonia Wadhwa -->
                 <div class="ws-trainer-card ws-fade-left">
                     <div class="ws-trainer-card__avatar">
-                        <img src="assets/img/team/trainer_wadhwa.png" alt="Mrs. S. Wadhwa">
+                        <img src="assets/img/team/trainer_wadhwa.png" alt="Ms. Sonia Wadhwa">
                     </div>
-                    <h3 class="ws-trainer-card__name">Mrs. S. Wadhwa</h3>
+                    <h3 class="ws-trainer-card__name">Ms. Sonia Wadhwa</h3>
                     <p class="ws-trainer-card__role">AI Practitioner & Education Technology Leader</p>
                     <div class="ws-trainer-card__badges">
                         <span><i class="fas fa-globe" style="margin-right:4px;"></i> 1 of 40 Bett Worldwide Leaders</span>
@@ -571,12 +571,12 @@
                     </p>
                 </div>
 
-                <!-- Trainer 2: Mrs. M. S. Saha -->
+                <!-- Trainer 2: Ms. M S Saha -->
                 <div class="ws-trainer-card ws-fade-right">
                     <div class="ws-trainer-card__avatar">
-                        <img src="assets/img/team/trainer_saha.png" alt="Mrs. M. S. Saha">
+                        <img src="assets/img/team/trainer_saha.png" alt="Ms. M S Saha">
                     </div>
-                    <h3 class="ws-trainer-card__name">Mrs. M. S. Saha</h3>
+                    <h3 class="ws-trainer-card__name">Ms. M S Saha</h3>
                     <p class="ws-trainer-card__role">Award-Winning School Leader | Research Scholar | Educator</p>
                     <div class="ws-trainer-card__badges">
                         <span><i class="fas fa-trophy" style="margin-right:4px;"></i> India's Most Impactful School Leader 2024</span>

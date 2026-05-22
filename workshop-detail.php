@@ -313,17 +313,17 @@ $nextId = $id < 6 ? $id + 1 : null;
                             <h4 class="ws-detail__sidebar-title"><i class="fas fa-graduation-cap"></i> Master Trainers</h4>
                             
                             <div class="ws-detail__sidebar-trainer">
-                                <img src="assets/img/team/trainer_wadhwa.png" alt="Mrs. S. Wadhwa">
+                                <img src="assets/img/team/trainer_wadhwa.png" alt="Ms. Sonia Wadhwa">
                                 <div class="ws-detail__sidebar-trainer-info">
-                                    <div class="ws-detail__sidebar-trainer-name">Mrs. S. Wadhwa</div>
+                                    <div class="ws-detail__sidebar-trainer-name">Ms. Sonia Wadhwa</div>
                                     <div class="ws-detail__sidebar-trainer-role">EdTech Leader & Author</div>
                                 </div>
                             </div>
 
                             <div class="ws-detail__sidebar-trainer">
-                                <img src="assets/img/team/trainer_saha.png" alt="Mrs. M. S. Saha">
+                                <img src="assets/img/team/trainer_saha.png" alt="Ms. M S Saha">
                                 <div class="ws-detail__sidebar-trainer-info">
-                                    <div class="ws-detail__sidebar-trainer-name">Mrs. M. S. Saha</div>
+                                    <div class="ws-detail__sidebar-trainer-name">Ms. M S Saha</div>
                                     <div class="ws-detail__sidebar-trainer-role">Award-Winning School Leader</div>
                                 </div>
                             </div>
