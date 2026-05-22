@@ -178,7 +178,7 @@ $nextId = $id < 6 ? $id + 1 : null;
                             <i class="far fa-clock"></i> Time: <strong>05:00 PM – 06:00 PM IST</strong>
                         </span>
                         <span class="ws-detail-hero__meta-item">
-                            <i class="fas fa-video"></i> Delivery: <strong>Live Online</strong>
+                            <i class="fas fa-video"></i> Delivery: <strong>Live Online ( IPN Meet )</strong>
                         </span>
                     </div>
                 </div>
@@ -279,7 +279,7 @@ $nextId = $id < 6 ? $id + 1 : null;
                                     <i class="fas fa-video ws-detail__sidebar-icon"></i>
                                     <div>
                                         <div class="ws-detail__sidebar-label">Delivery Mode</div>
-                                        <div class="ws-detail__sidebar-val">Live Online (IPN Meet)</div>
+                                        <div class="ws-detail__sidebar-val">Live Online ( IPN Meet )</div>
                                     </div>
                                 </div>
                                 <div class="ws-detail__sidebar-item">
