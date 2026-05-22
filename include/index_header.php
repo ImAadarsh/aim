@@ -16,6 +16,7 @@
                                             <li><a href="about.php">About Us</a></li>
                                             <li><a href="impact.php">AIM Impact</a></li>
                                             <li><a href="team.php">AI Educators</a></li>
+                                            <li><a href="workshop-series.php" style="color: #8B5CF6;">Workshop Series ✨</a></li>
                                             <li><a href="faq.php">FAQ</a></li>
                                             <li><a href="contact.php">Contact</a></li>
                                         </ul>

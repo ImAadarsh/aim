@@ -4,7 +4,7 @@
                 <div class="row gx-0 align-items-center">
                     <div class="col-xl-2 col-lg-5 col-md-4 col-6">
                         <div class="tp-logo">
-                            <a href="index.php"><img style="width: 500px;" src="assets/img/logo/logo-white.png" alt=""></a>
+                            <a href="index.php"><img src="assets/img/logo/logo-white.png" alt=""></a>
                         </div>
                     </div>
                     <div class="col-xl-10 col-lg-7 col-md-8 col-6">
@@ -16,6 +16,7 @@
                                         <li><a href="about.php">About Us</a></li>
                                         <li><a href="impact.php">AIM Impact</a></li>
                                         <li><a href="team.php">AI Educators</a></li>
+                                        <li><a href="workshop-series.php" style="color: #8B5CF6;">Workshop Series ✨</a></li>
                                         <li><a href="faq.php">FAQ</a></li>
                                         <li><a href="contact.php">Contact</a></li>
                                     </ul>
