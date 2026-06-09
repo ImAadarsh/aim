@@ -68,7 +68,7 @@
             <a href="#workshops" class="ws-nav__link">Workshops</a>
             <a href="#trainers" class="ws-nav__link">Trainers</a>
             <a href="#faq" class="ws-nav__link">FAQ</a>
-            <a href="https://www.instamojo.com/@ipnacademy/90e5e2e5bfbd47c587db1a2bffbc3d4f" target="_blank" class="ws-btn ws-btn--primary" id="nav-enrol-btn">
+            <a href="https://workshops.ipnacademy.in/workshop-payment-gateway.php?id=AIM-AI" target="_blank" class="ws-btn ws-btn--primary" id="nav-enrol-btn">
                 Enrol Now <i class="far fa-arrow-right"></i>
             </a>
         </div>
@@ -205,7 +205,7 @@
                 </div>
 
                 <!-- CTA -->
-                <a href="https://www.instamojo.com/@ipnacademy/90e5e2e5bfbd47c587db1a2bffbc3d4f" target="_blank" class="ws-btn ws-btn--primary" id="hero-enrol-btn">
+                <a href="https://workshops.ipnacademy.in/workshop-payment-gateway.php?id=AIM-AI" target="_blank" class="ws-btn ws-btn--primary" id="hero-enrol-btn">
                     <i class="fas fa-rocket"></i> Register for All 6 Workshops Now
                 </a>
 
@@ -324,7 +324,7 @@
                     <span>44% OFF!</span>
                 </div>
 
-                <a href="https://www.instamojo.com/@ipnacademy/90e5e2e5bfbd47c587db1a2bffbc3d4f" target="_blank" class="ws-btn ws-btn--primary" id="pricing-enrol-btn">
+                <a href="https://workshops.ipnacademy.in/workshop-payment-gateway.php?id=AIM-AI" target="_blank" class="ws-btn ws-btn--primary" id="pricing-enrol-btn">
                     <i class="fas fa-paper-plane"></i> Register for All 6 Workshops Now
                 </a>
 
@@ -697,7 +697,7 @@
                 Complete 6-Workshop Series &nbsp;|&nbsp; June – November 2026 &nbsp;|&nbsp; Live Online
             </p>
 
-            <a href="https://www.instamojo.com/@ipnacademy/90e5e2e5bfbd47c587db1a2bffbc3d4f" target="_blank" class="ws-btn ws-btn--primary" id="final-enrol-btn">
+            <a href="https://workshops.ipnacademy.in/workshop-payment-gateway.php?id=AIM-AI" target="_blank" class="ws-btn ws-btn--primary" id="final-enrol-btn">
                 <i class="fas fa-paper-plane"></i> Enrol Now
             </a>
 
@@ -748,7 +748,7 @@
                 <span class="ws-sticky-bar__original">₹8,999</span>
             </div>
         </div>
-        <a href="https://www.instamojo.com/@ipnacademy/90e5e2e5bfbd47c587db1a2bffbc3d4f" target="_blank" class="ws-btn ws-btn--primary" id="sticky-enrol-btn">
+        <a href="https://workshops.ipnacademy.in/workshop-payment-gateway.php?id=AIM-AI" target="_blank" class="ws-btn ws-btn--primary" id="sticky-enrol-btn">
             <i class="fas fa-paper-plane"></i> Enrol Now
         </a>
     </div>
