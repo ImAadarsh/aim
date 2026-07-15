@@ -1,4 +1,11 @@
-<?php require_once __DIR__ . '/include/workshops_data.php'; ?>
+<?php
+require_once __DIR__ . '/include/workshops_data.php';
+require_once __DIR__ . '/include/workshop_testimonials.php';
+
+$workshop_reviews = array_values(aim_get_workshop_reviews(275));
+$hero_rating = (float) $aim_series['rating'];
+$review_rows = aim_split_reviews_into_rows($workshop_reviews, 3);
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,9 +13,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Primary Meta Tags -->
-    <title>AI Workshop Series | IPN Mission AIM — 6 Power-Packed Workshops</title>
-    <meta name="title" content="AI Workshop Series | IPN Mission AIM — 6 Power-Packed Workshops">
-    <meta name="description" content="Join the complete 6-workshop AI series by IPN Mission AIM. Master AI tools for education — from lesson design to ethics. Special launch price ₹4,999 (Save 44%). June–November 2026.">
+    <title>AI Workshop Series | IPN Mission AIM — 4 Power-Packed Masterclasses</title>
+    <meta name="title" content="AI Workshop Series | IPN Mission AIM — 4 Power-Packed Masterclasses">
+    <meta name="description" content="Join the remaining 4-workshop AI Masterclass series by IPN Mission AIM. Rated 4.85/5 by educators. ₹2,999 (Save 50%). August–November 2026.">
     <meta name="keywords" content="AI workshops for teachers, AI in education, Mission AIM workshops, teacher training AI, IPN Foundation, AI lesson planning, STEM AI, numeracy AI, experiential learning AI">
     <meta name="author" content="IPN Foundation">
     <meta name="robots" content="index, follow">
@@ -16,15 +23,15 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://aim.ipnacademy.in/workshop-series.php">
-    <meta property="og:title" content="AI Workshop Series | IPN Mission AIM — 6 Power-Packed Workshops">
-    <meta property="og:description" content="Join the complete 6-workshop AI series. Master AI tools for education. Special launch price ₹4,999 (Save 44%). June–November 2026.">
+    <meta property="og:title" content="AI Workshop Series | IPN Mission AIM — 4 Power-Packed Masterclasses">
+    <meta property="og:description" content="Register for Four Masterclasses. Rated 4.85/5. ₹2,999 — Save 50%. August–November 2026.">
     <meta property="og:image" content="assets/img/logo/mission-aim-og.jpg">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://aim.ipnacademy.in/workshop-series.php">
-    <meta property="twitter:title" content="AI Workshop Series | IPN Mission AIM — 6 Power-Packed Workshops">
-    <meta property="twitter:description" content="Join the complete 6-workshop AI series. Master AI tools for education. Special launch price ₹4,999 (Save 44%). June–November 2026.">
+    <meta property="twitter:title" content="AI Workshop Series | IPN Mission AIM — 4 Power-Packed Masterclasses">
+    <meta property="twitter:description" content="Register for Four Masterclasses. Rated 4.85/5. ₹2,999 — Save 50%. August–November 2026.">
 
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="assets/img/logo/favicon.png">
@@ -40,7 +47,7 @@
     <!-- Stylesheets -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/fontawesome-pro.min.css">
-    <link rel="stylesheet" href="assets/css/workshop-series.css?v=2.2">
+    <link rel="stylesheet" href="assets/css/workshop-series.css?v=2.9">
 </head>
 
 <body class="ws-page">
@@ -68,7 +75,7 @@
             <a href="#workshops" class="ws-nav__link">Workshops</a>
             <a href="#trainers" class="ws-nav__link">Trainers</a>
             <a href="#faq" class="ws-nav__link">FAQ</a>
-            <a href="https://workshops.ipnacademy.in/workshop-payment-gateway.php?id=AIM-AI" target="_blank" class="ws-btn ws-btn--primary" id="nav-enrol-btn">
+            <a href="<?php echo htmlspecialchars($aim_series['payment_url']); ?>" target="_blank" class="ws-btn ws-btn--primary" id="nav-enrol-btn">
                 Enrol Now <i class="far fa-arrow-right"></i>
             </a>
         </div>
@@ -166,13 +173,24 @@
                 </div>
 
                 <h1 class="ws-hero__title">
-                    <span class="ws-gradient-text">1 Million</span><br>
-                    AI-Empowered Teachers
+                    <span class="ws-gradient-text">Join the AI Revolution</span><br>
+                    in Education
                 </h1>
 
                 <p class="ws-hero__subtitle">
-                    Empowering Educators. Transforming Classrooms. Shaping the Future.<br>
-                    A bold 6-workshop series designed by IPN Foundation — South Asia's leading teacher development platform.
+                    Master AI tools, lesson planning, assessments, content creation, and classroom innovation through our exclusive AI Masterclass Series — <?php echo $aim_series['remaining_workshops']; ?> power-packed sessions remaining.
+                </p>
+
+                <div class="ws-hero__rating">
+                    <div class="ws-hero__rating-score"><?php echo number_format($hero_rating, 2); ?>/5</div>
+                    <div class="ws-hero__rating-stars" aria-hidden="true">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="ws-hero__rating-label">Rated by Educators Across South Asia</div>
+                </div>
+
+                <p class="ws-countdown__heading">
+                    <i class="far fa-calendar-alt"></i> Next Masterclass · 25th August 2026
                 </p>
 
                 <!-- Countdown Timer -->
@@ -197,20 +215,20 @@
 
                 <!-- Price -->
                 <div class="ws-hero__price">
-                    <span class="ws-hero__price-current">₹4,999</span>
-                    <span class="ws-hero__price-original">₹8,999</span>
+                    <span class="ws-hero__price-current"><?php echo ws_format_price($aim_series['price']); ?></span>
+                    <span class="ws-hero__price-original"><?php echo ws_format_price($aim_series['original_price']); ?></span>
                     <span class="ws-hero__price-badge">
-                        <i class="fas fa-tag"></i> Save ₹4,000 | 44% OFF
+                        <i class="fas fa-tag"></i> Save <?php echo ws_format_price($aim_series['savings']); ?> | <?php echo $aim_series['discount_pct']; ?>% OFF
                     </span>
                 </div>
 
                 <!-- CTA -->
-                <a href="https://workshops.ipnacademy.in/workshop-payment-gateway.php?id=AIM-AI" target="_blank" class="ws-btn ws-btn--primary" id="hero-enrol-btn">
-                    <i class="fas fa-rocket"></i> Register for All 6 Workshops Now
+                <a href="<?php echo htmlspecialchars($aim_series['payment_url']); ?>" target="_blank" class="ws-btn ws-btn--primary" id="hero-enrol-btn">
+                    <i class="fas fa-rocket"></i> Register for <strong>Four</strong> Masterclasses
                 </a>
 
                 <p class="ws-hero__note">
-                    <i class="fas fa-info-circle"></i> Complete 6-part series enrolment only. Individual workshops not available separately.
+                    <i class="fas fa-info-circle"></i> Register for the <?php echo $aim_series['remaining_workshops']; ?> remaining Masterclasses with <?php echo $aim_series['discount_pct']; ?>% discount. Individual workshops not available separately.
                 </p>
             </div>
         </div>
@@ -228,14 +246,16 @@
             <div class="ws-marquee__item"><i class="fas fa-school"></i> 10,000+ Schools Impacted</div>
             <div class="ws-marquee__item"><i class="fas fa-globe-asia"></i> South Asia's #1 Teacher Platform</div>
             <div class="ws-marquee__item"><i class="fas fa-certificate"></i> IPN Foundation Certified</div>
-            <div class="ws-marquee__item"><i class="fas fa-calendar-alt"></i> 6 Workshops | June – November 2026</div>
+            <div class="ws-marquee__item"><i class="fas fa-star"></i> Rated <?php echo number_format($hero_rating, 2); ?>/5 by Educators</div>
+            <div class="ws-marquee__item"><i class="fas fa-calendar-alt"></i> <?php echo $aim_series['remaining_workshops']; ?> Masterclasses | <?php echo htmlspecialchars($aim_series['period']); ?></div>
             <div class="ws-marquee__item"><i class="fas fa-laptop"></i> Live Online Sessions</div>
             <!-- Duplicate for seamless scroll -->
             <div class="ws-marquee__item"><i class="fas fa-chalkboard-teacher"></i> 30,000+ Teachers Trained</div>
             <div class="ws-marquee__item"><i class="fas fa-school"></i> 10,000+ Schools Impacted</div>
             <div class="ws-marquee__item"><i class="fas fa-globe-asia"></i> South Asia's #1 Teacher Platform</div>
             <div class="ws-marquee__item"><i class="fas fa-certificate"></i> IPN Foundation Certified</div>
-            <div class="ws-marquee__item"><i class="fas fa-calendar-alt"></i> 6 Workshops | June – November 2026</div>
+            <div class="ws-marquee__item"><i class="fas fa-star"></i> Rated <?php echo number_format($hero_rating, 2); ?>/5 by Educators</div>
+            <div class="ws-marquee__item"><i class="fas fa-calendar-alt"></i> <?php echo $aim_series['remaining_workshops']; ?> Masterclasses | <?php echo htmlspecialchars($aim_series['period']); ?></div>
             <div class="ws-marquee__item"><i class="fas fa-laptop"></i> Live Online Sessions</div>
         </div>
     </div>
@@ -306,30 +326,29 @@
         <div class="ws-container">
             <div class="ws-pricing-card ws-fade-up">
                 <div class="ws-pricing-card__label">
-                    <i class="fas fa-fire"></i> Limited Time Offer
+                    <i class="fas fa-fire"></i> Limited Seats Available
                 </div>
-                <h3 class="ws-pricing-card__title">Complete 6-Workshop Series</h3>
+                <h3 class="ws-pricing-card__title"><strong><?php echo $aim_series['remaining_workshops']; ?></strong> Remaining Masterclasses</h3>
 
                 <div class="ws-pricing-card__original">
-                    <span>Original Price</span>
-                    ₹8,999
+                    <span>Individual Value</span>
+                    <?php echo ws_format_price($aim_series['original_price']); ?>
                 </div>
 
-                <div class="ws-pricing-card__price">₹4,999</div>
-                <div class="ws-pricing-card__price-label">Special Launch Price</div>
+                <div class="ws-pricing-card__price"><?php echo ws_format_price($aim_series['price']); ?></div>
 
                 <div class="ws-pricing-card__savings">
-                    <span>Save ₹4,000</span>
+                    <span>Save <?php echo ws_format_price($aim_series['savings']); ?></span>
                     <div class="divider"></div>
-                    <span>44% OFF!</span>
+                    <span><?php echo $aim_series['discount_pct']; ?>% OFF!</span>
                 </div>
 
-                <a href="https://workshops.ipnacademy.in/workshop-payment-gateway.php?id=AIM-AI" target="_blank" class="ws-btn ws-btn--primary" id="pricing-enrol-btn">
-                    <i class="fas fa-paper-plane"></i> Register for All 6 Workshops Now
+                <a href="<?php echo htmlspecialchars($aim_series['payment_url']); ?>" target="_blank" class="ws-btn ws-btn--primary" id="pricing-enrol-btn">
+                    <i class="fas fa-paper-plane"></i> Register for <strong>Four</strong> Masterclasses
                 </a>
 
                 <div class="ws-pricing-card__note">
-                    📌 <strong>Kind Note:</strong> For the best learning experience, Mission AIM is offered as a complete 6-part series. Individual workshop registrations are not available.
+                    📌 <strong>Kind Note:</strong> Enrol for the <?php echo $aim_series['remaining_workshops']; ?> remaining Masterclasses at <?php echo $aim_series['discount_pct']; ?>% discount. Individual workshop registrations are not available.
                 </div>
             </div>
         </div>
@@ -347,8 +366,8 @@
         <div class="ws-container">
             <div class="text-center ws-fade-up" style="margin-bottom: 40px;">
                 <span class="ws-section-label">Workshop Schedule</span>
-                <h2 class="ws-section-title">6 Power-Packed Workshops</h2>
-                <p class="ws-section-subtitle centered">June – November 2026</p>
+                <h2 class="ws-section-title"><?php echo $aim_series['remaining_workshops']; ?> Power-Packed Masterclasses</h2>
+                <p class="ws-section-subtitle centered"><?php echo htmlspecialchars($aim_series['period']); ?></p>
             </div>
         </div>
 
@@ -357,74 +376,14 @@
                 <?php 
                 // Loop 1 for seamless infinite marquee scroll
                 foreach ($workshops as $wId => $wItem): 
-                ?>
-                    <div class="ws-slider-card" style="--accent-color: var(--ws-accent-<?php echo htmlspecialchars($wItem['color']); ?>); --accent-color-rgb: var(--ws-accent-<?php echo htmlspecialchars($wItem['color']); ?>-rgb);">
-                        <div class="ws-slider-node"><?php echo $wId; ?></div>
-                        <div class="ws-slider-content">
-                            <a href="workshop-detail.php?id=<?php echo $wId; ?>" class="ws-slider-preview-link" style="display: block; text-decoration: none;">
-                                <div class="ws-slider-preview">
-                                    <img src="<?php echo htmlspecialchars($wItem['slide']); ?>" alt="<?php echo htmlspecialchars($wItem['title']); ?>" class="ws-slider-img">
-                                    <div class="ws-slider-overlay">
-                                        <span class="ws-slider-badge"><i class="fas fa-expand"></i> View Workshop Details</span>
-                                    </div>
-                                </div>
-                            </a>
-                            <div class="ws-slider-header">
-                                <h4 class="ws-slider-title">
-                                    <i class="<?php echo htmlspecialchars($wItem['icon']); ?>" style="color: var(--accent-color); margin-right: 8px;"></i>
-                                    <?php echo htmlspecialchars($wItem['title']); ?>
-                                </h4>
-                                <span class="ws-slider-date">
-                                    <i class="far fa-calendar"></i> <?php echo htmlspecialchars($wItem['date']); ?>
-                                </span>
-                            </div>
-                            <p class="ws-slider-text">
-                                <?php echo htmlspecialchars($wItem['description']); ?>
-                            </p>
-                            <div class="ws-slider-footer">
-                                <a href="workshop-detail.php?id=<?php echo $wId; ?>" class="ws-btn--link">
-                                    Learn More & Agenda <i class="far fa-arrow-right"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                <?php endforeach; ?>
+                    ws_render_slider_card($wId, $wItem);
+                endforeach; 
 
-                <?php 
                 // Loop 2 (identical clone) for seamless infinite marquee scroll
                 foreach ($workshops as $wId => $wItem): 
+                    ws_render_slider_card($wId, $wItem);
+                endforeach; 
                 ?>
-                    <div class="ws-slider-card" style="--accent-color: var(--ws-accent-<?php echo htmlspecialchars($wItem['color']); ?>); --accent-color-rgb: var(--ws-accent-<?php echo htmlspecialchars($wItem['color']); ?>-rgb);">
-                        <div class="ws-slider-node"><?php echo $wId; ?></div>
-                        <div class="ws-slider-content">
-                            <a href="workshop-detail.php?id=<?php echo $wId; ?>" class="ws-slider-preview-link" style="display: block; text-decoration: none;">
-                                <div class="ws-slider-preview">
-                                    <img src="<?php echo htmlspecialchars($wItem['slide']); ?>" alt="<?php echo htmlspecialchars($wItem['title']); ?>" class="ws-slider-img">
-                                    <div class="ws-slider-overlay">
-                                        <span class="ws-slider-badge"><i class="fas fa-expand"></i> View Workshop Details</span>
-                                    </div>
-                                </div>
-                            </a>
-                            <div class="ws-slider-header">
-                                <h4 class="ws-slider-title">
-                                    <i class="<?php echo htmlspecialchars($wItem['icon']); ?>" style="color: var(--accent-color); margin-right: 8px;"></i>
-                                    <?php echo htmlspecialchars($wItem['title']); ?>
-                                </h4>
-                                <span class="ws-slider-date">
-                                    <i class="far fa-calendar"></i> <?php echo htmlspecialchars($wItem['date']); ?>
-                                </span>
-                            </div>
-                            <p class="ws-slider-text">
-                                <?php echo htmlspecialchars($wItem['description']); ?>
-                            </p>
-                            <div class="ws-slider-footer">
-                                <a href="workshop-detail.php?id=<?php echo $wId; ?>" class="ws-btn--link">
-                                    Learn More & Agenda <i class="far fa-arrow-right"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                <?php endforeach; ?>
             </div>
         </div>
     </section>
@@ -495,6 +454,28 @@
             </div>
         </div>
     </section>
+
+    <!-- ============================================================
+         EDUCATOR REVIEWS — after takeaways
+         ============================================================ -->
+    <section class="ws-section ws-reviews-section ws-bg-dark-section" id="testimonials" aria-label="Educator testimonials">
+        <div class="ws-container ws-fade-up">
+            <div class="ws-reviews-section__head text-center">
+                <span class="ws-section-label">Educator Voices</span>
+                <h2 class="ws-section-title">What Teachers Are Saying</h2>
+                <p class="ws-section-subtitle centered">Real feedback from educators who joined the first Mission AIM Masterclass.</p>
+            </div>
+        </div>
+
+        <div class="ws-reviews-flow__mask">
+            <?php echo aim_render_review_marquee_row($review_rows[0], 'right', 46); ?>
+            <?php echo aim_render_review_marquee_row($review_rows[1], 'left', 40); ?>
+            <?php echo aim_render_review_marquee_row($review_rows[2], 'right', 52); ?>
+        </div>
+    </section>
+
+    <!-- Glowing section divider -->
+    <div class="ws-divider"></div>
 
     <!-- ============================================================
          PROGRAMME OBJECTIVES
@@ -609,7 +590,7 @@
                     </button>
                     <div class="ws-faq__answer">
                         <div class="ws-faq__answer-inner">
-                            For the best learning experience, Mission AIM is offered as a complete 6-part series. Individual workshop registrations are not available. Each workshop builds on the previous one, ensuring a comprehensive AI integration journey.
+                            For the best learning experience, Mission AIM is offered as a package of the <?php echo $aim_series['remaining_workshops']; ?> remaining Masterclasses. Individual workshop registrations are not available. Each session builds on the previous one, ensuring a comprehensive AI integration journey.
                         </div>
                     </div>
                 </div>
@@ -621,7 +602,7 @@
                     </button>
                     <div class="ws-faq__answer">
                         <div class="ws-faq__answer-inner">
-                            All 6 workshops are conducted as live online sessions. You'll get interactive, hands-on experience with direct access to the master trainers for Q&A and personalized guidance.
+                            All remaining Masterclasses are conducted as live online sessions. You'll get interactive, hands-on experience with direct access to the master trainers for Q&A and personalized guidance.
                         </div>
                     </div>
                 </div>
@@ -669,7 +650,7 @@
                     </button>
                     <div class="ws-faq__answer">
                         <div class="ws-faq__answer-inner">
-                            Upon completing all 6 workshops, you'll receive a Certificate of Completion from IPN Mission AIM, recognized by IPN Foundation — South Asia's leading teacher development platform.
+                            Upon completing all <?php echo $aim_series['remaining_workshops']; ?> Masterclasses, you'll receive a Certificate of Completion from IPN Mission AIM, recognized by IPN Foundation — South Asia's leading teacher development platform.
                         </div>
                     </div>
                 </div>
@@ -686,23 +667,23 @@
             <h2 class="ws-section-title">Lead the AI Revolution<br>in Your Classroom</h2>
 
             <div class="ws-final-cta__price">
-                <span class="ws-hero__price-current">₹4,999</span>
-                <span class="ws-hero__price-original">₹8,999</span>
+                <span class="ws-hero__price-current"><?php echo ws_format_price($aim_series['price']); ?></span>
+                <span class="ws-hero__price-original"><?php echo ws_format_price($aim_series['original_price']); ?></span>
                 <span class="ws-hero__price-badge">
-                    <i class="fas fa-tag"></i> Save ₹4,000 | 44% OFF
+                    <i class="fas fa-tag"></i> Save <?php echo ws_format_price($aim_series['savings']); ?> | <?php echo $aim_series['discount_pct']; ?>% OFF
                 </span>
             </div>
 
             <p class="ws-final-cta__details">
-                Complete 6-Workshop Series &nbsp;|&nbsp; June – November 2026 &nbsp;|&nbsp; Live Online
+                <strong><?php echo $aim_series['remaining_workshops']; ?> Masterclasses</strong> &nbsp;|&nbsp; <?php echo htmlspecialchars($aim_series['period']); ?> &nbsp;|&nbsp; Live Online
             </p>
 
-            <a href="https://workshops.ipnacademy.in/workshop-payment-gateway.php?id=AIM-AI" target="_blank" class="ws-btn ws-btn--primary" id="final-enrol-btn">
-                <i class="fas fa-paper-plane"></i> Enrol Now
+            <a href="<?php echo htmlspecialchars($aim_series['payment_url']); ?>" target="_blank" class="ws-btn ws-btn--primary" id="final-enrol-btn">
+                <i class="fas fa-paper-plane"></i> Register for <strong>Four</strong> Masterclasses
             </a>
 
             <p class="ws-hero__note" style="margin-top: 20px;">
-                📌 Full series enrolment only. Individual workshop registrations are not available.
+                📌 Enrol for the <?php echo $aim_series['remaining_workshops']; ?> remaining Masterclasses with <?php echo $aim_series['discount_pct']; ?>% discount. Individual registrations are not available.
             </p>
 
             <div class="ws-contact-strip" style="margin-top: 40px;">
@@ -740,16 +721,16 @@
     <div class="ws-sticky-bar" id="sticky-bar">
         <div class="ws-sticky-bar__info-group">
             <div class="ws-sticky-bar__badge-row">
-                <span class="ws-sticky-bar__badge"><i class="fas fa-graduation-cap"></i> 6-Workshop Pass</span>
-                <span class="ws-sticky-bar__discount"><i class="fas fa-tag"></i> 44% OFF</span>
+                <span class="ws-sticky-bar__badge"><i class="fas fa-graduation-cap"></i> <strong><?php echo $aim_series['remaining_workshops']; ?></strong> Masterclasses</span>
+                <span class="ws-sticky-bar__discount"><i class="fas fa-tag"></i> <?php echo $aim_series['discount_pct']; ?>% OFF</span>
             </div>
             <div class="ws-sticky-bar__price">
-                <span class="ws-sticky-bar__current">₹4,999</span>
-                <span class="ws-sticky-bar__original">₹8,999</span>
+                <span class="ws-sticky-bar__current"><?php echo ws_format_price($aim_series['price']); ?></span>
+                <span class="ws-sticky-bar__original"><?php echo ws_format_price($aim_series['original_price']); ?></span>
             </div>
         </div>
-        <a href="https://workshops.ipnacademy.in/workshop-payment-gateway.php?id=AIM-AI" target="_blank" class="ws-btn ws-btn--primary" id="sticky-enrol-btn">
-            <i class="fas fa-paper-plane"></i> Enrol Now
+        <a href="<?php echo htmlspecialchars($aim_series['payment_url']); ?>" target="_blank" class="ws-btn ws-btn--primary" id="sticky-enrol-btn">
+            <i class="fas fa-paper-plane"></i> Register for <strong>Four</strong> Masterclasses
         </a>
     </div>
 
@@ -914,7 +895,7 @@
         // ============================================================
         // COUNTDOWN TIMER
         // ============================================================
-        var targetDate = new Date('2026-06-16T17:00:00+05:30').getTime();
+        var targetDate = new Date('<?php echo $aim_series['countdown_target']; ?>').getTime();
 
         function updateCountdown() {
             var now = new Date().getTime();
@@ -1007,26 +988,32 @@
         }, { passive: true });
 
         // ============================================================
-        // HIDE STICKY FOOTER AT END OF PAGE
+        // STICKY BAR — show only after hero, hide at page bottom
         // ============================================================
         var stickyBar = document.getElementById('sticky-bar');
         if (stickyBar) {
-            window.addEventListener('scroll', function() {
+            var heroSection = document.getElementById('hero');
+
+            function updateStickyBar() {
                 var scrollHeight = document.documentElement.scrollHeight;
                 var clientHeight = document.documentElement.clientHeight;
                 var scrollPosition = window.scrollY + clientHeight;
+                var heroBottom = heroSection
+                    ? heroSection.offsetTop + heroSection.offsetHeight - 80
+                    : window.innerHeight * 0.85;
+                var pastHero = window.scrollY >= heroBottom;
+                var atPageEnd = scrollPosition >= scrollHeight - 120;
 
-                // Hide sticky footer when within 120px of the bottom of the page (footer entry point)
-                if (scrollPosition >= scrollHeight - 120) {
-                    stickyBar.style.transform = 'translateY(150%)';
-                    stickyBar.style.opacity = '0';
-                    stickyBar.style.visibility = 'hidden';
+                if (pastHero && !atPageEnd) {
+                    stickyBar.classList.add('is-visible');
                 } else {
-                    stickyBar.style.transform = 'translateY(0)';
-                    stickyBar.style.opacity = '1';
-                    stickyBar.style.visibility = 'visible';
+                    stickyBar.classList.remove('is-visible');
                 }
-            }, { passive: true });
+            }
+
+            updateStickyBar();
+            window.addEventListener('scroll', updateStickyBar, { passive: true });
+            window.addEventListener('resize', updateStickyBar);
         }
 
         // ============================================================

@@ -1341,6 +1341,17 @@ body.ws-menu-open {
   box-shadow: 0 -8px 30px rgba(74, 14, 78, 0.12);
   transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease, visibility 0.4s;
   will-change: transform, opacity;
+  transform: translateY(150%);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.ws-sticky-bar.is-visible {
+  transform: translateY(0);
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
 }
 
 .ws-sticky-bar__price {
@@ -2397,5 +2408,276 @@ body.ws-menu-open {
 @media (min-width: 992px) {
   .ws-detail__grid {
     grid-template-columns: 7fr 4fr;
+  }
+}
+
+/* Hero rating — centrally placed */
+.ws-hero__rating {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 28px auto 18px;
+  padding: 18px 28px;
+  max-width: 360px;
+  border-radius: 16px;
+  background: rgba(255, 184, 0, 0.08);
+  border: 1px solid rgba(255, 184, 0, 0.25);
+  box-shadow: 0 8px 32px rgba(255, 184, 0, 0.08);
+}
+
+.ws-hero__rating-score {
+  font-size: clamp(2rem, 5vw, 2.75rem);
+  font-weight: 900;
+  line-height: 1;
+  color: #ffb800;
+  letter-spacing: -0.02em;
+}
+
+.ws-hero__rating-stars {
+  display: flex;
+  gap: 4px;
+  margin: 8px 0 6px;
+  color: #ffb800;
+  font-size: 1rem;
+}
+
+.ws-hero__rating-label {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--ws-text-light-muted);
+  letter-spacing: 0.02em;
+}
+
+.ws-countdown__heading {
+  text-align: center;
+  font-size: 0.9rem;
+  font-weight: 700;
+  color: var(--ws-accent-orange);
+  margin: 0 auto 14px;
+  letter-spacing: 0.03em;
+}
+
+/* Past / completed workshop cards */
+.ws-slider-card--past {
+  opacity: 0.72;
+  filter: grayscale(0.35);
+}
+
+.ws-slider-card--past:hover {
+  transform: none;
+}
+
+.ws-slider-past-badge {
+  position: absolute;
+  top: 8px;
+  right: 16px;
+  z-index: 6;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 10px;
+  border-radius: 999px;
+  background: rgba(0, 192, 112, 0.15);
+  border: 1px solid rgba(0, 192, 112, 0.35);
+  color: var(--ws-accent-green);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.ws-slider-preview--past {
+  pointer-events: none;
+}
+
+.ws-btn--link-disabled {
+  color: var(--ws-text-light-muted);
+  font-size: 0.82rem;
+  font-weight: 600;
+  opacity: 0.75;
+}
+
+.ws-detail-hero__badge--past {
+  background: rgba(0, 192, 112, 0.12);
+  border-color: rgba(0, 192, 112, 0.3);
+  color: var(--ws-accent-green);
+}
+
+.ws-detail__past-notice {
+  margin-bottom: 14px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  background: rgba(255, 184, 0, 0.08);
+  border: 1px solid rgba(255, 184, 0, 0.22);
+  color: var(--ws-text-light-muted);
+  font-size: 0.82rem;
+  line-height: 1.5;
+}
+
+.ws-detail__past-notice i {
+  color: var(--ws-accent-orange);
+  margin-right: 6px;
+}
+
+#hero-enrol-btn strong,
+#pricing-enrol-btn strong,
+#final-enrol-btn strong,
+#sticky-enrol-btn strong,
+.ws-detail__enrol-btn strong {
+  font-weight: 900;
+}
+
+/* Flowing educator review marquees */
+.ws-reviews-section {
+  padding-top: 48px;
+  padding-bottom: 56px;
+  overflow: hidden;
+}
+
+.ws-reviews-section__head {
+  margin-bottom: 32px;
+}
+
+.ws-reviews-section__head .ws-section-title {
+  margin-top: 10px;
+}
+
+.ws-reviews-flow__mask {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  mask-image: linear-gradient(to right, transparent, black 6%, black 94%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 6%, black 94%, transparent);
+}
+
+.ws-reviews-flow__row {
+  overflow: hidden;
+  width: 100%;
+}
+
+.ws-reviews-flow__track {
+  display: flex;
+  width: max-content;
+  gap: 16px;
+  padding: 2px 0;
+}
+
+.ws-reviews-flow__track--left {
+  animation: wsReviewsScrollLeft var(--ws-review-duration, 40s) linear infinite;
+}
+
+.ws-reviews-flow__track--right {
+  animation: wsReviewsScrollRight var(--ws-review-duration, 40s) linear infinite;
+}
+
+.ws-reviews-flow__row:hover .ws-reviews-flow__track {
+  animation-play-state: paused;
+}
+
+@keyframes wsReviewsScrollLeft {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+@keyframes wsReviewsScrollRight {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(0); }
+}
+
+.ws-review-card {
+  flex: 0 0 auto;
+  width: 320px;
+  min-height: 178px;
+  padding: 22px 24px 24px;
+  border-radius: 20px;
+  background: linear-gradient(
+    155deg,
+    rgba(255, 184, 0, 0.16) 0%,
+    rgba(255, 140, 0, 0.08) 48%,
+    rgba(255, 184, 0, 0.1) 100%
+  );
+  border: 1px solid rgba(255, 184, 0, 0.28);
+  box-shadow:
+    0 10px 32px rgba(0, 0, 0, 0.22),
+    0 0 0 1px rgba(255, 184, 0, 0.06) inset,
+    0 8px 28px rgba(255, 184, 0, 0.08);
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.ws-review-card__author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 14px;
+  border-bottom: 1px solid rgba(255, 184, 0, 0.18);
+}
+
+.ws-review-card__avatar {
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  object-fit: cover;
+  border: 2px solid rgba(255, 184, 0, 0.55);
+  box-shadow: 0 0 0 3px rgba(255, 184, 0, 0.12);
+  flex-shrink: 0;
+}
+
+.ws-review-card__meta {
+  min-width: 0;
+}
+
+.ws-review-card__name {
+  font-size: 0.86rem;
+  font-weight: 800;
+  color: #fff;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ws-review-card__role {
+  font-size: 0.74rem;
+  color: rgba(255, 255, 255, 0.68);
+  margin-top: 3px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.ws-review-card__text {
+  margin: 0;
+  font-size: 0.86rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.92);
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  min-height: calc(1.6em * 3);
+  padding-top: 2px;
+}
+
+@media (max-width: 768px) {
+  .ws-reviews-section {
+    padding-top: 36px;
+    padding-bottom: 40px;
+  }
+
+  .ws-review-card {
+    width: 288px;
+    min-height: 168px;
+    padding: 18px 20px 20px;
+    gap: 14px;
+  }
+
+  .ws-review-card__text {
+    font-size: 0.82rem;
+    -webkit-line-clamp: 3;
+    min-height: calc(1.6em * 3);
   }
 }

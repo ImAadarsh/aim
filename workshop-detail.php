@@ -10,6 +10,7 @@ if ($id < 1 || $id > 6) {
 require_once __DIR__ . '/include/workshops_data.php';
 
 $workshop = $workshops[$id];
+$isPast = !empty($workshop['past']);
 
 // Setup Previous/Next Navigation IDs
 $prevId = $id > 1 ? $id - 1 : null;
@@ -24,7 +25,7 @@ $nextId = $id < 6 ? $id + 1 : null;
     <!-- Primary Meta Tags -->
     <title><?php echo htmlspecialchars($workshop['title']); ?> | IPN Mission AIM Workshop Details</title>
     <meta name="title" content="<?php echo htmlspecialchars($workshop['title']); ?> | IPN Mission AIM Workshop Details">
-    <meta name="description" content="Explore details for <?php echo htmlspecialchars($workshop['title']); ?>, part of the 6-workshop AI series by IPN Mission AIM. Special complete pass for ₹4,999.">
+    <meta name="description" content="Explore details for <?php echo htmlspecialchars($workshop['title']); ?>, part of the IPN Mission AIM AI Masterclass series. Register for Four Masterclasses at <?php echo ws_format_price($aim_series['price']); ?> (Save <?php echo $aim_series['discount_pct']; ?>%).">
     <meta name="author" content="IPN Foundation">
 
     <!-- Favicon -->
@@ -38,7 +39,7 @@ $nextId = $id < 6 ? $id + 1 : null;
     <!-- Stylesheets -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/fontawesome-pro.min.css">
-    <link rel="stylesheet" href="assets/css/workshop-series.css?v=2.4">
+    <link rel="stylesheet" href="assets/css/workshop-series.css?v=2.9">
 </head>
 
 <body class="ws-page">
@@ -66,7 +67,7 @@ $nextId = $id < 6 ? $id + 1 : null;
             <a href="workshop-series.php" class="ws-nav__link">Workshops</a>
             <a href="workshop-series.php#trainers" class="ws-nav__link">Trainers</a>
             <a href="workshop-series.php#faq" class="ws-nav__link">FAQ</a>
-            <a href="https://www.instamojo.com/@ipnacademy/90e5e2e5bfbd47c587db1a2bffbc3d4f" target="_blank" class="ws-btn ws-btn--primary" id="nav-enrol-btn">
+            <a href="<?php echo htmlspecialchars($aim_series['payment_url']); ?>" target="_blank" class="ws-btn ws-btn--primary" id="nav-enrol-btn">
                 Enrol Now <i class="far fa-arrow-right"></i>
             </a>
         </div>
@@ -84,7 +85,7 @@ $nextId = $id < 6 ? $id + 1 : null;
         <!-- ============================================================
              DETAIL HERO SECTION
              ============================================================ -->
-        <header class="ws-detail-hero">
+        <header class="ws-detail-hero" id="hero">
             <!-- Animated aurora ribbons -->
             <div class="ws-aurora">
                 <div class="ws-aurora__ribbon ws-aurora__ribbon--1"></div>
@@ -163,8 +164,13 @@ $nextId = $id < 6 ? $id + 1 : null;
                     </a>
                     
                     <div>
-                        <span class="ws-detail-hero__badge">
-                            <i class="<?php echo htmlspecialchars($workshop['icon']); ?>"></i> Workshop 0<?php echo $id; ?> / 06
+                        <span class="ws-detail-hero__badge<?php echo $isPast ? ' ws-detail-hero__badge--past' : ''; ?>">
+                            <i class="<?php echo htmlspecialchars($workshop['icon']); ?>"></i>
+                            <?php if ($isPast): ?>
+                                Completed · Workshop 0<?php echo $id; ?> / 06
+                            <?php else: ?>
+                                Workshop 0<?php echo $id; ?> / 06
+                            <?php endif; ?>
                         </span>
                     </div>
 
@@ -292,18 +298,23 @@ $nextId = $id < 6 ? $id + 1 : null;
                             </div>
 
                             <div class="ws-detail__enrol-box">
-                                <div class="ws-detail__sidebar-label">Complete 6-Workshop Pass</div>
+                                <?php if ($isPast): ?>
+                                    <div class="ws-detail__past-notice">
+                                        <i class="fas fa-info-circle"></i> This session concluded on <?php echo htmlspecialchars($workshop['date']); ?>. Register for the <strong><?php echo $aim_series['remaining_workshops']; ?> remaining Masterclasses</strong> below.
+                                    </div>
+                                <?php endif; ?>
+                                <div class="ws-detail__sidebar-label"><strong><?php echo $aim_series['remaining_workshops']; ?></strong> Masterclass Pass</div>
                                 <div class="ws-detail__enrol-price">
                                     <div class="ws-detail__enrol-price-val">
-                                        ₹4,999 
-                                        <span class="ws-detail__enrol-price-orig">₹8,999</span>
+                                        <?php echo ws_format_price($aim_series['price']); ?>
+                                        <span class="ws-detail__enrol-price-orig"><?php echo ws_format_price($aim_series['original_price']); ?></span>
                                     </div>
                                 </div>
-                                <a href="https://www.instamojo.com/@ipnacademy/90e5e2e5bfbd47c587db1a2bffbc3d4f" target="_blank" class="ws-btn ws-btn--primary ws-detail__enrol-btn">
-                                    <i class="fas fa-rocket"></i> Enrol for All 6 Sessions
+                                <a href="<?php echo htmlspecialchars($aim_series['payment_url']); ?>" target="_blank" class="ws-btn ws-btn--primary ws-detail__enrol-btn">
+                                    <i class="fas fa-rocket"></i> Register for <strong>Four</strong> Masterclasses
                                 </a>
                                 <div class="ws-detail__enrol-badge">
-                                    <i class="fas fa-check-circle"></i> 44% Special Launch Discount Applied
+                                    <i class="fas fa-check-circle"></i> <?php echo $aim_series['discount_pct']; ?>% OFF — Save <?php echo ws_format_price($aim_series['savings']); ?>
                                 </div>
                             </div>
                         </div>
@@ -362,16 +373,16 @@ $nextId = $id < 6 ? $id + 1 : null;
     <div class="ws-sticky-bar" id="sticky-bar">
         <div class="ws-sticky-bar__info-group">
             <div class="ws-sticky-bar__badge-row">
-                <span class="ws-sticky-bar__badge"><i class="fas fa-graduation-cap"></i> 6-Workshop Pass</span>
-                <span class="ws-sticky-bar__discount"><i class="fas fa-tag"></i> 44% OFF</span>
+                <span class="ws-sticky-bar__badge"><i class="fas fa-graduation-cap"></i> <strong><?php echo $aim_series['remaining_workshops']; ?></strong> Masterclasses</span>
+                <span class="ws-sticky-bar__discount"><i class="fas fa-tag"></i> <?php echo $aim_series['discount_pct']; ?>% OFF</span>
             </div>
             <div class="ws-sticky-bar__price">
-                <span class="ws-sticky-bar__current">₹4,999</span>
-                <span class="ws-sticky-bar__original">₹8,999</span>
+                <span class="ws-sticky-bar__current"><?php echo ws_format_price($aim_series['price']); ?></span>
+                <span class="ws-sticky-bar__original"><?php echo ws_format_price($aim_series['original_price']); ?></span>
             </div>
         </div>
-        <a href="https://www.instamojo.com/@ipnacademy/90e5e2e5bfbd47c587db1a2bffbc3d4f" target="_blank" class="ws-btn ws-btn--primary" id="sticky-enrol-btn">
-            <i class="fas fa-paper-plane"></i> Enrol Now
+        <a href="<?php echo htmlspecialchars($aim_series['payment_url']); ?>" target="_blank" class="ws-btn ws-btn--primary" id="sticky-enrol-btn">
+            <i class="fas fa-paper-plane"></i> Register for <strong>Four</strong> Masterclasses
         </a>
     </div>
 
@@ -562,25 +573,32 @@ $nextId = $id < 6 ? $id + 1 : null;
         }, { passive: true });
 
         // ============================================================
-        // HIDE STICKY FOOTER AT END OF PAGE
+        // STICKY BAR — show only after hero, hide at page bottom
         // ============================================================
         var stickyBar = document.getElementById('sticky-bar');
         if (stickyBar) {
-            window.addEventListener('scroll', function() {
+            var heroSection = document.getElementById('hero');
+
+            function updateStickyBar() {
                 var scrollHeight = document.documentElement.scrollHeight;
                 var clientHeight = document.documentElement.clientHeight;
                 var scrollPosition = window.scrollY + clientHeight;
+                var heroBottom = heroSection
+                    ? heroSection.offsetTop + heroSection.offsetHeight - 80
+                    : window.innerHeight * 0.85;
+                var pastHero = window.scrollY >= heroBottom;
+                var atPageEnd = scrollPosition >= scrollHeight - 120;
 
-                if (scrollPosition >= scrollHeight - 120) {
-                    stickyBar.style.transform = 'translateY(150%)';
-                    stickyBar.style.opacity = '0';
-                    stickyBar.style.visibility = 'hidden';
+                if (pastHero && !atPageEnd) {
+                    stickyBar.classList.add('is-visible');
                 } else {
-                    stickyBar.style.transform = 'translateY(0)';
-                    stickyBar.style.opacity = '1';
-                    stickyBar.style.visibility = 'visible';
+                    stickyBar.classList.remove('is-visible');
                 }
-            }, { passive: true });
+            }
+
+            updateStickyBar();
+            window.addEventListener('scroll', updateStickyBar, { passive: true });
+            window.addEventListener('resize', updateStickyBar);
         }
 
         // ============================================================

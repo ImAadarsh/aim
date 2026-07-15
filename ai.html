@@ -1,0 +1,825 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPN FORUM | AI Ecosystem for Schools</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg: #050816;
+            --bg-2: #0a0f1e;
+            --surface: rgba(15, 23, 42, 0.65);
+            --border: rgba(99, 102, 241, 0.18);
+            --text: #e2e8f0;
+            --muted: #94a3b8;
+            --cyan: #22d3ee;
+            --purple: #a78bfa;
+            --blue: #60a5fa;
+            --orange: #f26522;
+            --gold: #c9a227;
+            --section-gap: calc(1.75rem + 20px);
+            --section-x: 1.5rem;
+            --font: 'Inter', system-ui, sans-serif;
+        }
+
+        * { box-sizing: border-box; }
+
+        html { scroll-behavior: smooth; overflow-x: hidden; }
+
+        body {
+            margin: 0;
+            font-family: var(--font);
+            color: var(--text);
+            background: var(--bg);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+            overflow-x: hidden;
+        }
+
+        .page-wrap {
+            position: relative;
+            z-index: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 0;
+            padding-bottom: var(--section-gap);
+        }
+
+        /* ── Hero ── */
+        .hero {
+            position: relative;
+            text-align: center;
+            overflow: visible;
+        }
+
+        .hero-first-screen {
+            height: 100vh;
+            height: 100dvh;
+            min-height: 100vh;
+            min-height: 100dvh;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            padding: clamp(0.75rem, 2.5vh, 1.5rem) var(--section-x) clamp(0.5rem, 1.5vh, 1rem);
+            background: var(--bg);
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(ellipse 70% 50% at 50% -10%, rgba(99, 102, 241, 0.22) 0%, transparent 60%),
+                radial-gradient(ellipse 40% 30% at 80% 30%, rgba(34, 211, 238, 0.1) 0%, transparent 50%),
+                radial-gradient(ellipse 40% 30% at 20% 40%, rgba(167, 139, 250, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .hero-inner {
+            position: relative;
+            z-index: 4;
+            width: 100%;
+            max-width: min(960px, 94vw);
+            margin: 0 auto;
+            flex-shrink: 0;
+        }
+
+        .ai-chip {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.35rem;
+            padding: 0.32rem 0.75rem;
+            margin-bottom: clamp(0.4rem, 1.2vh, 0.75rem);
+            font-size: clamp(0.58rem, 1.1vw, 0.68rem);
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            color: var(--cyan);
+            background: rgba(34, 211, 238, 0.08);
+            border: 1px solid rgba(34, 211, 238, 0.25);
+            border-radius: 999px;
+        }
+
+        .ai-chip svg {
+            width: 11px;
+            height: 11px;
+        }
+
+        .hero h1 {
+            font-size: clamp(1.35rem, 3.2vw, 2.15rem);
+            font-weight: 800;
+            line-height: 1.15;
+            letter-spacing: -0.02em;
+            margin: 0 0 0.25rem;
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, var(--cyan) 0%, var(--purple) 50%, var(--blue) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-lead {
+            font-size: clamp(0.82rem, 1.5vw, 0.95rem);
+            color: var(--muted);
+            margin: 0;
+        }
+
+        .hero .hub-diagram {
+            position: relative;
+            z-index: 1;
+            width: 100vw;
+            max-width: 100vw;
+            margin-left: calc(50% - 50vw);
+            margin-top: clamp(-0.25rem, -0.5vh, 0);
+            padding: 0;
+            flex: 1 1 auto;
+            min-height: 0;
+            height: 100%;
+            background: transparent;
+        }
+
+        /* ── Ecosystem hub (SVG links + logos) ── */
+        .hub-links {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 2;
+            pointer-events: none;
+            overflow: visible;
+        }
+
+        .hub-link {
+            fill: none;
+            stroke-linecap: round;
+            stroke-linejoin: round;
+        }
+
+        .hub-link--star {
+            stroke: rgba(71, 85, 105, 0.35);
+            stroke-width: 0.45;
+        }
+
+        .hub-link--spoke {
+            stroke-width: 0.55;
+            stroke-dasharray: 3 5;
+            animation: hub-flow 4s linear infinite;
+        }
+
+        .hub-link--students { stroke: url(#hub-grad-students); }
+        .hub-link--teachers { stroke: url(#hub-grad-teachers); animation-delay: -1.3s; }
+        .hub-link--leaders  { stroke: url(#hub-grad-leaders); animation-delay: -2.6s; }
+
+        @keyframes hub-flow {
+            to { stroke-dashoffset: -16; }
+        }
+
+        .hub-node {
+            position: absolute;
+            z-index: 5;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            pointer-events: none;
+        }
+
+        .hub-logo-frame {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: none;
+            border-radius: 50%;
+            width: clamp(88px, 13vw, 120px);
+            height: clamp(88px, 13vw, 120px);
+            padding: 0;
+            overflow: hidden;
+            background: rgba(6, 10, 24, 0.96);
+            box-shadow: 0 4px 28px rgba(0, 0, 0, 0.55);
+            transition: transform 0.35s ease, box-shadow 0.35s ease;
+            --moon-lit: rgba(34, 211, 238, 0.28);
+            --moon-lit-soft: rgba(34, 211, 238, 0.1);
+            --moon-shadow: rgba(6, 10, 24, 0.97);
+        }
+
+        .hub-logo-frame::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: 50%;
+            background: radial-gradient(circle at 38% 36%, var(--moon-lit) 0%, var(--moon-lit-soft) 48%, transparent 62%);
+            z-index: 0;
+            animation: moon-grow 9s ease-in-out infinite;
+        }
+
+        .hub-logo-frame::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 86%;
+            height: 86%;
+            border-radius: 50%;
+            background: var(--moon-shadow);
+            z-index: 1;
+            transform: translate(4%, -50%);
+            animation: moon-shadow 9s ease-in-out infinite;
+        }
+
+        @keyframes moon-grow {
+            0%, 100% { opacity: 0.45; transform: scale(0.9); }
+            50% { opacity: 1; transform: scale(1); }
+        }
+
+        @keyframes moon-shadow {
+            0%, 100% { transform: translate(4%, -50%); opacity: 0.98; }
+            50% { transform: translate(-30%, -50%); opacity: 0.35; }
+        }
+
+        .hub-logo-inner {
+            position: relative;
+            z-index: 2;
+            width: 76%;
+            height: 76%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            overflow: hidden;
+            border-radius: 50%;
+            flex-shrink: 0;
+        }
+
+        .hub-logo-inner img {
+            display: block;
+            width: 95%;
+            height: auto;
+            max-height: 108%;
+            object-fit: contain;
+            object-position: 50% 54%;
+            margin: 0;
+        }
+
+        .hub-logo-frame--center .hub-logo-inner img {
+            height: auto;
+            width: 100%;
+            min-width: 0;
+            max-height: 100%;
+            object-fit: contain;
+            object-position: center center;
+        }
+
+        .hub-logo-frame--students {
+            --moon-lit: rgba(34, 211, 238, 0.32);
+            --moon-lit-soft: rgba(34, 211, 238, 0.12);
+            box-shadow: 0 4px 28px rgba(0, 0, 0, 0.55), 0 0 36px rgba(34, 211, 238, 0.12);
+        }
+
+        .hub-logo-frame--teachers {
+            --moon-lit: rgba(167, 139, 250, 0.32);
+            --moon-lit-soft: rgba(167, 139, 250, 0.12);
+            box-shadow: 0 4px 28px rgba(0, 0, 0, 0.55), 0 0 36px rgba(167, 139, 250, 0.12);
+        }
+
+        .hub-logo-frame--leaders {
+            --moon-lit: rgba(96, 165, 250, 0.32);
+            --moon-lit-soft: rgba(96, 165, 250, 0.12);
+            box-shadow: 0 4px 28px rgba(0, 0, 0, 0.55), 0 0 36px rgba(96, 165, 250, 0.12);
+        }
+
+        .hub-logo-frame--center {
+            width: clamp(104px, 15vw, 140px);
+            height: clamp(104px, 15vw, 140px);
+            --moon-lit: rgba(34, 211, 238, 0.22);
+            --moon-lit-soft: rgba(167, 139, 250, 0.1);
+            box-shadow: 0 4px 32px rgba(0, 0, 0, 0.6), 0 0 40px rgba(34, 211, 238, 0.1);
+        }
+
+        .hub-node a {
+            pointer-events: auto;
+            text-decoration: none;
+            transition: transform 0.35s ease;
+        }
+
+        .hub-node a.hub-logo-frame {
+            display: flex;
+        }
+
+        .hub-node a.hub-logo-frame:hover {
+            transform: scale(1.04);
+        }
+
+        .hub-node a.hub-logo-frame--students:hover {
+            box-shadow: 0 6px 32px rgba(0, 0, 0, 0.6), 0 0 48px rgba(34, 211, 238, 0.2);
+        }
+
+        .hub-node a.hub-logo-frame--teachers:hover {
+            box-shadow: 0 6px 32px rgba(0, 0, 0, 0.6), 0 0 48px rgba(167, 139, 250, 0.2);
+        }
+
+        .hub-node a.hub-logo-frame--leaders:hover {
+            box-shadow: 0 6px 32px rgba(0, 0, 0, 0.6), 0 0 48px rgba(96, 165, 250, 0.2);
+        }
+
+        .hub-node img {
+            display: block;
+        }
+
+        .hub-node--center {
+            top: 52%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .hub-node a img {
+            transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+        }
+
+        .hub-node a:hover img {
+            transform: scale(1.02);
+        }
+
+        .hub-node--students {
+            top: 8%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+        .hub-node--teachers {
+            top: 88%;
+            left: 24%;
+            transform: translate(-50%, -50%);
+        }
+
+        .hub-node--leaders {
+            top: 88%;
+            left: 76%;
+            transform: translate(-50%, -50%);
+        }
+
+        .hub-star-dot {
+            fill: var(--gold);
+            opacity: 0.6;
+        }
+
+        /* ── Sections ── */
+        .section {
+            padding: var(--section-gap) var(--section-x) 0;
+        }
+
+        .hero + .section {
+            padding-top: var(--section-gap);
+            margin-top: 0;
+        }
+
+        .container {
+            max-width: 1140px;
+            margin: 0 auto;
+        }
+
+        .section-head {
+            text-align: center;
+            max-width: 640px;
+            margin: 0 auto 1.25rem;
+        }
+
+        .section-head .label {
+            display: inline-block;
+            font-size: 0.7rem;
+            font-weight: 700;
+            letter-spacing: 0.14em;
+            text-transform: uppercase;
+            color: var(--purple);
+            margin-bottom: 0.75rem;
+        }
+
+        .section-head h2 {
+            font-size: clamp(1.75rem, 3.5vw, 2.35rem);
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            margin: 0 0 0.75rem;
+        }
+
+        .section-head p {
+            margin: 0;
+            color: var(--muted);
+            font-size: 1.05rem;
+        }
+
+        /* ── Pillars ── */
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+
+        .card {
+            position: relative;
+            scroll-margin-top: 2rem;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 2rem 1.75rem;
+            backdrop-filter: blur(12px);
+            display: flex;
+            flex-direction: column;
+            overflow: hidden;
+            transition: border-color 0.25s ease, transform 0.25s ease;
+        }
+
+        .card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+        }
+
+        .card--students::before { background: linear-gradient(90deg, var(--cyan), transparent); }
+        .card--teachers::before { background: linear-gradient(90deg, var(--purple), transparent); }
+        .card--leaders::before { background: linear-gradient(90deg, var(--blue), transparent); }
+
+        .card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(99, 102, 241, 0.35);
+        }
+
+        .card-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 1.25rem;
+        }
+
+        .card--students .card-icon { background: rgba(34, 211, 238, 0.12); color: var(--cyan); }
+        .card--teachers .card-icon { background: rgba(167, 139, 250, 0.12); color: var(--purple); }
+        .card--leaders .card-icon { background: rgba(96, 165, 250, 0.12); color: var(--blue); }
+
+        .card-tag {
+            font-size: 0.68rem;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            margin-bottom: 0.5rem;
+        }
+
+        .card--students .card-tag { color: var(--cyan); }
+        .card--teachers .card-tag { color: var(--purple); }
+        .card--leaders .card-tag { color: var(--blue); }
+
+        .card h3 {
+            font-size: 1.2rem;
+            font-weight: 700;
+            margin: 0 0 0.35rem;
+        }
+
+        .card em {
+            display: block;
+            font-style: normal;
+            font-size: 0.88rem;
+            color: var(--muted);
+            margin-bottom: 1rem;
+        }
+
+        .card .target {
+            display: inline-block;
+            font-size: 0.78rem;
+            font-weight: 600;
+            padding: 0.35rem 0.7rem;
+            border-radius: 6px;
+            margin-bottom: 1.25rem;
+            background: rgba(255, 255, 255, 0.04);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            color: var(--text);
+        }
+
+        .card .target span { font-weight: 700; }
+
+        .card--students .target span { color: var(--cyan); }
+        .card--teachers .target span { color: var(--purple); }
+        .card--leaders .target span { color: var(--blue); }
+
+        .card ul {
+            margin: 0;
+            padding-left: 0;
+            list-style: none;
+            flex: 1;
+        }
+
+        .card li {
+            position: relative;
+            padding-left: 1.1rem;
+            margin-bottom: 0.65rem;
+            font-size: 0.9rem;
+            color: var(--muted);
+        }
+
+        .card li::before {
+            content: '›';
+            position: absolute;
+            left: 0;
+            font-weight: 700;
+            opacity: 0.5;
+        }
+
+        .card li strong {
+            color: var(--text);
+            font-weight: 600;
+        }
+
+        /* ── Impact ── */
+        .impact-section {
+            background: linear-gradient(180deg, transparent 0%, rgba(99, 102, 241, 0.06) 50%, transparent 100%);
+        }
+
+        .stats {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.25rem;
+        }
+
+        .stat {
+            position: relative;
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            padding: 2rem 1.25rem;
+            text-align: center;
+            backdrop-filter: blur(12px);
+        }
+
+        .stat h4 {
+            font-size: clamp(1.75rem, 3vw, 2.25rem);
+            font-weight: 800;
+            margin: 0 0 0.35rem;
+            letter-spacing: -0.02em;
+            background: linear-gradient(135deg, var(--cyan), var(--purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .stat p {
+            margin: 0;
+            font-size: 0.85rem;
+            color: var(--muted);
+        }
+
+        /* ── Footer ── */
+        footer {
+            text-align: center;
+            padding: var(--section-gap) var(--section-x) 0;
+            background: rgba(0, 0, 0, 0.4);
+        }
+
+        footer img {
+            height: clamp(40px, 5vh, 52px);
+            width: auto;
+            max-width: min(240px, 72vw);
+            margin-bottom: 1.5rem;
+        }
+
+        footer h2 {
+            font-size: clamp(1.5rem, 3vw, 2rem);
+            font-weight: 800;
+            margin: 0 0 1rem;
+            letter-spacing: -0.02em;
+        }
+
+        footer > p {
+            max-width: 560px;
+            margin: 0 auto 0.75rem;
+            font-size: 0.95rem;
+            color: var(--muted);
+        }
+
+        footer a {
+            color: var(--cyan);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        footer a:hover { text-decoration: underline; }
+
+        .footer-copy {
+            margin-top: 1.25rem !important;
+            font-size: 0.8rem !important;
+            color: #64748b !important;
+        }
+
+        @media (max-width: 900px) {
+            .grid-3 { grid-template-columns: 1fr; }
+            .stats { grid-template-columns: repeat(2, 1fr); }
+            .hub-node--students img,
+            .hub-node--teachers img,
+            .hub-node--leaders img { max-height: clamp(48px, 9vh, 90px); }
+            .hub-node--center img { height: clamp(36px, 6vh, 56px); }
+        }
+
+        @media (max-width: 560px) {
+            .hero-first-screen {
+                height: auto;
+                min-height: 100dvh;
+                padding: 1rem var(--section-x) 0.75rem;
+            }
+            .hero .hub-diagram {
+                flex: 1;
+                min-height: 55vh;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 1rem;
+            }
+            .hub-node--teachers { left: 22%; top: 86%; }
+            .hub-node--leaders { left: 78%; top: 86%; }
+        }
+
+        @media (max-width: 480px) {
+            :root { --section-gap: calc(1.25rem + 20px); --section-x: 1.25rem; }
+            .stats { grid-template-columns: 1fr; }
+        }
+
+        @media (prefers-reduced-motion: reduce) {
+            .hub-link--spoke { animation: none; }
+            .hub-logo-frame::before,
+            .hub-logo-frame::after { animation: none; }
+            .hub-logo-frame::before { opacity: 0.7; transform: scale(1); }
+            .hub-logo-frame::after { transform: translate(-12%, -50%); opacity: 0.6; animation: none; }
+        }
+    </style>
+</head>
+<body>
+
+<div class="page-wrap">
+
+    <section class="hero">
+        <div class="hero-first-screen">
+            <div class="hero-inner">
+                <div class="ai-chip">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"/></svg>
+                    National AI Ecosystem · IPN FORUM
+                </div>
+                <h1>Building India's Largest<br><span class="gradient-text">AI Ecosystem for Schools</span></h1>
+                <p class="hero-lead">India Principals Network</p>
+            </div>
+
+            <div class="hub-diagram" aria-label="IPN AI Ecosystem star diagram">
+                <svg class="hub-links" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+                    <defs>
+                        <linearGradient id="hub-grad-students" x1="0%" y1="100%" x2="0%" y2="0%">
+                            <stop offset="0%" stop-color="#22d3ee" stop-opacity="0.15"/>
+                            <stop offset="100%" stop-color="#22d3ee" stop-opacity="0.85"/>
+                        </linearGradient>
+                        <linearGradient id="hub-grad-teachers" x1="100%" y1="0%" x2="0%" y2="100%">
+                            <stop offset="0%" stop-color="#a78bfa" stop-opacity="0.15"/>
+                            <stop offset="100%" stop-color="#a78bfa" stop-opacity="0.85"/>
+                        </linearGradient>
+                        <linearGradient id="hub-grad-leaders" x1="0%" y1="0%" x2="100%" y2="100%">
+                            <stop offset="0%" stop-color="#60a5fa" stop-opacity="0.15"/>
+                            <stop offset="100%" stop-color="#60a5fa" stop-opacity="0.85"/>
+                        </linearGradient>
+                    </defs>
+                    <path class="hub-link hub-link--star" d="M 50 14 L 24 84"/>
+                    <path class="hub-link hub-link--star" d="M 24 84 L 76 84"/>
+                    <path class="hub-link hub-link--star" d="M 76 84 L 50 14"/>
+                    <path class="hub-link hub-link--spoke hub-link--students" d="M 50 44 Q 51 28 50 14"/>
+                    <path class="hub-link hub-link--spoke hub-link--teachers" d="M 44 54 Q 32 70 26 84"/>
+                    <path class="hub-link hub-link--spoke hub-link--leaders" d="M 56 54 Q 68 70 74 84"/>
+                </svg>
+
+                <div class="hub-node hub-node--students">
+                    <a href="#pillar-students" class="hub-logo-frame hub-logo-frame--students">
+                        <span class="hub-logo-inner"><img src="assets/img/ai/ai-for-students.png" alt="AI for Students"></span>
+                    </a>
+                </div>
+
+                <div class="hub-node hub-node--center">
+                    <div class="hub-logo-frame hub-logo-frame--center">
+                        <span class="hub-logo-inner"><img src="https://www.ipnfoundation.org/assets/img/logo/logo-white.png" alt="IPN Foundation"></span>
+                    </div>
+                </div>
+
+                <div class="hub-node hub-node--teachers">
+                    <a href="#pillar-teachers" class="hub-logo-frame hub-logo-frame--teachers">
+                        <span class="hub-logo-inner"><img src="assets/img/ai/ai-for-teachers.png" alt="AI for Teachers"></span>
+                    </a>
+                </div>
+
+                <div class="hub-node hub-node--leaders">
+                    <a href="#pillar-leaders" class="hub-logo-frame hub-logo-frame--leaders">
+                        <span class="hub-logo-inner"><img src="assets/img/ai/ai-for-leaders.png" alt="AI for Leaders"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="section-head">
+                <div class="label">Core Architecture</div>
+                <h2>The IPN FORUM AI Ecosystem: Three Pillars</h2>
+                <p>A unified national programme for students, teachers, and school leaders.</p>
+            </div>
+            <div class="grid-3">
+                <div class="card card--students" id="pillar-students">
+                    <div class="card-icon">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 14l9-5-9-5-9 5 9 5z"/><path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824 2.998 12.078 12.078 0 01.665-6.479L12 14z"/></svg>
+                    </div>
+                    <div class="card-tag">Pillar 1</div>
+                    <h3>AI for Students</h3>
+                    <em>Nurturing the AI-Literate Generation</em>
+                    <div class="target"><span>Target:</span> 5,00,000+ Students by 2028</div>
+                    <ul>
+                        <li><strong>Student AI Literacy Programme:</strong> Age-appropriate curriculum Cl.3–12 across 4 stages.</li>
+                        <li><strong>Student AI Innovation Labs:</strong> Designated school spaces for prototyping.</li>
+                        <li><strong>IPN AI Olympiad:</strong> India's first school network AI competition.</li>
+                        <li><strong>Student AI Clubs:</strong> Peer networks with elected AI Ambassadors.</li>
+                    </ul>
+                </div>
+
+                <div class="card card--teachers" id="pillar-teachers">
+                    <div class="card-icon">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M17 21v-2a4 4 0 00-4-4H5a4 4 0 00-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 00-3-3.87M16 3.13a4 4 0 010 7.75"/></svg>
+                    </div>
+                    <div class="card-tag">Pillar 2</div>
+                    <h3>AI for Teachers</h3>
+                    <em>Empowering the Architects of Learning</em>
+                    <div class="target"><span>Target:</span> 1,00,000+ Teachers by 2028</div>
+                    <ul>
+                        <li><strong>IPN Teacher AI Bootcamp:</strong> 3-Day intensive covering foundations, practice, ethics, and leadership.</li>
+                        <li><strong>AI Mentor Teacher Network:</strong> 500 Mentor Teachers deployed nationwide.</li>
+                        <li><strong>AI Classroom Certification (IPN-AICC):</strong> Peer-observed evidence portfolio.</li>
+                        <li><strong>AI Instructional Design Studio:</strong> Cloud platform for lesson planning.</li>
+                    </ul>
+                </div>
+
+                <div class="card card--leaders" id="pillar-leaders">
+                    <div class="card-icon">
+                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M5 21V7l8-4v18M19 21V11l-6-4M9 9v.01M9 12v.01M9 15v.01M9 18v.01"/></svg>
+                    </div>
+                    <div class="card-tag">Pillar 3</div>
+                    <h3>AI for School Leaders</h3>
+                    <em>Governing the Future-Ready School</em>
+                    <div class="target"><span>Target:</span> 5,000+ Leaders by 2028</div>
+                    <ul>
+                        <li><strong>AI Manthan Conference Series:</strong> Premier multi-city leadership conference.</li>
+                        <li><strong>IPN AI Leadership Cert. (AiLCP):</strong> 6-month blended strategic programme.</li>
+                        <li><strong>AI School Governance Framework:</strong> Ready-to-adopt policy toolkit.</li>
+                        <li><strong>IPN Certified AI School Leader (CASL):</strong> India's FIRST leadership-grade AI certification.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section impact-section">
+        <div class="container">
+            <div class="section-head">
+                <div class="label">Projected Reach</div>
+                <h2>Impact by 2028</h2>
+                <p>Measurable outcomes at national scale.</p>
+            </div>
+            <div class="stats">
+                <div class="stat">
+                    <h4>1,00,000+</h4>
+                    <p>Students in AI Literacy</p>
+                </div>
+                <div class="stat">
+                    <h4>10,000+</h4>
+                    <p>Teachers Trained</p>
+                </div>
+                <div class="stat">
+                    <h4>2,000+</h4>
+                    <p>School Leaders Certified</p>
+                </div>
+                <div class="stat">
+                    <h4>500</h4>
+                    <p>AI Mentor Teachers</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <img src="https://www.ipnfoundation.org/assets/img/logo/logo-white.png" alt="IPN Foundation">
+        <h2>Join India's AI School Movement</h2>
+        <p>Partner as a Pilot School, Technology Provider, CSR Sponsor, Academic Partner, or AI Manthan Participant.</p>
+        <p>Contact us: <a href="mailto:forum@ipn.edu.in">forum@ipn.edu.in</a> &nbsp;|&nbsp; <a href="http://www.ipnforum.in" target="_blank">www.ipnforum.in</a></p>
+        <p class="footer-copy">© 2026 IPN FORUM. Empowering School Leadership. Building India's Future.</p>
+    </footer>
+
+</div>
+
+</body>
+</html>

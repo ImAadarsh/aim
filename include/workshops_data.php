@@ -4,10 +4,23 @@
  * Shared between landing page (workshop-series.php) and detail pages (workshop-detail.php)
  */
 
+$aim_series = [
+    'remaining_workshops' => 4,
+    'price' => 2999,
+    'original_price' => 5996,
+    'savings' => 2997,
+    'discount_pct' => 50,
+    'rating' => 4.85,
+    'countdown_target' => '2026-08-25T17:00:00+05:30',
+    'period' => 'August – November 2026',
+    'payment_url' => 'https://workshops.ipnacademy.in/workshop-payment-gateway.php?id=AIM-AI-4',
+];
+
 $workshops = [
     1 => [
         'title' => 'Designing Powerful Lesson Openings with AI',
         'date' => '16th June 2026',
+        'past' => true,
         'icon' => 'fas fa-lightbulb',
         'color' => 'orange',
         'slide' => 'assets/img/workshops/16_6_2026- WEBCARDS.png',
@@ -32,6 +45,7 @@ $workshops = [
     2 => [
         'title' => 'Analysing STEM using AI',
         'date' => '15th July 2026',
+        'past' => true,
         'icon' => 'fas fa-atom',
         'color' => 'blue',
         'slide' => 'assets/img/workshops/16_6_2026- WEBCARDS (4).png',
@@ -150,3 +164,63 @@ $workshops = [
         ]
     ]
 ];
+
+function ws_format_price(int $amount): string {
+    return '₹' . number_format($amount);
+}
+
+function ws_render_slider_card(int $wId, array $wItem): void {
+    $isPast = !empty($wItem['past']);
+    $pastClass = $isPast ? ' ws-slider-card--past' : '';
+    $color = htmlspecialchars($wItem['color']);
+    ?>
+    <div class="ws-slider-card<?php echo $pastClass; ?>" style="--accent-color: var(--ws-accent-<?php echo $color; ?>); --accent-color-rgb: var(--ws-accent-<?php echo $color; ?>-rgb);">
+        <div class="ws-slider-node"><?php echo $wId; ?></div>
+        <?php if ($isPast): ?>
+            <div class="ws-slider-past-badge"><i class="fas fa-check-circle"></i> Completed</div>
+        <?php endif; ?>
+        <div class="ws-slider-content">
+            <?php if ($isPast): ?>
+                <div class="ws-slider-preview ws-slider-preview--past">
+                    <img src="<?php echo htmlspecialchars($wItem['slide']); ?>" alt="<?php echo htmlspecialchars($wItem['title']); ?>" class="ws-slider-img">
+                    <div class="ws-slider-overlay">
+                        <span class="ws-slider-badge"><i class="fas fa-lock"></i> Session Concluded</span>
+                    </div>
+                </div>
+            <?php else: ?>
+                <a href="workshop-detail.php?id=<?php echo $wId; ?>" class="ws-slider-preview-link" style="display: block; text-decoration: none;">
+                    <div class="ws-slider-preview">
+                        <img src="<?php echo htmlspecialchars($wItem['slide']); ?>" alt="<?php echo htmlspecialchars($wItem['title']); ?>" class="ws-slider-img">
+                        <div class="ws-slider-overlay">
+                            <span class="ws-slider-badge"><i class="fas fa-expand"></i> View Workshop Details</span>
+                        </div>
+                    </div>
+                </a>
+            <?php endif; ?>
+            <div class="ws-slider-header">
+                <h4 class="ws-slider-title">
+                    <i class="<?php echo htmlspecialchars($wItem['icon']); ?>" style="color: var(--accent-color); margin-right: 8px;"></i>
+                    <?php echo htmlspecialchars($wItem['title']); ?>
+                </h4>
+                <span class="ws-slider-date">
+                    <i class="far fa-calendar"></i> <?php echo htmlspecialchars($wItem['date']); ?>
+                </span>
+            </div>
+            <p class="ws-slider-text">
+                <?php echo htmlspecialchars($wItem['description']); ?>
+            </p>
+            <div class="ws-slider-footer">
+                <?php if ($isPast): ?>
+                    <span class="ws-btn--link ws-btn--link-disabled">
+                        Enrolment closed <i class="far fa-ban"></i>
+                    </span>
+                <?php else: ?>
+                    <a href="workshop-detail.php?id=<?php echo $wId; ?>" class="ws-btn--link">
+                        Learn More & Agenda <i class="far fa-arrow-right"></i>
+                    </a>
+                <?php endif; ?>
+            </div>
+        </div>
+    </div>
+    <?php
+}
