@@ -39,7 +39,7 @@ $nextId = $id < 6 ? $id + 1 : null;
     <!-- Stylesheets -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/fontawesome-pro.min.css">
-    <link rel="stylesheet" href="assets/css/workshop-series.css?v=2.9">
+    <link rel="stylesheet" href="assets/css/workshop-series.css?v=3.2">
 </head>
 
 <body class="ws-page">
@@ -403,10 +403,10 @@ $nextId = $id < 6 ? $id + 1 : null;
         var particleCount = 80;
         var maxDist = 120;
         var colors = [
-            'rgba(192, 132, 252, 0.6)',
-            'rgba(255, 184, 0, 0.6)',
-            'rgba(255, 93, 56, 0.5)',
-            'rgba(62, 139, 255, 0.5)'
+            'rgba(94, 184, 168, 0.55)',
+            'rgba(255, 184, 0, 0.55)',
+            'rgba(91, 168, 200, 0.45)',
+            'rgba(62, 207, 154, 0.4)'
         ];
 
         function resizeCanvas() {
@@ -494,7 +494,7 @@ $nextId = $id < 6 ? $id + 1 : null;
                     if (dist < maxDist) {
                         var opacity = 0.08 * (1 - dist / maxDist);
                         ctx.beginPath();
-                        ctx.strokeStyle = 'rgba(192, 132, 252, ' + opacity + ')';
+                        ctx.strokeStyle = 'rgba(94, 184, 168, ' + opacity + ')';
                         ctx.lineWidth = 0.5;
                         ctx.moveTo(particles[a].x, particles[a].y);
                         ctx.lineTo(particles[b].x, particles[b].y);

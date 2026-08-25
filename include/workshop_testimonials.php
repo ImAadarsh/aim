@@ -190,7 +190,7 @@ function aim_get_workshop_reviews(int $workshopId = 275, int $limit = 24): array
     return count($reviews) > 0 ? $reviews : $fallback;
 }
 
-function aim_average_review_rating(array $reviews, float $fallback = 4.85): float
+function aim_average_review_rating(array $reviews, float $fallback = 4.79): float
 {
     $ratings = array_values(array_filter(array_map(
         static fn(array $review) => $review['rating'] ?? null,

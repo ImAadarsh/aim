@@ -15,7 +15,7 @@ $review_rows = aim_split_reviews_into_rows($workshop_reviews, 3);
     <!-- Primary Meta Tags -->
     <title>AI Workshop Series | IPN Mission AIM — 4 Power-Packed Masterclasses</title>
     <meta name="title" content="AI Workshop Series | IPN Mission AIM — 4 Power-Packed Masterclasses">
-    <meta name="description" content="Join the remaining 4-workshop AI Masterclass series by IPN Mission AIM. Rated 4.85/5 by educators. ₹2,999 (Save 50%). August–November 2026.">
+    <meta name="description" content="Join the remaining 4-workshop AI Masterclass series by IPN Mission AIM. Rated 4.79/5 by 353 educators. ₹2,999 (Save 50%). August–November 2026.">
     <meta name="keywords" content="AI workshops for teachers, AI in education, Mission AIM workshops, teacher training AI, IPN Foundation, AI lesson planning, STEM AI, numeracy AI, experiential learning AI">
     <meta name="author" content="IPN Foundation">
     <meta name="robots" content="index, follow">
@@ -24,14 +24,14 @@ $review_rows = aim_split_reviews_into_rows($workshop_reviews, 3);
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://aim.ipnacademy.in/workshop-series.php">
     <meta property="og:title" content="AI Workshop Series | IPN Mission AIM — 4 Power-Packed Masterclasses">
-    <meta property="og:description" content="Register for Four Masterclasses. Rated 4.85/5. ₹2,999 — Save 50%. August–November 2026.">
+    <meta property="og:description" content="Register for Four Masterclasses. Rated 4.79/5 by 353 educators. ₹2,999 — Save 50%. August–November 2026.">
     <meta property="og:image" content="assets/img/logo/mission-aim-og.jpg">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://aim.ipnacademy.in/workshop-series.php">
     <meta property="twitter:title" content="AI Workshop Series | IPN Mission AIM — 4 Power-Packed Masterclasses">
-    <meta property="twitter:description" content="Register for Four Masterclasses. Rated 4.85/5. ₹2,999 — Save 50%. August–November 2026.">
+    <meta property="twitter:description" content="Register for Four Masterclasses. Rated 4.79/5 by 353 educators. ₹2,999 — Save 50%. August–November 2026.">
 
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="assets/img/logo/favicon.png">
@@ -47,7 +47,7 @@ $review_rows = aim_split_reviews_into_rows($workshop_reviews, 3);
     <!-- Stylesheets -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="assets/css/fontawesome-pro.min.css">
-    <link rel="stylesheet" href="assets/css/workshop-series.css?v=2.9">
+    <link rel="stylesheet" href="assets/css/workshop-series.css?v=3.2">
 </head>
 
 <body class="ws-page">
@@ -93,75 +93,52 @@ $review_rows = aim_split_reviews_into_rows($workshop_reviews, 3);
     <!-- ============================================================
          HERO SECTION
          ============================================================ -->
-    <section class="ws-hero" id="hero">
-        <!-- Animated aurora ribbons -->
+    <section class="ws-hero ws-hero--grand" id="hero">
+        <div class="ws-hero__atmosphere" aria-hidden="true"></div>
+        <div class="ws-hero__veil" aria-hidden="true"></div>
+
         <div class="ws-aurora">
             <div class="ws-aurora__ribbon ws-aurora__ribbon--1"></div>
             <div class="ws-aurora__ribbon ws-aurora__ribbon--2"></div>
             <div class="ws-aurora__ribbon ws-aurora__ribbon--3"></div>
         </div>
-
-        <!-- Floating gradient blobs -->
         <div class="ws-blob ws-blob--1"></div>
         <div class="ws-blob ws-blob--2"></div>
         <div class="ws-blob ws-blob--3"></div>
 
-        <!-- Floating AI Product Logos -->
         <div class="ws-floating-logo-container">
             <?php
             $logo_dir = 'assets/img/ai_company_logo';
             $logos = [];
             if (is_dir($logo_dir)) {
-                $files = scandir($logo_dir);
-                foreach ($files as $file) {
+                foreach (scandir($logo_dir) as $file) {
                     if (pathinfo($file, PATHINFO_EXTENSION) === 'svg') {
                         $logos[] = $file;
                     }
                 }
             }
-            
-            // If logos were scanned, distribute them in the hero section
-            if (!empty($logos)) {
-                // Pre-defined premium positions (top/left offsets) to ensure nice distribution
-                // and avoid overlapping the central 850px text area.
-                $positions = [
-                    ['top' => '15%', 'left' => '6%',   'size' => '72px', 'anim' => 1],
-                    ['top' => '22%', 'right' => '6%',  'size' => '68px', 'anim' => 2],
-                    ['top' => '42%', 'left' => '10%',  'size' => '78px', 'anim' => 3],
-                    ['top' => '48%', 'right' => '10%', 'size' => '66px', 'anim' => 4],
-                    ['top' => '72%', 'left' => '8%',   'size' => '68px', 'anim' => 5],
-                    ['top' => '78%', 'right' => '7%',  'size' => '70px', 'anim' => 6],
-                    ['top' => '30%', 'left' => '20%',  'size' => '64px', 'anim' => 7],
-                    ['top' => '28%', 'right' => '21%', 'size' => '66px', 'anim' => 8],
-                    ['top' => '65%', 'left' => '24%',  'size' => '62px', 'anim' => 9],
-                ];
-                
-                foreach ($logos as $idx => $logo) {
-                    if (isset($positions[$idx])) {
-                        $pos = $positions[$idx];
-                        $style = "top: {$pos['top']}; ";
-                        if (isset($pos['left'])) {
-                            $style .= "left: {$pos['left']}; ";
-                        } else {
-                            $style .= "right: {$pos['right']}; ";
-                        }
-                        $style .= "width: {$pos['size']}; height: {$pos['size']};";
-                        
-                        $cleanName = ucwords(str_replace(['-logo', '-app', '-free', '_svgstack_com', '_', '-'], [' ', '', '', '', ' ', ' '], pathinfo($logo, PATHINFO_FILENAME)));
-                        $cleanName = preg_replace('/[0-9]+/', '', $cleanName);
-                        $cleanName = trim(str_replace('svg', '', $cleanName));
-                        if ($cleanName == 'Black Xai') {
-                            $cleanName = 'xAI';
-                        }
-                        if ($cleanName == 'Mistral Ai Logo Svg') {
-                            $cleanName = 'Mistral AI';
-                        }
-                        
-                        echo '<div class="ws-floating-logo-badge ws-float-anim-' . $pos['anim'] . '" style="' . $style . '" title="' . htmlspecialchars($cleanName) . '">';
-                        echo '  <img src="' . $logo_dir . '/' . htmlspecialchars($logo) . '" alt="' . htmlspecialchars($cleanName) . '">';
-                        echo '</div>';
-                    }
-                }
+            $positions = [
+                ['top' => '16%', 'left' => '5%',   'size' => '70px', 'anim' => 1],
+                ['top' => '20%', 'right' => '6%',  'size' => '66px', 'anim' => 2],
+                ['top' => '42%', 'left' => '8%',   'size' => '74px', 'anim' => 3],
+                ['top' => '48%', 'right' => '8%',  'size' => '64px', 'anim' => 4],
+                ['top' => '70%', 'left' => '7%',   'size' => '66px', 'anim' => 5],
+                ['top' => '74%', 'right' => '7%',  'size' => '68px', 'anim' => 6],
+                ['top' => '30%', 'left' => '18%',  'size' => '58px', 'anim' => 7],
+                ['top' => '28%', 'right' => '18%', 'size' => '60px', 'anim' => 8],
+            ];
+            foreach ($logos as $idx => $logo) {
+                if (!isset($positions[$idx])) continue;
+                $pos = $positions[$idx];
+                $style = "top: {$pos['top']}; width: {$pos['size']}; height: {$pos['size']};";
+                $style .= isset($pos['left']) ? " left: {$pos['left']};" : " right: {$pos['right']};";
+                $cleanName = ucwords(str_replace(['-logo', '-app', '-free', '_svgstack_com', '_', '-'], [' ', '', '', '', ' ', ' '], pathinfo($logo, PATHINFO_FILENAME)));
+                $cleanName = trim(preg_replace('/[0-9]+|svg/i', '', $cleanName));
+                if ($cleanName === 'Black Xai') $cleanName = 'xAI';
+                if ($cleanName === 'Mistral Ai Logo') $cleanName = 'Mistral AI';
+                echo '<div class="ws-floating-logo-badge ws-float-anim-' . $pos['anim'] . '" style="' . $style . '" title="' . htmlspecialchars($cleanName) . '">';
+                echo '<img src="' . $logo_dir . '/' . htmlspecialchars($logo) . '" alt="' . htmlspecialchars($cleanName) . '">';
+                echo '</div>';
             }
             ?>
         </div>
@@ -170,6 +147,14 @@ $review_rows = aim_split_reviews_into_rows($workshop_reviews, 3);
             <div class="ws-hero__content ws-fade-up">
                 <div class="ws-hero__badge">
                     <i class="fas fa-bolt"></i> IPN Mission AIM — Workshop Series
+                </div>
+
+                <div class="ws-hero__rating">
+                    <div class="ws-hero__rating-score"><?php echo number_format($hero_rating, 2); ?>/5</div>
+                    <div class="ws-hero__rating-stars" aria-hidden="true">
+                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
+                    </div>
+                    <div class="ws-hero__rating-label">Rated by <?php echo number_format($aim_series['rating_count']); ?> Educators</div>
                 </div>
 
                 <h1 class="ws-hero__title">
@@ -181,19 +166,16 @@ $review_rows = aim_split_reviews_into_rows($workshop_reviews, 3);
                     Master AI tools, lesson planning, assessments, content creation, and classroom innovation through our exclusive AI Masterclass Series — <?php echo $aim_series['remaining_workshops']; ?> power-packed sessions remaining.
                 </p>
 
-                <div class="ws-hero__rating">
-                    <div class="ws-hero__rating-score"><?php echo number_format($hero_rating, 2); ?>/5</div>
-                    <div class="ws-hero__rating-stars" aria-hidden="true">
-                        <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
-                    </div>
-                    <div class="ws-hero__rating-label">Rated by Educators Across South Asia</div>
-                </div>
-
                 <p class="ws-countdown__heading">
-                    <i class="far fa-calendar-alt"></i> Next Masterclass · 25th August 2026
+                    <i class="far fa-calendar-alt"></i> Next Masterclass · <?php
+                        $next_ws = null;
+                        foreach ($workshops as $w) {
+                            if (empty($w['past'])) { $next_ws = $w; break; }
+                        }
+                        echo htmlspecialchars($next_ws['date'] ?? 'TBA');
+                    ?>
                 </p>
 
-                <!-- Countdown Timer -->
                 <div class="ws-countdown" id="countdown">
                     <div class="ws-countdown__item">
                         <span class="ws-countdown__number" id="countdown-days">00</span>
@@ -213,7 +195,6 @@ $review_rows = aim_split_reviews_into_rows($workshop_reviews, 3);
                     </div>
                 </div>
 
-                <!-- Price -->
                 <div class="ws-hero__price">
                     <span class="ws-hero__price-current"><?php echo ws_format_price($aim_series['price']); ?></span>
                     <span class="ws-hero__price-original"><?php echo ws_format_price($aim_series['original_price']); ?></span>
@@ -222,8 +203,7 @@ $review_rows = aim_split_reviews_into_rows($workshop_reviews, 3);
                     </span>
                 </div>
 
-                <!-- CTA -->
-                <a href="<?php echo htmlspecialchars($aim_series['payment_url']); ?>" target="_blank" class="ws-btn ws-btn--primary" id="hero-enrol-btn">
+                <a href="<?php echo htmlspecialchars($aim_series['payment_url']); ?>" target="_blank" class="ws-btn ws-btn--primary ws-btn--hero" id="hero-enrol-btn">
                     <i class="fas fa-rocket"></i> Register for <strong>Four</strong> Masterclasses
                 </a>
 
@@ -246,7 +226,7 @@ $review_rows = aim_split_reviews_into_rows($workshop_reviews, 3);
             <div class="ws-marquee__item"><i class="fas fa-school"></i> 10,000+ Schools Impacted</div>
             <div class="ws-marquee__item"><i class="fas fa-globe-asia"></i> South Asia's #1 Teacher Platform</div>
             <div class="ws-marquee__item"><i class="fas fa-certificate"></i> IPN Foundation Certified</div>
-            <div class="ws-marquee__item"><i class="fas fa-star"></i> Rated <?php echo number_format($hero_rating, 2); ?>/5 by Educators</div>
+            <div class="ws-marquee__item"><i class="fas fa-star"></i> Rated <?php echo number_format($hero_rating, 2); ?>/5 by <?php echo number_format($aim_series['rating_count']); ?> Educators</div>
             <div class="ws-marquee__item"><i class="fas fa-calendar-alt"></i> <?php echo $aim_series['remaining_workshops']; ?> Masterclasses | <?php echo htmlspecialchars($aim_series['period']); ?></div>
             <div class="ws-marquee__item"><i class="fas fa-laptop"></i> Live Online Sessions</div>
             <!-- Duplicate for seamless scroll -->
@@ -254,7 +234,7 @@ $review_rows = aim_split_reviews_into_rows($workshop_reviews, 3);
             <div class="ws-marquee__item"><i class="fas fa-school"></i> 10,000+ Schools Impacted</div>
             <div class="ws-marquee__item"><i class="fas fa-globe-asia"></i> South Asia's #1 Teacher Platform</div>
             <div class="ws-marquee__item"><i class="fas fa-certificate"></i> IPN Foundation Certified</div>
-            <div class="ws-marquee__item"><i class="fas fa-star"></i> Rated <?php echo number_format($hero_rating, 2); ?>/5 by Educators</div>
+            <div class="ws-marquee__item"><i class="fas fa-star"></i> Rated <?php echo number_format($hero_rating, 2); ?>/5 by <?php echo number_format($aim_series['rating_count']); ?> Educators</div>
             <div class="ws-marquee__item"><i class="fas fa-calendar-alt"></i> <?php echo $aim_series['remaining_workshops']; ?> Masterclasses | <?php echo htmlspecialchars($aim_series['period']); ?></div>
             <div class="ws-marquee__item"><i class="fas fa-laptop"></i> Live Online Sessions</div>
         </div>
@@ -268,7 +248,7 @@ $review_rows = aim_split_reviews_into_rows($workshop_reviews, 3);
          ============================================================ -->
     <section class="ws-section ws-about ws-bg-light-section" id="about">
         <!-- Section floating blob -->
-        <div class="ws-blob ws-blob--section" style="top: 20%; right: -10%; background: radial-gradient(circle, rgba(49,136,255,0.12), transparent 70%);"></div>
+        <div class="ws-blob ws-blob--section" style="top: 20%; right: -10%; background: radial-gradient(circle, rgba(94,184,168,0.14), transparent 70%);"></div>
         
         <!-- Floating AI Logos in About Section -->
         <div class="ws-floating-logo-badge ws-float-anim-1" style="top: 25%; right: 5%; width: 50px; height: 50px;" title="ChatGPT">
@@ -322,7 +302,7 @@ $review_rows = aim_split_reviews_into_rows($workshop_reviews, 3);
          ============================================================ -->
     <section class="ws-section ws-pricing ws-bg-light-section" id="pricing">
         <!-- Section floating blob -->
-        <div class="ws-blob ws-blob--section" style="top: 30%; left: -8%; background: radial-gradient(circle, rgba(139,92,246,0.1), transparent 70%);"></div>
+        <div class="ws-blob ws-blob--section" style="top: 30%; left: -8%; background: radial-gradient(circle, rgba(91,168,200,0.12), transparent 70%);"></div>
         <div class="ws-container">
             <div class="ws-pricing-card ws-fade-up">
                 <div class="ws-pricing-card__label">
@@ -395,7 +375,7 @@ $review_rows = aim_split_reviews_into_rows($workshop_reviews, 3);
          WHAT YOU WALK AWAY WITH
          ============================================================ -->
     <section class="ws-section ws-takeaways ws-bg-light-section" id="takeaways">
-        <div class="ws-blob ws-blob--section" style="top: 40%; left: -10%; background: radial-gradient(circle, rgba(49,136,255,0.08), transparent 70%);"></div>
+        <div class="ws-blob ws-blob--section" style="top: 40%; left: -10%; background: radial-gradient(circle, rgba(94,184,168,0.1), transparent 70%);"></div>
         <div class="ws-container">
             <div class="text-center ws-fade-up">
                 <span class="ws-section-label">Takeaways</span>
@@ -523,7 +503,7 @@ $review_rows = aim_split_reviews_into_rows($workshop_reviews, 3);
          MEET YOUR MASTER TRAINERS
          ============================================================ -->
     <section class="ws-section ws-trainers ws-bg-dark-section" id="trainers">
-        <div class="ws-blob ws-blob--section" style="top: 20%; right: -8%; background: radial-gradient(circle, rgba(139,92,246,0.1), transparent 70%);"></div>
+        <div class="ws-blob ws-blob--section" style="top: 20%; right: -8%; background: radial-gradient(circle, rgba(91,168,200,0.12), transparent 70%);"></div>
         <div class="ws-container">
             <div class="text-center ws-fade-up">
                 <span class="ws-section-label">Expert Facilitators</span>
@@ -752,10 +732,10 @@ $review_rows = aim_split_reviews_into_rows($workshop_reviews, 3);
         var particleCount = 80;
         var maxDist = 120;
         var colors = [
-            'rgba(192, 132, 252, 0.6)', // light purple
-            'rgba(255, 184, 0, 0.6)',   // golden yellow
-            'rgba(255, 93, 56, 0.5)',   // Rippling accent peach/orange
-            'rgba(62, 139, 255, 0.5)'   // soft blue
+            'rgba(94, 184, 168, 0.55)',  // soft teal
+            'rgba(255, 184, 0, 0.55)',   // gold
+            'rgba(91, 168, 200, 0.45)',  // cool blue
+            'rgba(62, 207, 154, 0.4)'    // mint
         ];
 
         function resizeCanvas() {
@@ -846,7 +826,7 @@ $review_rows = aim_split_reviews_into_rows($workshop_reviews, 3);
                     if (dist < maxDist) {
                         var opacity = 0.08 * (1 - dist / maxDist);
                         ctx.beginPath();
-                        ctx.strokeStyle = 'rgba(192, 132, 252, ' + opacity + ')'; // Purple lines
+                        ctx.strokeStyle = 'rgba(94, 184, 168, ' + opacity + ')'; // Teal lines
                         ctx.lineWidth = 0.5;
                         ctx.moveTo(particles[a].x, particles[a].y);
                         ctx.lineTo(particles[b].x, particles[b].y);

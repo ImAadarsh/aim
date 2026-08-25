@@ -1,55 +1,56 @@
 /* ============================================================
-   WORKSHOP SERIES — Custom Styles (Rippling Theme)
-   Premium, high-contrast B2B design for IPN Mission AIM
+   WORKSHOP SERIES — Atmosphere Theme
+   Dark navy / muted teal look for IPN Mission AIM
    ============================================================ */
 
 /* ---------- Design Tokens ---------- */
 :root {
-  --ws-bg-dark: #4A0E4E;
-  /* Rippling Deep Plum / Dark Purple */
-  --ws-bg-dark-deep: #2A072E;
-  /* Rippling Deepest Aubergine */
-  --ws-bg-light: #FAF9F5;
-  /* Rippling Warm Cream */
-  --ws-bg-light-alt: #F3F1E9;
-  /* Rippling Beige/Sand */
+  --ws-bg-dark: #0d171a;
+  /* Deep charcoal-navy */
+  --ws-bg-dark-deep: #070c10;
+  /* Near-black base */
+  --ws-bg-mid: #152428;
+  /* Mid atmosphere panel */
+  --ws-bg-teal: #1c3330;
+  /* Soft forest teal */
+  --ws-bg-light: #F5F2EB;
+  /* Warm cream */
+  --ws-bg-light-alt: #EBE6DC;
+  /* Soft sand */
 
-  --ws-card-dark: #5F1A64;
-  /* Refined Plum Card */
+  --ws-card-dark: rgba(28, 48, 48, 0.72);
+  /* Glass teal card */
   --ws-card-light: #FFFFFF;
-  /* Pure White Card */
 
-  --ws-border-dark: rgba(255, 255, 255, 0.08);
-  --ws-border-light: #E2DEC4;
-  /* Warm Cream Border */
+  --ws-border-dark: rgba(255, 255, 255, 0.1);
+  --ws-border-light: #DDD7C8;
 
-  --ws-text-light: #FAF9F5;
-  --ws-text-light-muted: rgba(250, 249, 245, 0.7);
-  --ws-text-dark: #2B152B;
-  /* Very Dark Plum/Charcoal */
-  --ws-text-dark-muted: rgba(43, 21, 43, 0.7);
+  --ws-text-light: #F4F7F6;
+  --ws-text-light-muted: rgba(244, 247, 246, 0.72);
+  --ws-text-dark: #10181a;
+  --ws-text-dark-muted: rgba(16, 24, 26, 0.68);
 
   --ws-accent-orange: #FFB800;
   --ws-accent-orange-rgb: 255, 184, 0;
-  /* Rippling Golden Yellow */
   --ws-accent-orange-hover: #E5A500;
-  --ws-accent-green: #00D37F;
-  --ws-accent-green-rgb: 0, 211, 127;
-  /* Bright Mint Green */
-  --ws-accent-blue: #3E8BFF;
-  --ws-accent-blue-rgb: 62, 139, 255;
-  --ws-accent-purple: #C084FC;
-  --ws-accent-purple-rgb: 192, 132, 252;
-  /* Lighter Purple accent */
+  --ws-accent-green: #3ECF9A;
+  --ws-accent-green-rgb: 62, 207, 154;
+  --ws-accent-blue: #5BA8C8;
+  --ws-accent-blue-rgb: 91, 168, 200;
+  --ws-accent-purple: #7EC8B8;
+  --ws-accent-purple-rgb: 126, 200, 184;
+  /* Soft aqua (legacy purple token remapped) */
+  --ws-accent-teal: #5EB8A8;
+  --ws-accent-teal-rgb: 94, 184, 168;
 
-  --ws-radius: 8px;
-  /* Structured, clean corners */
-  --ws-radius-lg: 12px;
+  --ws-radius: 10px;
+  --ws-radius-lg: 16px;
 
-  --ws-shadow-dark: 0 10px 40px rgba(0, 0, 0, 0.3);
-  --ws-shadow-light: 0 4px 20px rgba(74, 14, 78, 0.04);
+  --ws-shadow-dark: 0 16px 48px rgba(0, 0, 0, 0.35);
+  --ws-shadow-light: 0 4px 20px rgba(13, 23, 26, 0.06);
 
   --ws-font: 'Inter', system-ui, -apple-system, sans-serif;
+  --ws-atmosphere: url('../img/workshops/bg-atmosphere.png');
 }
 
 /* ---------- Base Overrides ---------- */
@@ -62,7 +63,10 @@ body.ws-page {
 }
 
 .ws-page {
-  background: var(--ws-bg-dark);
+  background:
+    radial-gradient(ellipse 90% 55% at 20% 0%, rgba(94, 184, 168, 0.14), transparent 55%),
+    radial-gradient(ellipse 70% 45% at 90% 20%, rgba(45, 70, 68, 0.35), transparent 50%),
+    linear-gradient(165deg, #101c1f 0%, var(--ws-bg-dark-deep) 45%, #0a1214 100%);
   color: var(--ws-text-light);
   font-family: var(--ws-font);
   -webkit-font-smoothing: antialiased;
@@ -75,6 +79,19 @@ body.ws-page {
   overflow: hidden;
   width: 100%;
   position: relative;
+}
+
+.ws-page-wrapper::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  background-image: var(--ws-atmosphere);
+  background-size: cover;
+  background-position: center;
+  opacity: 0.35;
+  mix-blend-mode: soft-light;
 }
 
 body.ws-menu-open {
@@ -146,12 +163,15 @@ body.ws-menu-open {
 
 /* Alternating Background styles */
 .ws-section.ws-bg-dark-section {
-  background: var(--ws-bg-dark);
+  background:
+    linear-gradient(180deg, rgba(7, 12, 16, 0.55), rgba(13, 23, 26, 0.82)),
+    var(--ws-bg-dark);
   color: var(--ws-text-light);
 }
 
 .ws-section.ws-bg-light-section {
-  background: var(--ws-bg-light);
+  background:
+    linear-gradient(180deg, rgba(245, 242, 235, 0.97), rgba(235, 230, 220, 0.98));
   color: var(--ws-text-dark);
 }
 
@@ -176,21 +196,18 @@ body.ws-menu-open {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: rgba(42, 7, 46, 0.85);
-  /* Premium semi-transparent plum */
-  backdrop-filter: blur(16px);
-  -webkit-backdrop-filter: blur(16px);
-  border-bottom: 1px solid var(--ws-border-dark);
+  background: rgba(7, 12, 16, 0.72);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border-bottom: 1px solid rgba(94, 184, 168, 0.12);
   transition: all 0.3s ease;
 }
 
 .ws-nav.ws-nav--scrolled {
-  background: rgba(42, 7, 46, 0.98);
-  /* Solid Deep Plum on scroll */
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.25);
+  background: rgba(7, 12, 16, 0.94);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.35);
   padding: 10px 40px;
-  /* Slimmer header when scrolled */
-  border-bottom-color: rgba(255, 255, 255, 0.05);
+  border-bottom-color: rgba(94, 184, 168, 0.18);
 }
 
 .ws-nav__logo img {
@@ -257,61 +274,154 @@ body.ws-menu-open {
 }
 
 /* ============================================================
-   HERO SECTION
+   HERO SECTION — Grand centered atmosphere
    ============================================================ */
 .ws-hero {
   position: relative;
-  padding: 130px 0 70px;
-  background: radial-gradient(ellipse 80% 50% at 50% -20%, rgba(192, 132, 252, 0.1), transparent),
-    var(--ws-bg-dark-deep);
-  border-bottom: 1px solid var(--ws-border-dark);
+  min-height: 92vh;
+  padding: 140px 0 80px;
+  overflow: hidden;
+  border-bottom: 1px solid rgba(94, 184, 168, 0.14);
   text-align: center;
+  background: var(--ws-bg-dark-deep);
+  display: flex;
+  align-items: center;
+}
+
+.ws-hero__atmosphere {
+  position: absolute;
+  inset: 0;
+  background: var(--ws-atmosphere) center / cover no-repeat;
+  transform: scale(1.05);
+  animation: wsHeroZoom 20s ease-in-out infinite alternate;
+  z-index: 0;
+}
+
+.ws-hero__veil {
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  background:
+    radial-gradient(ellipse 70% 55% at 50% 20%, rgba(94, 184, 168, 0.2), transparent 60%),
+    radial-gradient(ellipse 50% 40% at 80% 70%, rgba(255, 184, 0, 0.08), transparent 55%),
+    linear-gradient(180deg, rgba(7, 12, 16, 0.55) 0%, rgba(7, 12, 16, 0.78) 55%, rgba(7, 12, 16, 0.92) 100%);
+}
+
+.ws-hero .ws-aurora,
+.ws-hero .ws-blob,
+.ws-hero .ws-floating-logo-container {
+  z-index: 1;
+}
+
+.ws-hero .ws-container {
+  position: relative;
+  z-index: 3;
+  width: 100%;
 }
 
 .ws-hero__content {
   position: relative;
-  z-index: 2;
-  max-width: 850px;
+  z-index: 3;
+  max-width: 860px;
   margin: 0 auto;
 }
 
 .ws-hero__badge {
   display: inline-flex;
   align-items: center;
-  gap: 6px;
-  padding: 6px 14px;
-  border-radius: 4px;
-  background: rgba(250, 249, 245, 0.06);
-  border: 1px solid rgba(250, 249, 245, 0.15);
+  gap: 8px;
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: rgba(94, 184, 168, 0.12);
+  border: 1px solid rgba(94, 184, 168, 0.28);
   font-size: 12px;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 1px;
+  letter-spacing: 1.2px;
   color: var(--ws-text-light);
-  margin-bottom: 20px;
+  margin-bottom: 22px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.ws-hero__rating {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto 28px;
+  padding: 22px 36px;
+  max-width: 380px;
+  border-radius: 22px;
+  background: linear-gradient(155deg, rgba(255, 184, 0, 0.18), rgba(94, 184, 168, 0.1));
+  border: 1px solid rgba(255, 184, 0, 0.35);
+  box-shadow:
+    0 16px 48px rgba(0, 0, 0, 0.35),
+    0 0 40px rgba(255, 184, 0, 0.12);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+}
+
+.ws-hero__rating-score {
+  font-size: clamp(2.6rem, 6vw, 3.4rem);
+  font-weight: 900;
+  line-height: 1;
+  color: #ffb800;
+  letter-spacing: -0.03em;
+  text-shadow: 0 0 28px rgba(255, 184, 0, 0.35);
+}
+
+.ws-hero__rating-stars {
+  display: flex;
+  gap: 5px;
+  margin: 10px 0 8px;
+  color: #ffb800;
+  font-size: 1.15rem;
+  filter: drop-shadow(0 0 8px rgba(255, 184, 0, 0.35));
+}
+
+.ws-hero__rating-label {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--ws-text-light-muted);
+  letter-spacing: 0.02em;
 }
 
 .ws-hero__title {
-  font-size: clamp(2.4rem, 6vw, 4rem);
+  font-size: clamp(2.6rem, 6.5vw, 4.4rem);
   font-weight: 900;
-  line-height: 1.1;
-  margin-bottom: 16px;
-  letter-spacing: -1px;
+  line-height: 1.08;
+  margin: 0 0 18px;
+  letter-spacing: -0.04em;
+  color: #fff;
+  text-shadow: 0 8px 40px rgba(0, 0, 0, 0.35);
 }
 
 .ws-hero__title .ws-gradient-text {
   color: var(--ws-accent-orange);
-  background: none;
-  -webkit-text-fill-color: initial;
-  -webkit-background-clip: initial;
+  background: linear-gradient(110deg, #fff6d0 10%, #ffb800 45%, #ffe08a 80%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: wsTextShimmer 4s linear infinite;
 }
 
 .ws-hero__subtitle {
-  font-size: 1.15rem;
+  font-size: 1.18rem;
   color: var(--ws-text-light-muted);
-  line-height: 1.65;
-  max-width: 680px;
-  margin: 0 auto 36px;
+  line-height: 1.7;
+  max-width: 700px;
+  margin: 0 auto 28px;
+}
+
+.ws-countdown__heading {
+  text-align: center;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--ws-accent-orange);
+  margin: 0 auto 14px;
+  letter-spacing: 0.04em;
 }
 
 /* Countdown Timer */
@@ -319,24 +429,26 @@ body.ws-menu-open {
   display: flex;
   justify-content: center;
   gap: 12px;
-  margin-bottom: 36px;
+  margin-bottom: 32px;
 }
 
 .ws-countdown__item {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 12px 18px;
-  min-width: 80px;
-  background: var(--ws-card-dark);
-  border: 1px solid var(--ws-border-dark);
-  border-radius: var(--ws-radius);
+  padding: 14px 18px;
+  min-width: 82px;
+  background: rgba(12, 22, 24, 0.65);
+  border: 1px solid rgba(94, 184, 168, 0.28);
+  border-radius: 14px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.28);
+  backdrop-filter: blur(12px);
 }
 
 .ws-countdown__number {
-  font-size: 2rem;
+  font-size: 2.1rem;
   font-weight: 800;
-  color: var(--ws-text-light);
+  color: #fff;
   line-height: 1.1;
 }
 
@@ -354,23 +466,26 @@ body.ws-menu-open {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 16px;
-  margin-bottom: 28px;
+  flex-wrap: wrap;
+  gap: 14px 16px;
+  margin-bottom: 26px;
 }
 
 .ws-hero__price-current {
-  font-size: 2.5rem;
+  font-size: 2.8rem;
   font-weight: 800;
-  background: linear-gradient(110deg, #ffffff 30%, var(--ws-accent-orange) 50%, #ffffff 70%);
+  background: linear-gradient(110deg, #ffffff 25%, var(--ws-accent-orange) 50%, #ffffff 75%);
   background-size: 200% auto;
   -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
   animation: wsTextShimmer 4s linear infinite;
   display: inline-block;
+  letter-spacing: -0.03em;
 }
 
 .ws-hero__price-original {
-  font-size: 1.3rem;
+  font-size: 1.35rem;
   color: var(--ws-text-light-muted);
   position: relative;
   display: inline-block;
@@ -381,26 +496,23 @@ body.ws-menu-open {
   position: absolute;
   left: 0;
   top: 50%;
-  width: 0;
+  width: 105%;
   height: 2px;
   background: var(--ws-accent-orange);
   transform: translateY(-50%) rotate(-4deg);
-  transform-origin: left center;
-  animation: wsStrikeThrough 1s cubic-bezier(0.65, 0, 0.35, 1) forwards;
-  animation-delay: 0.6s;
 }
 
 .ws-hero__price-badge {
   display: inline-flex;
   align-items: center;
   gap: 4px;
-  padding: 4px 10px;
-  border-radius: 4px;
-  background: rgba(0, 192, 112, 0.12);
-  border: 1px solid rgba(0, 192, 112, 0.2);
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgba(62, 207, 154, 0.14);
+  border: 1px solid rgba(62, 207, 154, 0.35);
   color: var(--ws-accent-green);
-  font-size: 0.8rem;
-  font-weight: 700;
+  font-size: 0.82rem;
+  font-weight: 800;
   position: relative;
   overflow: hidden;
   animation: wsBadgePulse 2.5s infinite ease-in-out;
@@ -421,6 +533,61 @@ body.ws-menu-open {
   );
   transform: rotate(30deg);
   animation: wsBadgeShimmer 4s ease-in-out infinite;
+}
+
+.ws-btn--hero {
+  padding: 18px 34px;
+  font-size: 1.05rem;
+  border-radius: 999px;
+  box-shadow: 0 10px 36px rgba(255, 184, 0, 0.35);
+}
+
+.ws-hero__note {
+  font-size: 0.88rem;
+  color: var(--ws-text-light-muted);
+  margin-top: 16px;
+}
+
+@keyframes wsHeroZoom {
+  0% { transform: scale(1.03); }
+  100% { transform: scale(1.1); }
+}
+
+@media (max-width: 767px) {
+  .ws-hero {
+    min-height: auto;
+    padding: 120px 0 56px;
+  }
+
+  .ws-hero__title {
+    font-size: clamp(2.2rem, 9vw, 2.9rem);
+  }
+
+  .ws-countdown {
+    gap: 8px;
+  }
+
+  .ws-countdown__item {
+    padding: 12px 10px;
+    min-width: 68px;
+  }
+
+  .ws-countdown__number {
+    font-size: 1.55rem;
+  }
+
+  .ws-hero__price-current {
+    font-size: 2.2rem;
+  }
+
+  .ws-btn--hero {
+    width: 100%;
+    max-width: 360px;
+  }
+
+  .ws-floating-logo-container {
+    opacity: 0.35;
+  }
 }
 
 /* Pricing Keyframes */
@@ -516,7 +683,7 @@ body.ws-menu-open {
 }
 
 .ws-bg-light-section .ws-btn--outline:hover {
-  background: rgba(74, 14, 78, 0.04);
+  background: rgba(13, 23, 26, 0.05);
   color: var(--ws-text-dark);
 }
 
@@ -626,11 +793,15 @@ body.ws-menu-open {
   margin: 0 auto;
   padding: 44px 36px;
   border-radius: var(--ws-radius-lg);
-  background: var(--ws-bg-dark);
-  border: 1px solid var(--ws-border-dark);
-  box-shadow: var(--ws-shadow-dark);
+  background:
+    linear-gradient(160deg, rgba(28, 51, 48, 0.9) 0%, rgba(13, 23, 26, 0.95) 100%);
+  border: 1px solid rgba(94, 184, 168, 0.22);
+  box-shadow:
+    var(--ws-shadow-dark),
+    0 0 0 1px rgba(255, 184, 0, 0.04) inset;
   text-align: center;
   color: var(--ws-text-light);
+  backdrop-filter: blur(12px);
 }
 
 .ws-pricing-card__label {
@@ -804,7 +975,7 @@ body.ws-menu-open {
 .ws-slider-content {
   padding: 26px 30px;
   border-radius: 16px;
-  background: linear-gradient(135deg, rgba(95, 26, 100, 0.45) 0%, rgba(42, 7, 46, 0.7) 100%);
+  background: linear-gradient(135deg, rgba(36, 58, 56, 0.55) 0%, rgba(7, 12, 16, 0.75) 100%);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   border: 1px solid rgba(255, 255, 255, 0.08);
@@ -850,7 +1021,7 @@ body.ws-menu-open {
 .ws-slider-overlay {
   position: absolute;
   inset: 0;
-  background: rgba(42, 7, 46, 0.4);
+  background: rgba(7, 12, 16, 0.45);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
   display: flex;
@@ -1329,16 +1500,15 @@ body.ws-menu-open {
   z-index: 99999 !important;
   padding: 14px 30px;
   padding-bottom: calc(14px + env(safe-area-inset-bottom, 0px));
-  background: rgba(250, 249, 245, 0.96) !important;
-  /* Rippling Warm Cream Glassmorphism */
-  border-top: 1px solid rgba(43, 21, 43, 0.08);
+  background: rgba(245, 242, 235, 0.96) !important;
+  border-top: 1px solid rgba(16, 24, 26, 0.08);
   backdrop-filter: blur(16px);
   -webkit-backdrop-filter: blur(16px);
   display: flex !important;
   align-items: center;
   justify-content: center;
   gap: 24px;
-  box-shadow: 0 -8px 30px rgba(74, 14, 78, 0.12);
+  box-shadow: 0 -8px 30px rgba(7, 12, 16, 0.2);
   transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.4s ease, visibility 0.4s;
   will-change: transform, opacity;
   transform: translateY(150%);
@@ -1377,13 +1547,13 @@ body.ws-menu-open {
   font-size: 0.85rem;
   background: var(--ws-bg-dark) !important;
   color: var(--ws-text-light) !important;
-  box-shadow: 0 4px 14px rgba(74, 14, 78, 0.15) !important;
+  box-shadow: 0 4px 14px rgba(7, 12, 16, 0.18) !important;
 }
 
 .ws-sticky-bar .ws-btn:hover {
   background: var(--ws-bg-dark-deep) !important;
   color: var(--ws-text-light) !important;
-  box-shadow: 0 6px 20px rgba(74, 14, 78, 0.3) !important;
+  box-shadow: 0 6px 20px rgba(7, 12, 16, 0.28) !important;
   transform: translateY(-1px);
 }
 
@@ -1404,7 +1574,7 @@ body.ws-menu-open {
   font-size: 9px;
   font-weight: 800;
   color: var(--ws-bg-dark);
-  background: rgba(74, 14, 78, 0.07);
+  background: rgba(13, 23, 26, 0.07);
   padding: 2px 6px;
   border-radius: 4px;
   text-transform: uppercase;
@@ -1631,7 +1801,7 @@ body.ws-menu-open {
     left: 0;
     right: 0;
     height: calc(100vh - 64px);
-    background: rgba(42, 7, 46, 0.98);
+    background: rgba(7, 12, 16, 0.98);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
     border-top: 1px solid var(--ws-border-dark);
@@ -1670,31 +1840,6 @@ body.ws-menu-open {
 }
 
 @media (max-width: 767px) {
-  .ws-hero {
-    padding: 100px 0 40px;
-  }
-
-  .ws-hero__title {
-    font-size: 2.2rem;
-  }
-
-  .ws-countdown {
-    gap: 8px;
-  }
-
-  .ws-countdown__item {
-    padding: 10px 12px;
-    min-width: 68px;
-  }
-
-  .ws-countdown__number {
-    font-size: 1.5rem;
-  }
-
-  .ws-hero__price-current {
-    font-size: 2.1rem;
-  }
-
   .ws-pricing-card {
     padding: 32px 20px;
   }
@@ -1785,7 +1930,7 @@ body.ws-menu-open {
   overflow: hidden;
   z-index: 1;
   pointer-events: none;
-  opacity: 0.15;
+  opacity: 0.22;
 }
 
 .ws-aurora__ribbon {
@@ -1956,7 +2101,7 @@ body.ws-menu-open {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(to top, rgba(42, 7, 46, 0.85) 0%, rgba(42, 7, 46, 0) 60%);
+  background: linear-gradient(to top, rgba(7, 12, 16, 0.88) 0%, rgba(7, 12, 16, 0) 60%);
   display: flex;
   align-items: flex-end;
   justify-content: flex-start;
@@ -2019,6 +2164,12 @@ body.ws-menu-open {
   padding: 160px 0 60px;
   position: relative;
   overflow: hidden;
+  background:
+    linear-gradient(180deg, rgba(7, 12, 16, 0.4) 0%, rgba(7, 12, 16, 0.78) 100%),
+    radial-gradient(ellipse 70% 50% at 25% 15%, rgba(94, 184, 168, 0.2), transparent 55%),
+    var(--ws-atmosphere) center / cover no-repeat,
+    var(--ws-bg-dark-deep);
+  border-bottom: 1px solid rgba(94, 184, 168, 0.14);
 }
 
 .ws-detail-hero__badge {
@@ -2411,54 +2562,6 @@ body.ws-menu-open {
   }
 }
 
-/* Hero rating — centrally placed */
-.ws-hero__rating {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
-  margin: 28px auto 18px;
-  padding: 18px 28px;
-  max-width: 360px;
-  border-radius: 16px;
-  background: rgba(255, 184, 0, 0.08);
-  border: 1px solid rgba(255, 184, 0, 0.25);
-  box-shadow: 0 8px 32px rgba(255, 184, 0, 0.08);
-}
-
-.ws-hero__rating-score {
-  font-size: clamp(2rem, 5vw, 2.75rem);
-  font-weight: 900;
-  line-height: 1;
-  color: #ffb800;
-  letter-spacing: -0.02em;
-}
-
-.ws-hero__rating-stars {
-  display: flex;
-  gap: 4px;
-  margin: 8px 0 6px;
-  color: #ffb800;
-  font-size: 1rem;
-}
-
-.ws-hero__rating-label {
-  font-size: 0.82rem;
-  font-weight: 600;
-  color: var(--ws-text-light-muted);
-  letter-spacing: 0.02em;
-}
-
-.ws-countdown__heading {
-  text-align: center;
-  font-size: 0.9rem;
-  font-weight: 700;
-  color: var(--ws-accent-orange);
-  margin: 0 auto 14px;
-  letter-spacing: 0.03em;
-}
-
 /* Past / completed workshop cards */
 .ws-slider-card--past {
   opacity: 0.72;
@@ -2594,18 +2697,18 @@ body.ws-menu-open {
   border-radius: 20px;
   background: linear-gradient(
     155deg,
-    rgba(255, 184, 0, 0.16) 0%,
-    rgba(255, 140, 0, 0.08) 48%,
-    rgba(255, 184, 0, 0.1) 100%
+    rgba(36, 58, 56, 0.92) 0%,
+    rgba(18, 30, 32, 0.94) 55%,
+    rgba(28, 48, 48, 0.9) 100%
   );
-  border: 1px solid rgba(255, 184, 0, 0.28);
+  border: 1px solid rgba(94, 184, 168, 0.28);
   box-shadow:
-    0 10px 32px rgba(0, 0, 0, 0.22),
-    0 0 0 1px rgba(255, 184, 0, 0.06) inset,
-    0 8px 28px rgba(255, 184, 0, 0.08);
+    0 12px 36px rgba(0, 0, 0, 0.28),
+    0 0 0 1px rgba(255, 184, 0, 0.05) inset;
   display: flex;
   flex-direction: column;
   gap: 16px;
+  backdrop-filter: blur(10px);
 }
 
 .ws-review-card__author {
@@ -2613,7 +2716,7 @@ body.ws-menu-open {
   align-items: center;
   gap: 12px;
   padding-bottom: 14px;
-  border-bottom: 1px solid rgba(255, 184, 0, 0.18);
+  border-bottom: 1px solid rgba(94, 184, 168, 0.2);
 }
 
 .ws-review-card__avatar {

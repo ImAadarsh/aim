@@ -10,8 +10,9 @@ $aim_series = [
     'original_price' => 5996,
     'savings' => 2997,
     'discount_pct' => 50,
-    'rating' => 4.85,
-    'countdown_target' => '2026-08-25T17:00:00+05:30',
+    'rating' => 4.79,
+    'rating_count' => 353,
+    'countdown_target' => '2026-08-27T17:00:00+05:30',
     'period' => 'August – November 2026',
     'payment_url' => 'https://workshops.ipnacademy.in/workshop-payment-gateway.php?id=AIM-AI-4',
 ];
@@ -69,10 +70,10 @@ $workshops = [
     ],
     3 => [
         'title' => 'Fostering Numeracy Skills using AI',
-        'date' => '25th August 2026',
+        'date' => '27th August 2026',
         'icon' => 'fas fa-calculator',
         'color' => 'purple',
-        'slide' => 'assets/img/workshops/16_6_2026- WEBCARDS (5).png',
+        'slide' => 'assets/img/workshops/27th-August.jpeg',
         'description' => 'Use AI to break down complex numeracy problems, generate models and visual explanations, and support differentiated learning in mathematics.',
         'extended_description' => 'Developing numeracy is not just about solving equations; it is about building deep numerical intuition. In this workshop, you will discover how to use AI to generate rich, context-aware mathematical word problems that resonate with students. Learn how to diagnose student misconceptions, instantly customize worksheets for different math levels, and use generative AI to construct visual, conceptual models for fractions, decimals, ratios, and beyond.',
         'agenda' => [
