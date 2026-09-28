@@ -13,9 +13,9 @@ $review_rows = aim_split_reviews_into_rows($workshop_reviews, 3);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Primary Meta Tags -->
-    <title>AI Workshop Series | IPN Mission AIM — 4 Power-Packed Masterclasses</title>
-    <meta name="title" content="AI Workshop Series | IPN Mission AIM — 4 Power-Packed Masterclasses">
-    <meta name="description" content="Join the remaining 4-workshop AI Masterclass series by IPN Mission AIM. Rated 4.79/5 by 353 educators. ₹2,999 (Save 50%). August–November 2026.">
+    <title>AI Workshop Series | IPN Mission AIM — 2 Power-Packed Masterclasses</title>
+    <meta name="title" content="AI Workshop Series | IPN Mission AIM — 2 Power-Packed Masterclasses">
+    <meta name="description" content="Join the remaining 2-workshop AI Masterclass series by IPN Mission AIM. Rated 4.8/5 by 370 educators. ₹1,500 (Save 50%). October–November 2026.">
     <meta name="keywords" content="AI workshops for teachers, AI in education, Mission AIM workshops, teacher training AI, IPN Foundation, AI lesson planning, STEM AI, numeracy AI, experiential learning AI">
     <meta name="author" content="IPN Foundation">
     <meta name="robots" content="index, follow">
@@ -23,15 +23,15 @@ $review_rows = aim_split_reviews_into_rows($workshop_reviews, 3);
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://aim.ipnacademy.in/workshop-series.php">
-    <meta property="og:title" content="AI Workshop Series | IPN Mission AIM — 4 Power-Packed Masterclasses">
-    <meta property="og:description" content="Register for Four Masterclasses. Rated 4.79/5 by 353 educators. ₹2,999 — Save 50%. August–November 2026.">
+    <meta property="og:title" content="AI Workshop Series | IPN Mission AIM — 2 Power-Packed Masterclasses">
+    <meta property="og:description" content="Register for Two Masterclasses. Rated 4.8/5 by 370 educators. ₹1,500 — Save 50%. October–November 2026.">
     <meta property="og:image" content="assets/img/logo/mission-aim-og.jpg">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://aim.ipnacademy.in/workshop-series.php">
-    <meta property="twitter:title" content="AI Workshop Series | IPN Mission AIM — 4 Power-Packed Masterclasses">
-    <meta property="twitter:description" content="Register for Four Masterclasses. Rated 4.79/5 by 353 educators. ₹2,999 — Save 50%. August–November 2026.">
+    <meta property="twitter:title" content="AI Workshop Series | IPN Mission AIM — 2 Power-Packed Masterclasses">
+    <meta property="twitter:description" content="Register for Two Masterclasses. Rated 4.8/5 by 370 educators. ₹1,500 — Save 50%. October–November 2026.">
 
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="assets/img/logo/favicon.png">
@@ -150,7 +150,7 @@ $review_rows = aim_split_reviews_into_rows($workshop_reviews, 3);
                 </div>
 
                 <div class="ws-hero__rating">
-                    <div class="ws-hero__rating-score"><?php echo number_format($hero_rating, 2); ?>/5</div>
+                    <div class="ws-hero__rating-score"><?php echo number_format($hero_rating, 1); ?>/5</div>
                     <div class="ws-hero__rating-stars" aria-hidden="true">
                         <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star-half-alt"></i>
                     </div>
@@ -204,7 +204,7 @@ $review_rows = aim_split_reviews_into_rows($workshop_reviews, 3);
                 </div>
 
                 <a href="<?php echo htmlspecialchars($aim_series['payment_url']); ?>" target="_blank" class="ws-btn ws-btn--primary ws-btn--hero" id="hero-enrol-btn">
-                    <i class="fas fa-rocket"></i> Register for <strong>Four</strong> Masterclasses
+                    <i class="fas fa-rocket"></i> Register for <strong><?php echo htmlspecialchars($aim_series['remaining_word']); ?></strong> Masterclasses
                 </a>
 
                 <p class="ws-hero__note">
@@ -226,7 +226,7 @@ $review_rows = aim_split_reviews_into_rows($workshop_reviews, 3);
             <div class="ws-marquee__item"><i class="fas fa-school"></i> 10,000+ Schools Impacted</div>
             <div class="ws-marquee__item"><i class="fas fa-globe-asia"></i> South Asia's #1 Teacher Platform</div>
             <div class="ws-marquee__item"><i class="fas fa-certificate"></i> IPN Foundation Certified</div>
-            <div class="ws-marquee__item"><i class="fas fa-star"></i> Rated <?php echo number_format($hero_rating, 2); ?>/5 by <?php echo number_format($aim_series['rating_count']); ?> Educators</div>
+            <div class="ws-marquee__item"><i class="fas fa-star"></i> Rated <?php echo number_format($hero_rating, 1); ?>/5 by <?php echo number_format($aim_series['rating_count']); ?> Educators</div>
             <div class="ws-marquee__item"><i class="fas fa-calendar-alt"></i> <?php echo $aim_series['remaining_workshops']; ?> Masterclasses | <?php echo htmlspecialchars($aim_series['period']); ?></div>
             <div class="ws-marquee__item"><i class="fas fa-laptop"></i> Live Online Sessions</div>
             <!-- Duplicate for seamless scroll -->
@@ -234,7 +234,7 @@ $review_rows = aim_split_reviews_into_rows($workshop_reviews, 3);
             <div class="ws-marquee__item"><i class="fas fa-school"></i> 10,000+ Schools Impacted</div>
             <div class="ws-marquee__item"><i class="fas fa-globe-asia"></i> South Asia's #1 Teacher Platform</div>
             <div class="ws-marquee__item"><i class="fas fa-certificate"></i> IPN Foundation Certified</div>
-            <div class="ws-marquee__item"><i class="fas fa-star"></i> Rated <?php echo number_format($hero_rating, 2); ?>/5 by <?php echo number_format($aim_series['rating_count']); ?> Educators</div>
+            <div class="ws-marquee__item"><i class="fas fa-star"></i> Rated <?php echo number_format($hero_rating, 1); ?>/5 by <?php echo number_format($aim_series['rating_count']); ?> Educators</div>
             <div class="ws-marquee__item"><i class="fas fa-calendar-alt"></i> <?php echo $aim_series['remaining_workshops']; ?> Masterclasses | <?php echo htmlspecialchars($aim_series['period']); ?></div>
             <div class="ws-marquee__item"><i class="fas fa-laptop"></i> Live Online Sessions</div>
         </div>
@@ -324,7 +324,7 @@ $review_rows = aim_split_reviews_into_rows($workshop_reviews, 3);
                 </div>
 
                 <a href="<?php echo htmlspecialchars($aim_series['payment_url']); ?>" target="_blank" class="ws-btn ws-btn--primary" id="pricing-enrol-btn">
-                    <i class="fas fa-paper-plane"></i> Register for <strong>Four</strong> Masterclasses
+                    <i class="fas fa-paper-plane"></i> Register for <strong><?php echo htmlspecialchars($aim_series['remaining_word']); ?></strong> Masterclasses
                 </a>
 
                 <div class="ws-pricing-card__note">
@@ -659,7 +659,7 @@ $review_rows = aim_split_reviews_into_rows($workshop_reviews, 3);
             </p>
 
             <a href="<?php echo htmlspecialchars($aim_series['payment_url']); ?>" target="_blank" class="ws-btn ws-btn--primary" id="final-enrol-btn">
-                <i class="fas fa-paper-plane"></i> Register for <strong>Four</strong> Masterclasses
+                <i class="fas fa-paper-plane"></i> Register for <strong><?php echo htmlspecialchars($aim_series['remaining_word']); ?></strong> Masterclasses
             </a>
 
             <p class="ws-hero__note" style="margin-top: 20px;">
@@ -710,7 +710,7 @@ $review_rows = aim_split_reviews_into_rows($workshop_reviews, 3);
             </div>
         </div>
         <a href="<?php echo htmlspecialchars($aim_series['payment_url']); ?>" target="_blank" class="ws-btn ws-btn--primary" id="sticky-enrol-btn">
-            <i class="fas fa-paper-plane"></i> Register for <strong>Four</strong> Masterclasses
+            <i class="fas fa-paper-plane"></i> Register for <strong><?php echo htmlspecialchars($aim_series['remaining_word']); ?></strong> Masterclasses
         </a>
     </div>
 

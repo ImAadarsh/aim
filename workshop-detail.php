@@ -25,7 +25,7 @@ $nextId = $id < 6 ? $id + 1 : null;
     <!-- Primary Meta Tags -->
     <title><?php echo htmlspecialchars($workshop['title']); ?> | IPN Mission AIM Workshop Details</title>
     <meta name="title" content="<?php echo htmlspecialchars($workshop['title']); ?> | IPN Mission AIM Workshop Details">
-    <meta name="description" content="Explore details for <?php echo htmlspecialchars($workshop['title']); ?>, part of the IPN Mission AIM AI Masterclass series. Register for Four Masterclasses at <?php echo ws_format_price($aim_series['price']); ?> (Save <?php echo $aim_series['discount_pct']; ?>%).">
+    <meta name="description" content="Explore details for <?php echo htmlspecialchars($workshop['title']); ?>, part of the IPN Mission AIM AI Masterclass series. Register for <?php echo htmlspecialchars($aim_series['remaining_word']); ?> Masterclasses at <?php echo ws_format_price($aim_series['price']); ?> (Save <?php echo $aim_series['discount_pct']; ?>%).">
     <meta name="author" content="IPN Foundation">
 
     <!-- Favicon -->
@@ -311,7 +311,7 @@ $nextId = $id < 6 ? $id + 1 : null;
                                     </div>
                                 </div>
                                 <a href="<?php echo htmlspecialchars($aim_series['payment_url']); ?>" target="_blank" class="ws-btn ws-btn--primary ws-detail__enrol-btn">
-                                    <i class="fas fa-rocket"></i> Register for <strong>Four</strong> Masterclasses
+                                    <i class="fas fa-rocket"></i> Register for <strong><?php echo htmlspecialchars($aim_series['remaining_word']); ?></strong> Masterclasses
                                 </a>
                                 <div class="ws-detail__enrol-badge">
                                     <i class="fas fa-check-circle"></i> <?php echo $aim_series['discount_pct']; ?>% OFF — Save <?php echo ws_format_price($aim_series['savings']); ?>
@@ -382,7 +382,7 @@ $nextId = $id < 6 ? $id + 1 : null;
             </div>
         </div>
         <a href="<?php echo htmlspecialchars($aim_series['payment_url']); ?>" target="_blank" class="ws-btn ws-btn--primary" id="sticky-enrol-btn">
-            <i class="fas fa-paper-plane"></i> Register for <strong>Four</strong> Masterclasses
+            <i class="fas fa-paper-plane"></i> Register for <strong><?php echo htmlspecialchars($aim_series['remaining_word']); ?></strong> Masterclasses
         </a>
     </div>
 

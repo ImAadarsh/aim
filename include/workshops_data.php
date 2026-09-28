@@ -5,16 +5,17 @@
  */
 
 $aim_series = [
-    'remaining_workshops' => 4,
-    'price' => 2999,
-    'original_price' => 5996,
-    'savings' => 2997,
+    'remaining_workshops' => 2,
+    'remaining_word' => 'Two',
+    'price' => 1500,
+    'original_price' => 2998,
+    'savings' => 1498,
     'discount_pct' => 50,
-    'rating' => 4.79,
-    'rating_count' => 353,
-    'countdown_target' => '2026-08-27T17:00:00+05:30',
-    'period' => 'August – November 2026',
-    'payment_url' => 'https://workshops.ipnacademy.in/workshop-payment-gateway.php?id=AIM-AI-4',
+    'rating' => 4.8,
+    'rating_count' => 370,
+    'countdown_target' => '2026-10-23T17:00:00+05:30',
+    'period' => 'October – November 2026',
+    'payment_url' => 'https://workshops.ipnacademy.in/workshop-payment-gateway.php?id=65GV2SX37EJY',
 ];
 
 $workshops = [
@@ -71,6 +72,7 @@ $workshops = [
     3 => [
         'title' => 'Fostering Numeracy Skills using AI',
         'date' => '27th August 2026',
+        'past' => true,
         'icon' => 'fas fa-calculator',
         'color' => 'purple',
         'slide' => 'assets/img/workshops/27th-August.jpeg',
@@ -95,6 +97,7 @@ $workshops = [
     4 => [
         'title' => 'AI for Experiential Learning Design',
         'date' => '25th September 2026',
+        'past' => true,
         'icon' => 'fas fa-vr-cardboard',
         'color' => 'green',
         'slide' => 'assets/img/workshops/16_6_2026- WEBCARDS (3).png',
