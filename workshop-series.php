@@ -13,9 +13,9 @@ $review_rows = aim_split_reviews_into_rows($workshop_reviews, 3);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- Primary Meta Tags -->
-    <title>AI Workshop Series | IPN Mission AIM — 2 Power-Packed Masterclasses</title>
-    <meta name="title" content="AI Workshop Series | IPN Mission AIM — 2 Power-Packed Masterclasses">
-    <meta name="description" content="Join the remaining 2-workshop AI Masterclass series by IPN Mission AIM. Rated 4.8/5 by 370 educators. ₹1,500 (Save 50%). October–November 2026.">
+    <title>AI Workshop Series | IPN Mission AIM — Final Masterclass</title>
+    <meta name="title" content="AI Workshop Series | IPN Mission AIM — Final Masterclass">
+    <meta name="description" content="Join the final AI Masterclass by IPN Mission AIM — Academic Integrity, Ethics & Responsible AI Use. Rated 4.8/5 by 370 educators. ₹1,499. 26th November 2026.">
     <meta name="keywords" content="AI workshops for teachers, AI in education, Mission AIM workshops, teacher training AI, IPN Foundation, AI lesson planning, STEM AI, numeracy AI, experiential learning AI">
     <meta name="author" content="IPN Foundation">
     <meta name="robots" content="index, follow">
@@ -23,15 +23,15 @@ $review_rows = aim_split_reviews_into_rows($workshop_reviews, 3);
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://aim.ipnacademy.in/workshop-series.php">
-    <meta property="og:title" content="AI Workshop Series | IPN Mission AIM — 2 Power-Packed Masterclasses">
-    <meta property="og:description" content="Register for Two Masterclasses. Rated 4.8/5 by 370 educators. ₹1,500 — Save 50%. October–November 2026.">
+    <meta property="og:title" content="AI Workshop Series | IPN Mission AIM — Final Masterclass">
+    <meta property="og:description" content="Register for the final Masterclass. Rated 4.8/5 by 370 educators. ₹1,499. 26th November 2026.">
     <meta property="og:image" content="assets/img/logo/mission-aim-og.jpg">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://aim.ipnacademy.in/workshop-series.php">
-    <meta property="twitter:title" content="AI Workshop Series | IPN Mission AIM — 2 Power-Packed Masterclasses">
-    <meta property="twitter:description" content="Register for Two Masterclasses. Rated 4.8/5 by 370 educators. ₹1,500 — Save 50%. October–November 2026.">
+    <meta property="twitter:title" content="AI Workshop Series | IPN Mission AIM — Final Masterclass">
+    <meta property="twitter:description" content="Register for the final Masterclass. Rated 4.8/5 by 370 educators. ₹1,499. 26th November 2026.">
 
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="assets/img/logo/favicon.png">
@@ -163,7 +163,7 @@ $review_rows = aim_split_reviews_into_rows($workshop_reviews, 3);
                 </h1>
 
                 <p class="ws-hero__subtitle">
-                    Master AI tools, lesson planning, assessments, content creation, and classroom innovation through our exclusive AI Masterclass Series — <?php echo $aim_series['remaining_workshops']; ?> power-packed sessions remaining.
+                    Master AI tools, lesson planning, assessments, content creation, and classroom innovation through our exclusive AI Masterclass Series — final session remaining: Academic Integrity, Ethics &amp; Responsible AI Use.
                 </p>
 
                 <p class="ws-countdown__heading">
@@ -197,18 +197,20 @@ $review_rows = aim_split_reviews_into_rows($workshop_reviews, 3);
 
                 <div class="ws-hero__price">
                     <span class="ws-hero__price-current"><?php echo ws_format_price($aim_series['price']); ?></span>
+                    <?php if ($aim_series['savings'] > 0): ?>
                     <span class="ws-hero__price-original"><?php echo ws_format_price($aim_series['original_price']); ?></span>
                     <span class="ws-hero__price-badge">
                         <i class="fas fa-tag"></i> Save <?php echo ws_format_price($aim_series['savings']); ?> | <?php echo $aim_series['discount_pct']; ?>% OFF
                     </span>
+                    <?php endif; ?>
                 </div>
 
                 <a href="<?php echo htmlspecialchars($aim_series['payment_url']); ?>" target="_blank" class="ws-btn ws-btn--primary ws-btn--hero" id="hero-enrol-btn">
-                    <i class="fas fa-rocket"></i> Register for <strong><?php echo htmlspecialchars($aim_series['remaining_word']); ?></strong> Masterclasses
+                    <i class="fas fa-rocket"></i> Register for the <strong>Final</strong> <?php echo htmlspecialchars($aim_series['remaining_label']); ?>
                 </a>
 
                 <p class="ws-hero__note">
-                    <i class="fas fa-info-circle"></i> Register for the <?php echo $aim_series['remaining_workshops']; ?> remaining Masterclasses with <?php echo $aim_series['discount_pct']; ?>% discount. Individual workshops not available separately.
+                    <i class="fas fa-info-circle"></i> Final Masterclass · Academic Integrity, Ethics &amp; Responsible AI Use · 26th November 2026.
                 </p>
             </div>
         </div>
@@ -227,7 +229,7 @@ $review_rows = aim_split_reviews_into_rows($workshop_reviews, 3);
             <div class="ws-marquee__item"><i class="fas fa-globe-asia"></i> South Asia's #1 Teacher Platform</div>
             <div class="ws-marquee__item"><i class="fas fa-certificate"></i> IPN Foundation Certified</div>
             <div class="ws-marquee__item"><i class="fas fa-star"></i> Rated <?php echo number_format($hero_rating, 1); ?>/5 by <?php echo number_format($aim_series['rating_count']); ?> Educators</div>
-            <div class="ws-marquee__item"><i class="fas fa-calendar-alt"></i> <?php echo $aim_series['remaining_workshops']; ?> Masterclasses | <?php echo htmlspecialchars($aim_series['period']); ?></div>
+            <div class="ws-marquee__item"><i class="fas fa-calendar-alt"></i> Final <?php echo htmlspecialchars($aim_series['remaining_label']); ?> | <?php echo htmlspecialchars($aim_series['period']); ?></div>
             <div class="ws-marquee__item"><i class="fas fa-laptop"></i> Live Online Sessions</div>
             <!-- Duplicate for seamless scroll -->
             <div class="ws-marquee__item"><i class="fas fa-chalkboard-teacher"></i> 30,000+ Teachers Trained</div>
@@ -235,7 +237,7 @@ $review_rows = aim_split_reviews_into_rows($workshop_reviews, 3);
             <div class="ws-marquee__item"><i class="fas fa-globe-asia"></i> South Asia's #1 Teacher Platform</div>
             <div class="ws-marquee__item"><i class="fas fa-certificate"></i> IPN Foundation Certified</div>
             <div class="ws-marquee__item"><i class="fas fa-star"></i> Rated <?php echo number_format($hero_rating, 1); ?>/5 by <?php echo number_format($aim_series['rating_count']); ?> Educators</div>
-            <div class="ws-marquee__item"><i class="fas fa-calendar-alt"></i> <?php echo $aim_series['remaining_workshops']; ?> Masterclasses | <?php echo htmlspecialchars($aim_series['period']); ?></div>
+            <div class="ws-marquee__item"><i class="fas fa-calendar-alt"></i> Final <?php echo htmlspecialchars($aim_series['remaining_label']); ?> | <?php echo htmlspecialchars($aim_series['period']); ?></div>
             <div class="ws-marquee__item"><i class="fas fa-laptop"></i> Live Online Sessions</div>
         </div>
     </div>
@@ -308,27 +310,35 @@ $review_rows = aim_split_reviews_into_rows($workshop_reviews, 3);
                 <div class="ws-pricing-card__label">
                     <i class="fas fa-fire"></i> Limited Seats Available
                 </div>
-                <h3 class="ws-pricing-card__title"><strong><?php echo $aim_series['remaining_workshops']; ?></strong> Remaining Masterclasses</h3>
+                <h3 class="ws-pricing-card__title"><strong>Final</strong> <?php echo htmlspecialchars($aim_series['remaining_label']); ?></h3>
 
+                <?php if ($aim_series['savings'] > 0): ?>
                 <div class="ws-pricing-card__original">
                     <span>Individual Value</span>
                     <?php echo ws_format_price($aim_series['original_price']); ?>
                 </div>
+                <?php endif; ?>
 
                 <div class="ws-pricing-card__price"><?php echo ws_format_price($aim_series['price']); ?></div>
 
+                <?php if ($aim_series['savings'] > 0): ?>
                 <div class="ws-pricing-card__savings">
                     <span>Save <?php echo ws_format_price($aim_series['savings']); ?></span>
                     <div class="divider"></div>
                     <span><?php echo $aim_series['discount_pct']; ?>% OFF!</span>
                 </div>
+                <?php else: ?>
+                <div class="ws-pricing-card__savings">
+                    <span>All-inclusive package price</span>
+                </div>
+                <?php endif; ?>
 
                 <a href="<?php echo htmlspecialchars($aim_series['payment_url']); ?>" target="_blank" class="ws-btn ws-btn--primary" id="pricing-enrol-btn">
-                    <i class="fas fa-paper-plane"></i> Register for <strong><?php echo htmlspecialchars($aim_series['remaining_word']); ?></strong> Masterclasses
+                    <i class="fas fa-paper-plane"></i> Register for the <strong>Final</strong> <?php echo htmlspecialchars($aim_series['remaining_label']); ?>
                 </a>
 
                 <div class="ws-pricing-card__note">
-                    📌 <strong>Kind Note:</strong> Enrol for the <?php echo $aim_series['remaining_workshops']; ?> remaining Masterclasses at <?php echo $aim_series['discount_pct']; ?>% discount. Individual workshop registrations are not available.
+                    📌 <strong>Kind Note:</strong> This is the last Masterclass in the Mission AIM series — Academic Integrity, Ethics &amp; Responsible AI Use on 26th November 2026.
                 </div>
             </div>
         </div>
@@ -346,7 +356,7 @@ $review_rows = aim_split_reviews_into_rows($workshop_reviews, 3);
         <div class="ws-container">
             <div class="text-center ws-fade-up" style="margin-bottom: 40px;">
                 <span class="ws-section-label">Workshop Schedule</span>
-                <h2 class="ws-section-title"><?php echo $aim_series['remaining_workshops']; ?> Power-Packed Masterclasses</h2>
+                <h2 class="ws-section-title">Final Power-Packed Masterclass</h2>
                 <p class="ws-section-subtitle centered"><?php echo htmlspecialchars($aim_series['period']); ?></p>
             </div>
         </div>
@@ -565,12 +575,12 @@ $review_rows = aim_split_reviews_into_rows($workshop_reviews, 3);
             <div class="ws-faq__list">
                 <div class="ws-faq__item active">
                     <button class="ws-faq__question" id="faq-q1">
-                        <span>Can I register for individual workshops?</span>
+                        <span>What is included in this enrolment?</span>
                         <span class="ws-faq__icon"><i class="fas fa-plus"></i></span>
                     </button>
                     <div class="ws-faq__answer">
                         <div class="ws-faq__answer-inner">
-                            For the best learning experience, Mission AIM is offered as a package of the <?php echo $aim_series['remaining_workshops']; ?> remaining Masterclasses. Individual workshop registrations are not available. Each session builds on the previous one, ensuring a comprehensive AI integration journey.
+                            This is the final Masterclass in the Mission AIM series — Academic Integrity, Ethics &amp; Responsible AI Use on 26th November 2026. Enrolment is for this concluding session.
                         </div>
                     </div>
                 </div>
@@ -582,7 +592,7 @@ $review_rows = aim_split_reviews_into_rows($workshop_reviews, 3);
                     </button>
                     <div class="ws-faq__answer">
                         <div class="ws-faq__answer-inner">
-                            All remaining Masterclasses are conducted as live online sessions. You'll get interactive, hands-on experience with direct access to the master trainers for Q&A and personalized guidance.
+                            The final Masterclass is conducted as a live online session. You'll get interactive, hands-on experience with direct access to the master trainers for Q&A and personalized guidance.
                         </div>
                     </div>
                 </div>
@@ -630,7 +640,7 @@ $review_rows = aim_split_reviews_into_rows($workshop_reviews, 3);
                     </button>
                     <div class="ws-faq__answer">
                         <div class="ws-faq__answer-inner">
-                            Upon completing all <?php echo $aim_series['remaining_workshops']; ?> Masterclasses, you'll receive a Certificate of Completion from IPN Mission AIM, recognized by IPN Foundation — South Asia's leading teacher development platform.
+                            Upon completing this Masterclass, you'll receive a Certificate of Completion from IPN Mission AIM, recognized by IPN Foundation — South Asia's leading teacher development platform.
                         </div>
                     </div>
                 </div>
@@ -648,22 +658,24 @@ $review_rows = aim_split_reviews_into_rows($workshop_reviews, 3);
 
             <div class="ws-final-cta__price">
                 <span class="ws-hero__price-current"><?php echo ws_format_price($aim_series['price']); ?></span>
+                <?php if ($aim_series['savings'] > 0): ?>
                 <span class="ws-hero__price-original"><?php echo ws_format_price($aim_series['original_price']); ?></span>
                 <span class="ws-hero__price-badge">
                     <i class="fas fa-tag"></i> Save <?php echo ws_format_price($aim_series['savings']); ?> | <?php echo $aim_series['discount_pct']; ?>% OFF
                 </span>
+                <?php endif; ?>
             </div>
 
             <p class="ws-final-cta__details">
-                <strong><?php echo $aim_series['remaining_workshops']; ?> Masterclasses</strong> &nbsp;|&nbsp; <?php echo htmlspecialchars($aim_series['period']); ?> &nbsp;|&nbsp; Live Online
+                <strong>Final <?php echo htmlspecialchars($aim_series['remaining_label']); ?></strong> &nbsp;|&nbsp; <?php echo htmlspecialchars($aim_series['period']); ?> &nbsp;|&nbsp; Live Online
             </p>
 
             <a href="<?php echo htmlspecialchars($aim_series['payment_url']); ?>" target="_blank" class="ws-btn ws-btn--primary" id="final-enrol-btn">
-                <i class="fas fa-paper-plane"></i> Register for <strong><?php echo htmlspecialchars($aim_series['remaining_word']); ?></strong> Masterclasses
+                <i class="fas fa-paper-plane"></i> Register for the <strong>Final</strong> <?php echo htmlspecialchars($aim_series['remaining_label']); ?>
             </a>
 
             <p class="ws-hero__note" style="margin-top: 20px;">
-                📌 Enrol for the <?php echo $aim_series['remaining_workshops']; ?> remaining Masterclasses with <?php echo $aim_series['discount_pct']; ?>% discount. Individual registrations are not available.
+                📌 Final Masterclass · Academic Integrity, Ethics &amp; Responsible AI Use · 26th November 2026.
             </p>
 
             <div class="ws-contact-strip" style="margin-top: 40px;">
@@ -701,16 +713,20 @@ $review_rows = aim_split_reviews_into_rows($workshop_reviews, 3);
     <div class="ws-sticky-bar" id="sticky-bar">
         <div class="ws-sticky-bar__info-group">
             <div class="ws-sticky-bar__badge-row">
-                <span class="ws-sticky-bar__badge"><i class="fas fa-graduation-cap"></i> <strong><?php echo $aim_series['remaining_workshops']; ?></strong> Masterclasses</span>
+                <span class="ws-sticky-bar__badge"><i class="fas fa-graduation-cap"></i> <strong>Final</strong> <?php echo htmlspecialchars($aim_series['remaining_label']); ?></span>
+                <?php if ($aim_series['discount_pct'] > 0): ?>
                 <span class="ws-sticky-bar__discount"><i class="fas fa-tag"></i> <?php echo $aim_series['discount_pct']; ?>% OFF</span>
+                <?php endif; ?>
             </div>
             <div class="ws-sticky-bar__price">
                 <span class="ws-sticky-bar__current"><?php echo ws_format_price($aim_series['price']); ?></span>
+                <?php if ($aim_series['savings'] > 0): ?>
                 <span class="ws-sticky-bar__original"><?php echo ws_format_price($aim_series['original_price']); ?></span>
+                <?php endif; ?>
             </div>
         </div>
         <a href="<?php echo htmlspecialchars($aim_series['payment_url']); ?>" target="_blank" class="ws-btn ws-btn--primary" id="sticky-enrol-btn">
-            <i class="fas fa-paper-plane"></i> Register for <strong><?php echo htmlspecialchars($aim_series['remaining_word']); ?></strong> Masterclasses
+            <i class="fas fa-paper-plane"></i> Register for the <strong>Final</strong> <?php echo htmlspecialchars($aim_series['remaining_label']); ?>
         </a>
     </div>
 

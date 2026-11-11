@@ -25,7 +25,7 @@ $nextId = $id < 6 ? $id + 1 : null;
     <!-- Primary Meta Tags -->
     <title><?php echo htmlspecialchars($workshop['title']); ?> | IPN Mission AIM Workshop Details</title>
     <meta name="title" content="<?php echo htmlspecialchars($workshop['title']); ?> | IPN Mission AIM Workshop Details">
-    <meta name="description" content="Explore details for <?php echo htmlspecialchars($workshop['title']); ?>, part of the IPN Mission AIM AI Masterclass series. Register for <?php echo htmlspecialchars($aim_series['remaining_word']); ?> Masterclasses at <?php echo ws_format_price($aim_series['price']); ?> (Save <?php echo $aim_series['discount_pct']; ?>%).">
+    <meta name="description" content="Explore details for <?php echo htmlspecialchars($workshop['title']); ?>, part of the IPN Mission AIM AI Masterclass series. Register for the final Masterclass at <?php echo ws_format_price($aim_series['price']); ?> (Save <?php echo $aim_series['discount_pct']; ?>%).">
     <meta name="author" content="IPN Foundation">
 
     <!-- Favicon -->
@@ -300,22 +300,30 @@ $nextId = $id < 6 ? $id + 1 : null;
                             <div class="ws-detail__enrol-box">
                                 <?php if ($isPast): ?>
                                     <div class="ws-detail__past-notice">
-                                        <i class="fas fa-info-circle"></i> This session concluded on <?php echo htmlspecialchars($workshop['date']); ?>. Register for the <strong><?php echo $aim_series['remaining_workshops']; ?> remaining Masterclasses</strong> below.
+                                        <i class="fas fa-info-circle"></i> This session concluded on <?php echo htmlspecialchars($workshop['date']); ?>. Register for the <strong>final Masterclass</strong> below.
                                     </div>
                                 <?php endif; ?>
-                                <div class="ws-detail__sidebar-label"><strong><?php echo $aim_series['remaining_workshops']; ?></strong> Masterclass Pass</div>
+                                <div class="ws-detail__sidebar-label"><strong>Final</strong> <?php echo htmlspecialchars($aim_series['remaining_label']); ?></div>
                                 <div class="ws-detail__enrol-price">
                                     <div class="ws-detail__enrol-price-val">
                                         <?php echo ws_format_price($aim_series['price']); ?>
+                                        <?php if ($aim_series['savings'] > 0): ?>
                                         <span class="ws-detail__enrol-price-orig"><?php echo ws_format_price($aim_series['original_price']); ?></span>
+                                        <?php endif; ?>
                                     </div>
                                 </div>
                                 <a href="<?php echo htmlspecialchars($aim_series['payment_url']); ?>" target="_blank" class="ws-btn ws-btn--primary ws-detail__enrol-btn">
-                                    <i class="fas fa-rocket"></i> Register for <strong><?php echo htmlspecialchars($aim_series['remaining_word']); ?></strong> Masterclasses
+                                    <i class="fas fa-rocket"></i> Register for the <strong>Final</strong> <?php echo htmlspecialchars($aim_series['remaining_label']); ?>
                                 </a>
+                                <?php if ($aim_series['savings'] > 0): ?>
                                 <div class="ws-detail__enrol-badge">
                                     <i class="fas fa-check-circle"></i> <?php echo $aim_series['discount_pct']; ?>% OFF — Save <?php echo ws_format_price($aim_series['savings']); ?>
                                 </div>
+                                <?php else: ?>
+                                <div class="ws-detail__enrol-badge">
+                                    <i class="fas fa-check-circle"></i> All-inclusive · 26th November 2026
+                                </div>
+                                <?php endif; ?>
                             </div>
                         </div>
 
@@ -373,16 +381,20 @@ $nextId = $id < 6 ? $id + 1 : null;
     <div class="ws-sticky-bar" id="sticky-bar">
         <div class="ws-sticky-bar__info-group">
             <div class="ws-sticky-bar__badge-row">
-                <span class="ws-sticky-bar__badge"><i class="fas fa-graduation-cap"></i> <strong><?php echo $aim_series['remaining_workshops']; ?></strong> Masterclasses</span>
+                <span class="ws-sticky-bar__badge"><i class="fas fa-graduation-cap"></i> <strong>Final</strong> <?php echo htmlspecialchars($aim_series['remaining_label']); ?></span>
+                <?php if ($aim_series['discount_pct'] > 0): ?>
                 <span class="ws-sticky-bar__discount"><i class="fas fa-tag"></i> <?php echo $aim_series['discount_pct']; ?>% OFF</span>
+                <?php endif; ?>
             </div>
             <div class="ws-sticky-bar__price">
                 <span class="ws-sticky-bar__current"><?php echo ws_format_price($aim_series['price']); ?></span>
+                <?php if ($aim_series['savings'] > 0): ?>
                 <span class="ws-sticky-bar__original"><?php echo ws_format_price($aim_series['original_price']); ?></span>
+                <?php endif; ?>
             </div>
         </div>
         <a href="<?php echo htmlspecialchars($aim_series['payment_url']); ?>" target="_blank" class="ws-btn ws-btn--primary" id="sticky-enrol-btn">
-            <i class="fas fa-paper-plane"></i> Register for <strong><?php echo htmlspecialchars($aim_series['remaining_word']); ?></strong> Masterclasses
+            <i class="fas fa-paper-plane"></i> Register for the <strong>Final</strong> <?php echo htmlspecialchars($aim_series['remaining_label']); ?>
         </a>
     </div>
 

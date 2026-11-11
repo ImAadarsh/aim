@@ -5,17 +5,18 @@
  */
 
 $aim_series = [
-    'remaining_workshops' => 2,
-    'remaining_word' => 'Two',
-    'price' => 1500,
-    'original_price' => 2998,
-    'savings' => 1498,
-    'discount_pct' => 50,
+    'remaining_workshops' => 1,
+    'remaining_word' => 'One',
+    'remaining_label' => 'Masterclass',
+    'price' => 1499,
+    'original_price' => 1499,
+    'savings' => 0,
+    'discount_pct' => 0,
     'rating' => 4.8,
     'rating_count' => 370,
-    'countdown_target' => '2026-10-23T17:00:00+05:30',
-    'period' => 'October – November 2026',
-    'payment_url' => 'https://workshops.ipnacademy.in/workshop-payment-gateway.php?id=65GV2SX37EJY',
+    'countdown_target' => '2026-11-26T17:00:00+05:30',
+    'period' => 'November 2026',
+    'payment_url' => 'https://workshops.ipnacademy.in/workshop-payment-gateway.php?id=5N9XCMHYYQV7',
 ];
 
 $workshops = [
@@ -122,6 +123,7 @@ $workshops = [
     5 => [
         'title' => 'Building Comprehension, Listening & Reading through AI',
         'date' => '23rd October 2026',
+        'past' => true,
         'icon' => 'fas fa-book-reader',
         'color' => 'orange',
         'slide' => 'assets/img/workshops/16_6_2026- WEBCARDS (6).png',
