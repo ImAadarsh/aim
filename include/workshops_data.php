@@ -16,7 +16,7 @@ $aim_series = [
     'rating_count' => 370,
     'countdown_target' => '2026-11-26T17:00:00+05:30',
     'period' => 'November 2026',
-    'payment_url' => 'https://workshops.ipnacademy.in/workshop-payment-gateway.php?id=5N9XCMHYYQV7',
+    'payment_url' => 'https://workshops.ipnacademy.in/workshop-payment-gateway.php?id=JSFX4UJ2JW3Z',
 ];
 
 $workshops = [
