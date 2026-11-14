@@ -15,7 +15,7 @@ $review_rows = aim_split_reviews_into_rows($workshop_reviews, 3);
     <!-- Primary Meta Tags -->
     <title>AI Workshop Series | IPN Mission AIM — Final Masterclass</title>
     <meta name="title" content="AI Workshop Series | IPN Mission AIM — Final Masterclass">
-    <meta name="description" content="Join the final AI Masterclass by IPN Mission AIM — Academic Integrity, Ethics & Responsible AI Use. Rated 4.8/5 by 370 educators. ₹1,499. 26th November 2026.">
+    <meta name="description" content="Join the final AI Masterclass by IPN Mission AIM — Academic Integrity, Ethics & Responsible AI Use. Rated 4.8/5 by 370 educators. ₹999. 26th November 2026.">
     <meta name="keywords" content="AI workshops for teachers, AI in education, Mission AIM workshops, teacher training AI, IPN Foundation, AI lesson planning, STEM AI, numeracy AI, experiential learning AI">
     <meta name="author" content="IPN Foundation">
     <meta name="robots" content="index, follow">
@@ -24,14 +24,14 @@ $review_rows = aim_split_reviews_into_rows($workshop_reviews, 3);
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://aim.ipnacademy.in/workshop-series.php">
     <meta property="og:title" content="AI Workshop Series | IPN Mission AIM — Final Masterclass">
-    <meta property="og:description" content="Register for the final Masterclass. Rated 4.8/5 by 370 educators. ₹1,499. 26th November 2026.">
+    <meta property="og:description" content="Register for the final Masterclass. Rated 4.8/5 by 370 educators. ₹999. 26th November 2026.">
     <meta property="og:image" content="assets/img/logo/mission-aim-og.jpg">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://aim.ipnacademy.in/workshop-series.php">
     <meta property="twitter:title" content="AI Workshop Series | IPN Mission AIM — Final Masterclass">
-    <meta property="twitter:description" content="Register for the final Masterclass. Rated 4.8/5 by 370 educators. ₹1,499. 26th November 2026.">
+    <meta property="twitter:description" content="Register for the final Masterclass. Rated 4.8/5 by 370 educators. ₹999. 26th November 2026.">
 
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="assets/img/logo/favicon.png">
